@@ -36,3 +36,11 @@ build_reference_demo.py の後に adapt_rv_content.py を実行。
 ・2点の新規イラストは内蔵画像生成ツールで作成。正確なプロンプトは forest-image-prompts.json に保存。
 ・新しいヘッダー、メニュー、フッターは編集可能なHTML/CSS。
 ・再構築は build_reference_demo.py、adapt_rv_content.py、build_forest_design.py の順。
+
+整備工場としての訴求を強めたFV
+・丸枠内をキャンプの休憩シーンから、工場内でキャンピングカーの電装設備を点検する場面へ変更。
+・FV見出しを「キャンピングカーの修理・メンテナンス。」へ変更。
+・修理・点検、電装・バッテリー、部品取付の対応内容と認証工場の表示を追加。
+・上部相談ボタンと丸枠のラベルに工具のアイコンを使用。
+・森の背景、緑・茶色・生成り、木のサイン、車と吹き出しのアニメーションは維持。
+・新規画像は内蔵画像生成ツールを利用。画像と完全なプロンプトは dist/assets/camper-workshop.png、workshop-image-prompt.json に保存。

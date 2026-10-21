@@ -13,10 +13,11 @@ def bykey(key): return doc.xpath(f'//*[@data-s-{key}]')[0]
 
 brand_icon='''<svg viewBox="0 0 72 56" aria-hidden="true"><path d="M8 40V20h33l10 12h11v15H8Z"/><path d="M15 20V11h25v9M41 25v12h16M15 28h15v10H15Z"/><circle cx="21" cy="47" r="6"/><circle cx="51" cy="47" r="6"/><path d="M59 5 49 20h7l-6 9h18l-6-9h7Z"/></svg>'''
 lantern='''<svg viewBox="0 0 60 72" aria-hidden="true"><path d="M20 16V11a10 10 0 0 1 20 0v5M15 20h30l5 40H10Z"/><path d="M22 21v38M38 21v38M10 60h40v7H10ZM20 16h20v5H20Z"/><path d="M30 34q-10 12 0 18 10-6 0-18Z"/></svg>'''
+wrench='''<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M41 7a17 17 0 0 0-19 23L7 45a8 8 0 0 0 12 12l15-15A17 17 0 0 0 57 23L45 35 33 23Z"/><circle cx="13" cy="51" r="2"/></svg>'''
 header=fragment(f'''<header class="camp-header">
  <a class="camp-brand" href="#page-top" aria-label="RV BASE Lab トップへ">{brand_icon}<span><strong>RV BASE <b>Lab</b></strong><small>CAMPER REPAIR &amp; CARE</small></span></a>
  <nav class="camp-desktop-nav" aria-label="メインナビゲーション"><a href="#about">私たちについて</a><a href="#service">整備メニュー</a><a href="#store-info">店舗・アクセス</a></nav>
- <a class="camp-header-contact" href="https://lin.ee/bryjnk0" target="_blank" rel="noopener noreferrer">{lantern}<span>LINEで相談 <b>↗</b></span></a>
+ <a class="camp-header-contact" href="https://lin.ee/bryjnk0" target="_blank" rel="noopener noreferrer">{wrench}<span>整備のご相談 <b>↗</b></span></a>
  <button class="camp-menu-button" type="button" data-rv-menu="" aria-label="メニューを開く"><span></span><span></span><small>MENU</small></button>
 </header>''')
 cars=list(doc.xpath('//*[contains(concat(" ",normalize-space(@class)," ")," camper-swapped ")]'))
@@ -30,15 +31,17 @@ hero=fragment('''<section class="forest-hero" aria-labelledby="forest-headline">
   <div class="forest-copy">
    <p class="forest-eyebrow"><span></span> 千葉・君津のキャンピングカー修理工場</p>
    <p class="forest-wordmark">RV BASE <span>Lab</span></p>
-   <h1 id="forest-headline">直して、整えて。<br/>また、<span>旅に出よう。</span></h1>
-   <p class="forest-description">お気に入りの景色に、また会えるように。<br/>修理も、電装も、カスタムも。<br/>旅する愛車の「気になる」を、一緒に。</p>
-   <a class="camp-primary-cta" href="https://lin.ee/bryjnk0" target="_blank" rel="noopener noreferrer">愛車のことを相談する <span>↗</span></a>
+   <h1 id="forest-headline">キャンピングカーの<br/><span>修理・メンテナンス。</span></h1>
+   <p class="forest-description">修理・点検から、電装の見直しまで。<br/>キャンピングカーの経験を持つスタッフが、<br/>愛車の状態に合わせてご案内します。</p>
+   <p class="workshop-service-line">修理・点検 <span>/</span> 電装・バッテリー <span>/</span> 部品取付</p>
+   <a class="camp-primary-cta" href="https://lin.ee/bryjnk0" target="_blank" rel="noopener noreferrer">修理・整備を相談する <span>↗</span></a>
    <p class="forest-contact-note">写真があれば、LINEで気軽に。</p>
+   <p class="workshop-certification">関東運輸局長認証工場 <span>第3-5923号</span></p>
   </div>
   <div class="camp-window-area">
-   <div class="camp-window-caption">好きな景色を、これからも。</div>
-   <div class="camp-window"><img src="assets/forest-camper-life.png" width="1024" height="1024" alt="森のキャンプ場で、キャンピングカーの隣でコーヒーを楽しむ二人のイラスト" fetchpriority="high"/></div>
-   <div class="camp-window-tag"><span class="camp-tag-star">✳</span><span>GOOD CAMPER,<br/><b>GOOD JOURNEY.</b></span></div>
+   <div class="camp-window-caption">旅の安心は、整備から。</div>
+   <div class="camp-window"><img src="assets/camper-workshop.png" width="1024" height="1024" alt="工具や診断機を備えた整備工場で、キャンピングカーの電装設備を点検するメカニックのイラスト" fetchpriority="high"/></div>
+   <div class="camp-window-tag"><span class="workshop-tag-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M41 7a17 17 0 0 0-19 23L7 45a8 8 0 0 0 12 12l15-15A17 17 0 0 0 57 23L45 35 33 23Z"/></svg></span><span>CAMPER REPAIR<br/><b>キャンピングカー整備工場</b></span></div>
   </div>
  </div>
  <div class="camp-route" aria-label="3種類のキャンピングカーが走るアニメーション"><div class="camp-route-ground"></div><div class="camp-route-line"></div></div>
@@ -73,8 +76,8 @@ newfooter=fragment(f'''<footer class="camp-footer">
 </footer>''')
 replace(oldfooter,newfooter)
 etree.SubElement(doc.find('head'),'link',{'rel':'stylesheet','href':'forest-design.css'})
-etree.SubElement(doc.find('head'),'link',{'rel':'preload','href':'assets/forest-camper-life.png','as':'image'})
-doc.find('head').find('title').text='RV BASE Lab｜旅する愛車の、かかりつけ。｜キャンピングカー修理'
+etree.SubElement(doc.find('head'),'link',{'rel':'preload','href':'assets/camper-workshop.png','as':'image'})
+doc.find('head').find('title').text='RV BASE Lab｜キャンピングカー修理・メンテナンス｜千葉県君津市'
 (D/'index.html').write_text('<!DOCTYPE html>\n'+html.tostring(doc,encoding='unicode',method='html'))
 assert len(doc.xpath('//*[contains(concat(" ",normalize-space(@class)," ")," camper-swapped ")]'))==6
 assert not doc.xpath('//*[@id="header-contact" or @id="header-nav" or @id="fv-man" or @id="service-title" or @id="store-info-bar"]')

@@ -20,9 +20,9 @@ document.addEventListener('keydown', event => {
     menuButton.focus();
   }
 });
-const camper = document.querySelector('.camper-button');
+const camper = document.querySelector('.hero-camper');
 const speech = document.querySelector('.camper-speech');
-const phrases = ['次は、どこへ行こう？', 'その不調、まずは相談しよう！', '相棒を整えて、出発！', '次のキャンプが、楽しみだ！'];
+const phrases = ['今度の休みは、どこ行こう？', '出発前に、ちょっと点検。', 'まだまだ、一緒に走ろう。', '次のキャンプが、楽しみだ。'];
 let phrase = 0;
 camper.addEventListener('click', () => {
   phrase = (phrase + 1) % phrases.length;
@@ -37,3 +37,17 @@ document.querySelectorAll('[data-service]').forEach(button => button.addEventLis
   selection.hidden = false;
   document.querySelector('#contact').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 }));
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const headingObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        headingObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.about h2, .section-heading h2, .promise-copy h2, .contact h2').forEach(heading => {
+    heading.classList.add('reveal-heading');
+    headingObserver.observe(heading);
+  });
+}

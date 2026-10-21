@@ -1,4 +1,4 @@
-// Lightweight behavior for the static reference comparison.
+// Navigation and gallery for the RV BASE Lab landing page.
 // Vehicle movement, wheel rotation and speech timing use the original CSS.
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', event => {
@@ -22,6 +22,26 @@ if ('IntersectionObserver' in window) {
   }), { rootMargin: '100px 0px', threshold: 0 });
   document.querySelectorAll('.appear').forEach(element => reveal.observe(element));
 }
+
+document.querySelectorAll('[data-rv-menu]').forEach(trigger => {
+  const open = () => {
+    if(document.querySelector('.rv-mobile-menu')) return;
+    const panel = document.createElement('nav');
+    panel.className='rv-mobile-menu';
+    panel.setAttribute('aria-label','メインメニュー');
+    const close = () => {panel.remove();trigger.focus();};
+    const button = document.createElement('button');
+    button.textContent='閉じる ×';button.addEventListener('click',close);panel.append(button);
+    [['RV BASE Labについて','#about'],['サービス','#service'],['店舗・アクセス','#store-info'],['LINEで整備相談','https://lin.ee/bryjnk0'],['電話 050-5585-9522','tel:05055859522']].forEach(([label,href]) => {
+      const a=document.createElement('a');a.textContent=label;a.href=href;
+      a.addEventListener('click',close);panel.append(a);
+    });
+    panel.addEventListener('keydown',event=>{if(event.key==='Escape')close();});
+    document.body.append(panel);button.focus();
+  };
+  trigger.addEventListener('click',open);
+  trigger.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();open();}});
+});
 
 const gallery = document.querySelector('#slider-wrapper-1');
 if (gallery) {

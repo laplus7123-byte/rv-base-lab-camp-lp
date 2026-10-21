@@ -1,0 +1,33 @@
+:root { color-scheme: light; }
+body { background: #f4f0e7; }
+.rv-earth-art { filter: sepia(.34) saturate(.62); }
+.rv-mobile-hide { visibility: hidden !important; }
+.camper-swapped { aspect-ratio: auto !important; }
+.camper-swapped > .replacement-camper { display:block; }
+.camper-swapped .camper-rim { transform:translate(-50%,-50%); border:1px solid #34383b; }
+.camper-swapped[data-camper-type="cabover"] .camper-rim-front { left:24%; top:83.2%; width:6.6%; height:11.4%; }
+.camper-swapped[data-camper-type="cabover"] .camper-rim-back { left:72.1%; top:83.2%; width:6.6%; height:11.4%; }
+.camper-swapped[data-camper-type="van"] .camper-rim-front { left:22.4%; top:81.3%; width:6.5%; height:13.1%; }
+.camper-swapped[data-camper-type="van"] .camper-rim-back { left:74.5%; top:81.3%; width:6.5%; height:13.1%; }
+.camper-swapped[data-camper-type="mini"] .camper-rim-front { left:21.3%; top:81.6%; width:8.9%; height:13.4%; }
+.camper-swapped[data-camper-type="mini"] .camper-rim-back { left:74.9%; top:81.6%; width:8.9%; height:13.4%; }
+.rv-map-card { display:flex !important; flex-direction:column; gap:18px; justify-content:center; align-items:center; background:#e8eddf !important; padding:36px !important; border:2px solid #3e5d36; border-radius:22px; color:#302d27; text-align:center; }
+.rv-map-card h3 {font-size:clamp(26px,4vw,48px);font-weight:900;}
+.rv-map-card p {font-size:clamp(14px,1.5vw,20px);line-height:1.7;}
+.rv-map-card .rv-map-kicker {font-weight:800;color:#3e5d36;letter-spacing:.16em;}
+.rv-map-card a {padding:14px 24px;border:2px solid #302d27;border-radius:40px;background:#fff;color:#302d27;font-weight:700;}
+#service1-cars-img { width:min(52vw,780px) !important; bottom:15px !important; }
+#overview-car-img {width:min(45vw,600px) !important;height:auto !important;right:-50px !important;}
+#slide-1 > .image {background-size:contain !important;background-color:#f4f0e7 !important;}
+[data-s-4cf13a6c-b3d7-463c-b5c3-8c3202cf72bd] {font-size:16px !important;line-height:1.8 !important;}
+[data-s-f73b9b20-130b-4744-ba8c-4a8ae7120314] {font-size:13px !important;}
+[data-s-f1a6a807-be80-4bc8-88a1-17cf398921a4] {font-size:16px !important;}
+.rv-mobile-menu {position:fixed;inset:0;z-index:10000;background:#f4f0e7;display:flex;flex-direction:column;justify-content:center;gap:25px;padding:40px;}
+.rv-mobile-menu a {font-size:25px;font-weight:800;color:#302d27;}
+.rv-mobile-menu button {position:absolute;right:25px;top:25px;font-size:20px;border:2px solid #302d27;padding:12px 20px;border-radius:30px;}
+@media(max-width:835px){#service1-cars-img{width:88vw!important;}#overview-car-img{width:65vw!important;right:-20px!important;} .rv-map-card{padding:22px!important;gap:12px;} [data-s-f73b9b20-130b-4744-ba8c-4a8ae7120314]{font-size:12px!important;}
+  [data-s-85821e28-2d72-4894-81a2-ca071ef11d42]{font-size:18px!important;white-space:nowrap!important;}
+  #fv-title-sp-jp{background-image:none!important;}
+  #fv-title-sp-jp::after{content:'キャンピングカーの\A 修理・メンテナンス';white-space:pre;position:absolute;top:26px;left:20px;color:#fff;font-size:18px;font-weight:800;line-height:1.6;letter-spacing:.02em;}
+}
+@media(prefers-reduced-motion:reduce){#fv-title-sp-en img,#marquee img,#sns-marquee img{animation-play-state:paused!important;}}

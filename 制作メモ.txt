@@ -1,31 +1,16 @@
-RV BASE Lab キャンピングカー修理LP / Coleman参考配色版
+車の差し替え比較案 / 2026年10月21日
 
-デザイン
-・白 #ffffff / 生成り #f3efe6 / オリーブ #225603 / 淡緑 #eef1ec / 茶 #846858
-・ご提供のキャンピングカーイラストをメインに使用
-・編集可能な森とキャンプ場の線画、控えめな紙の質感
-・回転するタイヤ、タップで変わる車の吹き出し
-・見出しが順に現れる文字モーション（動きを減らす端末設定に対応）
-・LINEと電話への相談導線、FAQ、スマートフォン対応
+参考：https://maruyoshi-car.com/
+・人物、ロゴ、赤と青の配色、文字、レイアウトは参考サイトのままです。
+・ファーストビューの走る車（6インスタンス）を、ご提供のキャンピングカーへ差し替えています。
+・車の移動、タイヤ回転、吹き出しは元サイトの15秒ループに合わせています。
+・RV BASE Lab向けの社名・文章への調整は、この比較案では行っていません。
 
-掲載内容の確認元（2026年10月21日）
-https://rvbaselab.com/access
-https://rvbaselab.com/repair-maintenance
-https://rvbaselab.com/lithium-battery-conversion
-https://rvbaselab.com/ff-heater
-https://rvbaselab.com/
-https://rvbaselab.com/contact
-
-配色の参考
-https://www.coleman.co.jp/special/solocamp/
-
-文字モーションの参考
-https://www.threads.com/@ai_yunon_ai/post/DeeJRUjkXlM
-
-修理範囲、費用、期間は車両・設備の確認後に案内する旨を明記。
-
-編集するファイル
- dist/index.html : 文章と構成
- dist/style.css : 色、レイアウト、アニメーション
- dist/script.js : メニュー、吹き出し、見出し演出
- dist/assets/ : 車のイラスト、キャンプ場の線画、アイコン
+主なファイル
+ dist/index.html : 比較用ページ
+ dist/reference-layout.css : 参考ページのレイアウトとモーション
+ dist/camper-swap.css : 車体とホイールの差し替え
+ dist/reference-runtime.js : ページ内リンクなど
+ dist/reference-assets/ : 参考ページの画像と基本スタイル
+ dist/assets/camper.png : ご提供の車イラスト
+ reference-source/ : 参照元の公開構成（再編集用）

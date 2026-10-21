@@ -1,0 +1,47 @@
+/* The reference layout and motion remain in reference-layout.css.
+   These rules only fit the replacement camper and its rotating wheel hubs. */
+.camper-swapped > .replacement-camper {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain;
+}
+.camper-swapped .camper-rim {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #b2b4b3;
+  border: 1px solid #30353a;
+  transform: translate(-50%, -50%) rotate(10deg);
+  pointer-events: none;
+}
+.camper-swapped .camper-rim-front { left: 44.8%; top: 88.2%; width: 5.4%; height: 11.2%; }
+.camper-swapped .camper-rim-back { left: 81.3%; top: 75%; width: 4.4%; height: 10%; }
+.camper-swapped .camper-rim > .camper-rim-spin {
+  position: absolute !important;
+  inset: -9px !important;
+  top: -9px !important;
+  bottom: -9px !important;
+  left: -9px !important;
+  right: -9px !important;
+  width: calc(100% + 18px) !important;
+  height: calc(100% + 18px) !important;
+  max-width: none !important;
+  background: repeating-conic-gradient(#30363a 0deg 16deg, #b4b6b5 16deg 60deg);
+  clip-path: circle(48%);
+}
+.camper-rim::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 32%; aspect-ratio: 1;
+  border-radius: 50%;
+  background: #798186;
+  border: 1px solid #30353a;
+  transform: translate(-50%, -50%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .camper-swapped, .camper-rim-spin { animation-play-state: paused !important; }
+}

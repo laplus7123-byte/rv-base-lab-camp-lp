@@ -27,3 +27,12 @@ assets/camper-side-mini.png
 再構築
 build_reference_demo.py の後に adapt_rv_content.py を実行。
 配信ディレクトリは dist。
+
+森とキャンプのFVへの変更
+・https://www.takutora.net/ の「左にメッセージ、右に丸い枠のイラスト」という構成を参考に、独自の森とキャンプの表現へ変更。
+・背景に森のイラスト、丸枠の中にキャンピングカーの横でコーヒーを楽しむ二人のイラスト。
+・信号風のボタン、柱・横棒の見出しを撤去。ランタン、木製サイン、キャンプ場の道へ置き換え。
+・FV下部では横向きのキャンピングカー3種類、タイヤ、吹き出しが動く。
+・2点の新規イラストは内蔵画像生成ツールで作成。正確なプロンプトは forest-image-prompts.json に保存。
+・新しいヘッダー、メニュー、フッターは編集可能なHTML/CSS。
+・再構築は build_reference_demo.py、adapt_rv_content.py、build_forest_design.py の順。

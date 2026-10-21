@@ -44,3 +44,11 @@ build_reference_demo.py の後に adapt_rv_content.py を実行。
 ・上部相談ボタンと丸枠のラベルに工具のアイコンを使用。
 ・森の背景、緑・茶色・生成り、木のサイン、車と吹き出しのアニメーションは維持。
 ・新規画像は内蔵画像生成ツールを利用。画像と完全なプロンプトは dist/assets/camper-workshop.png、workshop-image-prompt.json に保存。
+
+2026-10-21 サービス訴求・レスポンシブ再構成
+- 最新版は build_service_design.py 単独で生成する。旧3段階の参考サイトビルダーは履歴用。
+- ヤマト運輸の個人向けトップ（https://www.kuronekoyamato.co.jp/ytc/customer/）の目的別導線を参考に、相談目的→6サービス→工場の強み→相談の流れ→FAQ→店舗→問い合わせの順に再構成。
+- 独立した service-design.css / service-design.js を使用。参考サイト由来の絶対配置と競合するスタイルを読み込まない。
+- 余白と文字サイズを統一。PC3列・タブレット2列・スマホ1列。ヘッダーナビ、スマホ相談ボタン、FAQ/サービス詳細の開閉に対応。
+- 既存の整備工場、森、横向きキャンピングカー3種の画像を活用。
+- サービスと店舗情報はRV BASE Lab公式 repair-maintenance / access の内容に基づく。

@@ -1,0 +1,27 @@
+RV BASE Lab キャンピングカー修理LP / 初稿
+
+デザイン
+・ネイビー #1e2b5a / 朱色 #f45130 / 空色 #69cdf0 / 黄 #f9d342 / 生成り #fff9ed
+・オリジナルの漫画タッチによるキャンプシーン
+・回転するタイヤ、走る車、タップで変わる吹き出し
+・サービス別相談ボタン、開閉式FAQ、スマートフォンの固定相談ボタン
+・動きを減らす端末設定に対応
+
+掲載内容の確認元（2026年10月21日）
+https://rvbaselab.com/access
+https://rvbaselab.com/repair-maintenance
+https://rvbaselab.com/lithium-battery-conversion
+https://rvbaselab.com/ff-heater
+https://rvbaselab.com/
+https://rvbaselab.com/contact
+
+連絡先は公式サイトで確認したLINE・電話・問い合わせページへ接続。
+修理範囲、費用、期間は車両・設備の確認後に案内する旨を明記。
+メインイラストの人物は創作キャラクターです。
+準備中のサービス、未確認の即日修理・無料サービス等は掲載していません。
+
+編集するファイル
+dist/index.html : 文章と構成
+dist/style.css : 色、レイアウト、アニメーション
+dist/script.js : メニュー、吹き出し、相談内容表示
+dist/assets/ : 画像とアイコン

@@ -93,6 +93,9 @@ HTML を変更したらプロジェクトルートで:
 
 ## 公開方法と注意
 
+- クライアント共有用: GitHub Pages https://laplus7123-byte.github.io/rv-base-lab-camp-lp/ （公開リポジトリ https://github.com/laplus7123-byte/rv-base-lab-camp-lp ）。`main` に push すると `.github/workflows/pages.yml` が `dist` を自動公開する（数分）。
+- 以下は Codex Sites（所有者のみ）の情報。
+
 - ホスティングは Codex の Sites プラグイン。設定は `.openai/hosting.json`。
 - 同ファイルの既存 `project_id` と `static.directory: dist` を維持する。
 - 現在は所有者のみのアクセス設定。共有範囲を勝手に変えない。

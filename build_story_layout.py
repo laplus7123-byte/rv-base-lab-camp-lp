@@ -20,13 +20,15 @@ for i,card in enumerate(grid.xpath('./article')):
  cap=card.xpath('.//figcaption')[0];cap.set('class','story-bubble')
 help=services.xpath('.//div[@class="comic-consult"]')[0];help.set('class','comic-consult story-consult')
 about=d.xpath('//section[@id="about"]')[0];about.set('class',about.get('class')+' story-about')
-flow=d.xpath('//section[@id="flow"]')[0];flow.set('class',flow.get('class')+' story-flow')
-for elem in flow.xpath('.//li'):elem.set('class','story-step')
+old_flow=d.xpath('//section[@id="flow"]')[0]
+flow=html.fromstring((ROOT/'flow-accordion.html').read_text())
+old_flow.getparent().replace(old_flow,flow)
 faq=d.xpath('//section[@id="faq"]')[0];faq.set('class',faq.get('class')+' story-faq')
 access=d.xpath('//section[@id="store-info"]')[0];access.set('class',access.get('class')+' story-access')
 contact=d.xpath('//section[@id="contact"]')[0];contact.set('class',contact.get('class')+' story-contact')
 for old in flow.xpath('.//p[@class="eyebrow"]'):old.text='HOW IT WORKS'
 for old in about.xpath('.//p[@class="eyebrow"]'):old.text='YOUR CAMPER’S HOME BASE'
 head=d.find('head');etree.SubElement(head,'link',{'rel':'stylesheet','href':'story-layout.css'});etree.SubElement(head,'script',{'src':'story-layout.js','defer':'defer'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'flow-accordion.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

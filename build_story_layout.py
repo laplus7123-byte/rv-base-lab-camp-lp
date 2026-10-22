@@ -27,7 +27,10 @@ old_about.getparent().replace(old_about,about)
 old_flow=d.xpath('//section[@id="flow"]')[0]
 flow=html.fromstring((ROOT/'flow-accordion.html').read_text())
 old_flow.getparent().replace(old_flow,flow)
-faq=d.xpath('//section[@id="faq"]')[0];faq.set('class',faq.get('class')+' story-faq')
+faq=d.xpath('//section[@id="faq"]')[0];faq.set('class','camp-faq');faq.set('aria-labelledby','camp-faq-title')
+faq_grid=faq.xpath('./div')[0];faq_grid.set('class','camp-faq-inner')
+faq_heading=html.fromstring('''<header class="camp-faq-intro"><div class="camp-faq-copy"><h2 id="camp-faq-title"><span>よくある</span><strong>質問</strong></h2><p>キャンピングカーのこと、<br>整備のこと。<br>よくあるご質問をまとめました。</p></div><figure class="camp-faq-guide"><figcaption class="story-bubble">わかりやすく<br class="faq-bubble-break">お答えします！</figcaption><img src="assets/rv-mechanic-ink-v2.png" width="1122" height="1402" loading="lazy" alt="工具を持って案内する整備士のイラスト"></figure></header>''')
+faq_grid.replace(faq_grid[0],faq_heading)
 access=d.xpath('//section[@id="store-info"]')[0];access.set('class',access.get('class')+' story-access')
 contact=d.xpath('//section[@id="contact"]')[0];contact.set('class',contact.get('class')+' story-contact')
 for old in flow.xpath('.//p[@class="eyebrow"]'):old.text='HOW IT WORKS'
@@ -36,5 +39,6 @@ head=d.find('head');etree.SubElement(head,'link',{'rel':'stylesheet','href':'sto
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'flow-accordion.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'story-refinement.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-about.css'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-faq.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

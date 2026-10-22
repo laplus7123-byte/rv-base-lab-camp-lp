@@ -1,0 +1,40 @@
+/* A large editorial title and illustrated guide introduce the FAQ. */
+.camp-faq{margin:40px 12px 0;padding:65px 40px 70px;background:linear-gradient(125deg,#edf0e4 0%,#e0e7d2 65%,#d4dfc2 100%);border-radius:28px;color:var(--ink);scroll-margin-top:24px;overflow:hidden}
+.camp-faq-inner{max-width:960px;margin:0 auto}
+.camp-faq-intro{display:grid;grid-template-columns:1fr 340px;gap:45px;align-items:center;min-height:380px;margin-bottom:40px}
+.camp-faq-copy h2{margin:0;color:var(--green);letter-spacing:.04em;line-height:1.25}
+.camp-faq-copy h2>span{display:block;font-size:43px;font-weight:900;margin-bottom:8px}
+.camp-faq-copy h2>strong{display:block;font-size:112px;font-weight:900;letter-spacing:.08em;line-height:1.2}
+.camp-faq-copy>p{font-size:16px;line-height:2.1;font-weight:600;margin:25px 0 0;color:#566047}
+.camp-faq-guide{position:relative;display:flex;flex-direction:column;align-items:center;align-self:end;margin:0;min-width:0}
+.camp-faq-guide>img{display:block;width:290px;max-width:100%;height:auto;margin-top:7px}
+.camp-faq-guide .story-bubble{position:relative;background:var(--brown);color:#fffdf4;border:2px solid #fffdf4;border-radius:30px;padding:12px 19px;max-width:100%;font-size:15px;line-height:1.5;text-align:center;white-space:nowrap;transform-origin:50% 100%}
+.camp-faq-guide .story-bubble::after{content:'';position:absolute;left:50%;bottom:-8px;width:12px;height:12px;background:var(--brown);border-right:2px solid #fffdf4;border-bottom:2px solid #fffdf4;transform:translateX(-50%) rotate(45deg)}
+.faq-bubble-break{display:none}
+.camp-faq .faq-list{display:grid;gap:13px}
+.camp-faq .faq-list details,.camp-faq .faq-list details:first-child{background:#fffef9;border:0;border-radius:16px;margin:0;padding:0 27px;box-shadow:none;overflow:hidden}
+.camp-faq .faq-list summary{display:grid;grid-template-columns:34px minmax(0,1fr) 22px;align-items:center;gap:17px;padding:24px 0;font-size:16px;line-height:1.85;font-weight:700;list-style:none;cursor:pointer}
+.camp-faq .faq-list summary::-webkit-details-marker{display:none}
+.camp-faq .faq-list summary>span{display:grid;place-items:center;border-radius:50%;width:32px;height:32px;background:var(--green);color:#fffdf4;font:700 18px/1 Georgia,serif}
+.camp-faq .faq-list summary>b{font-size:24px;line-height:1;color:var(--brown);margin:0;justify-self:end}
+.camp-faq .faq-list summary:focus-visible{outline:2px solid var(--brown);outline-offset:-3px;border-radius:8px}
+.camp-faq .faq-list details>p{border-top:1px solid #e0e5d5;margin:0;padding:20px 0 24px 51px;font-size:14px;line-height:2;color:#566047}
+@media(max-width:700px){
+ .camp-faq{margin:28px 8px 0;padding:34px 18px 35px;border-radius:20px}
+ .camp-faq-intro{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:8px;min-height:270px;margin-bottom:27px;align-items:start}
+ .camp-faq-copy{padding-top:13px}
+ .camp-faq-copy h2>span{font-size:29px;letter-spacing:.02em;margin-bottom:5px}
+ .camp-faq-copy h2>strong{font-size:73px;letter-spacing:.04em}
+ .camp-faq-copy>p{font-size:12px;line-height:1.95;margin-top:18px}
+ .camp-faq-guide{align-self:center;padding-top:8px}
+ .camp-faq-guide>img{width:100%;margin-top:10px}
+ .camp-faq-guide .story-bubble{font-size:10px;padding:9px 11px;white-space:normal;line-height:1.5}
+ .faq-bubble-break{display:block}
+ .camp-faq .faq-list{gap:12px}
+ .camp-faq .faq-list details,.camp-faq .faq-list details:first-child{padding:0 17px;border-radius:13px}
+ .camp-faq .faq-list summary{grid-template-columns:28px minmax(0,1fr) 18px;gap:11px;padding:20px 0;font-size:13px;line-height:1.8}
+ .camp-faq .faq-list summary>span{width:27px;height:27px;font-size:16px}
+ .camp-faq .faq-list summary>b{font-size:22px}
+ .camp-faq .faq-list details>p{padding:16px 0 20px;font-size:12px;line-height:1.95}
+}
+@media(max-width:360px){.camp-faq{padding-inline:14px}.camp-faq-intro{gap:5px;min-height:250px}.camp-faq-copy h2>span{font-size:25px}.camp-faq-copy h2>strong{font-size:64px}.camp-faq-copy>p{font-size:11px;margin-top:16px}.camp-faq-guide .story-bubble{font-size:9px;padding:8px 10px}.camp-faq .faq-list details,.camp-faq .faq-list details:first-child{padding-inline:13px}.camp-faq .faq-list summary{gap:9px;font-size:12px}}

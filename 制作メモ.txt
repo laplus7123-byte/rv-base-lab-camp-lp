@@ -72,3 +72,5 @@ build_reference_demo.py の後に adapt_rv_content.py を実行。
 2026-10-22 FV下の3車種を添付動画の正面寄りの斜め前角度へ変更。camper-front-* を使用。従来の横流れと重ねタイヤを撤去し、車体の軽い上下動へ。生成条件 camper-angle-prompts.json。
 
 2026-10-22 キャブコンを右下固定に変更。横並び3台を撤去。画像本体を保持し、SVGで黒いゴム外周・接地面の模様・ホイールをまとめて回転。fixed-camper.html / dist/fixed-camper.css / dist/fixed-camper.js。モバイル相談バーから16px以上離して配置。
+
+2026-10-22 AISHIFT参考でFV下を再構成。現行コマンド: python3 build_story_layout.py。FVはDOM同一、既存画像のみ使用。丸い3つの悩み→中央の縦書き見出しと整備士→左右の6サービス。緑・茶色・生成り。スクロール進入時に吹き出しを一度だけポップ表示。動きを抑える設定に対応。

@@ -21,7 +21,9 @@ for i,card in enumerate(grid.xpath('./article')):
  card.xpath('./div[@class="comic-service-copy"]')[0].set('class','story-service-copy')
  cap=card.xpath('.//figcaption')[0];cap.set('class','story-bubble')
 help=services.xpath('.//div[@class="comic-consult"]')[0];help.set('class','comic-consult story-consult')
-about=d.xpath('//section[@id="about"]')[0];about.set('class',about.get('class')+' story-about')
+old_about=d.xpath('//section[@id="about"]')[0]
+about=html.fromstring((ROOT/'camp-about.html').read_text())
+old_about.getparent().replace(old_about,about)
 old_flow=d.xpath('//section[@id="flow"]')[0]
 flow=html.fromstring((ROOT/'flow-accordion.html').read_text())
 old_flow.getparent().replace(old_flow,flow)
@@ -33,5 +35,6 @@ for old in about.xpath('.//p[@class="eyebrow"]'):old.text='YOUR CAMPER’S HOME 
 head=d.find('head');etree.SubElement(head,'link',{'rel':'stylesheet','href':'story-layout.css'});etree.SubElement(head,'script',{'src':'story-layout.js','defer':'defer'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'flow-accordion.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'story-refinement.css'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-about.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

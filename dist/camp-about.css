@@ -1,0 +1,77 @@
+.camp-about{margin:60px 12px;color:var(--ink);scroll-margin-top:24px;overflow:hidden;border-radius:28px}
+.camp-intro{background:#4b6039;color:#fffdf4;padding:65px 40px 60px}
+.camp-intro-inner{max-width:950px;margin:auto}
+.camp-eyebrow{font:700 11px/1.6 Arial,sans-serif;letter-spacing:.15em;color:#e0d8bc;margin:0 0 28px}
+.camp-intro-visual{display:grid;grid-template-columns:minmax(0,1fr) 225px;gap:64px;align-items:center}
+.camp-life-art{margin:0;position:relative}
+.camp-life-art>img{display:block;width:100%;height:auto;aspect-ratio:1.15;object-fit:cover;border-radius:48% 48% 12px 12px;filter:saturate(.7)}
+.camp-life-art .story-bubble{position:absolute;top:5%;left:4%;background:var(--brown);font-size:17px;border:2px solid #fffdf4;padding:13px 23px;width:max-content;border-radius:26px 26px 26px 4px}
+.camp-intro h2{display:flex;flex-direction:row-reverse;justify-content:center;gap:17px;height:490px;margin:0;font-size:40px;font-weight:900;line-height:1.6;letter-spacing:.04em;color:#fffdf4;white-space:nowrap}
+.camp-intro h2>span,.camp-intro h2>strong{writing-mode:vertical-rl;text-orientation:mixed;display:block;font-weight:900}
+.camp-intro h2>strong{color:#e5d4ae}
+.camp-intro-copy{font-size:16px;line-height:2.1;margin:32px 0 0;font-weight:600;color:#fffdf4}
+.camp-strengths{padding:65px 40px 35px;background-color:#f2f1e9;background-image:radial-gradient(#6d765e55 .7px,transparent .8px);background-size:25px 25px}
+.camp-strengths-inner{max-width:950px;margin:auto}
+.camp-experience{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin:0 0 65px}
+.camp-tab{display:table;background:var(--green);color:#fffdf4;font-size:15px;line-height:1.5;font-weight:800;padding:7px 15px;border-radius:5px 5px 0 0;margin:0}
+.camp-years{display:flex;align-items:baseline;gap:13px;background:#fffef9;width:max-content;max-width:100%;padding:2px 23px 5px;margin:0;border-radius:0 5px 5px 5px;color:var(--green)}
+.camp-years strong{font:800 110px/1.1 Arial,sans-serif;letter-spacing:-.05em}
+.camp-years>span{font-size:33px;font-weight:700}
+.camp-metric-caption{font-size:14px;line-height:1.8;margin-top:16px}
+.camp-experience>div:nth-child(2){padding-top:45px}
+.camp-experience>div:nth-child(2) .camp-tab{background:var(--brown)}
+.camp-experience>div:nth-child(2) .camp-years{color:var(--brown)}
+.camp-reasons-lead{font-size:22px;font-weight:800;line-height:1.7;margin:0 0 45px;color:var(--green)}
+.camp-reasons{list-style:none;padding:0;margin:0;display:grid;gap:65px}
+.camp-reasons>li{display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative}
+.camp-reason-content{width:71%;position:relative;z-index:1}
+.camp-reasons>li:nth-child(even){flex-direction:row-reverse}
+.camp-reasons>li:nth-child(3) .camp-reason-content{margin-left:7%}
+.camp-reason-panel{display:flex;align-items:center;gap:22px;padding:8px 24px 13px;background:#fffef9;border-radius:0 5px 5px 5px;width:max-content;max-width:100%}
+.camp-reason-number{font:800 94px/1.1 Arial,sans-serif;letter-spacing:-.06em;color:var(--green);flex-shrink:0}
+.camp-reason-panel h3{font-size:25px;font-weight:800;line-height:1.6;color:var(--green);margin:0;letter-spacing:0}
+.camp-reason-description{font-size:16px;line-height:1.9;margin:17px 0 0}
+.camp-cert{font-size:12px;line-height:1.8;color:#637057;margin-top:13px}
+.camp-reason-icon{width:150px;flex-shrink:0;color:#c5cfb6}
+.camp-reasons>li:nth-child(2) .camp-tab{background:var(--brown)}
+.camp-reasons>li:nth-child(2) .camp-reason-number,.camp-reasons>li:nth-child(2) h3{color:var(--brown)}
+.camp-reasons>li:nth-child(2) .camp-reason-icon{color:#d5c8ae}
+.camp-art-note{font-size:10px;color:#6c715f;line-height:1.8;text-align:center;margin:48px 0 0}
+@media(max-width:800px){.camp-intro-visual{grid-template-columns:minmax(0,1fr) 165px;gap:28px}.camp-intro h2{font-size:33px;height:400px;gap:9px}.camp-life-art>img{aspect-ratio:.95}.camp-intro-copy{font-size:14px}.camp-reason-panel{gap:16px;padding-inline:20px}.camp-reason-panel h3{font-size:21px}.camp-reason-number{font-size:80px}.camp-reason-icon{width:115px}.camp-reason-description{font-size:14px}.camp-experience{gap:35px}.camp-years strong{font-size:95px}}
+@media(max-width:600px){
+ .camp-about{margin:38px 8px;border-radius:20px}
+ .camp-intro{padding:32px 19px 33px}
+ .camp-eyebrow{font-size:8px;letter-spacing:.11em;margin-bottom:21px}
+ .camp-intro-visual{grid-template-columns:minmax(0,1fr) 96px;gap:13px;align-items:center}
+ .camp-intro h2{font-size:26px;gap:8px;line-height:1.35;height:310px;letter-spacing:.04em}
+ .camp-life-art>img{aspect-ratio:.73;object-position:46% center;border-radius:100px 100px 9px 9px}
+ .camp-life-art .story-bubble{font-size:11px;padding:9px 12px;left:-5px;top:-12px;border-radius:20px 20px 20px 4px}
+ .camp-intro-copy{font-size:13px;line-height:2;margin-top:24px;font-weight:500}
+ .camp-intro-copy br{display:none}
+ .camp-strengths{padding:37px 17px 27px;background-size:22px 22px}
+ .camp-experience{gap:15px;margin-bottom:43px}
+ .camp-tab{font-size:12px;padding:6px 10px}
+ .camp-experience .camp-tab{font-size:10px;padding:5px 8px}
+ .camp-years{gap:6px;padding:4px 13px 7px;width:100%}
+ .camp-years strong{font-size:73px;line-height:1.05}
+ .camp-years>span{font-size:24px}
+ .camp-metric-caption{font-size:11px;line-height:1.8;margin-top:12px}
+ .camp-experience>div:nth-child(2){padding-top:27px}
+ .camp-reasons-lead{font-size:17px;margin-bottom:28px}
+ .camp-reasons{gap:39px}
+ .camp-reasons>li{gap:0;display:block;padding-right:35px}
+ .camp-reasons>li:nth-child(even){padding-right:0;padding-left:35px}
+ .camp-reasons>li:nth-child(3){padding-left:15px;padding-right:20px}
+ .camp-reasons>li:nth-child(3) .camp-reason-content{margin-left:0}
+ .camp-reason-content{width:100%}
+ .camp-reason-panel{gap:13px;padding:8px 13px 10px;width:100%}
+ .camp-reason-number{font-size:65px}
+ .camp-reason-panel h3{font-size:17px;line-height:1.5}
+ .camp-reason-description{font-size:13px;line-height:1.9;margin-top:15px}
+ .camp-reason-description br{display:none}
+ .camp-cert{font-size:10px;line-height:1.8;margin-top:12px}
+ .camp-reason-icon{position:absolute;width:72px;right:-10px;top:7px;opacity:.6}
+ .camp-reasons>li:nth-child(even) .camp-reason-icon{right:auto;left:-9px;top:3px}
+ .camp-art-note{margin-top:35px;font-size:9px}
+}
+@media(max-width:360px){.camp-intro{padding-inline:15px}.camp-intro-visual{grid-template-columns:minmax(0,1fr) 83px;gap:10px}.camp-intro h2{font-size:23px;height:280px;gap:7px}.camp-life-art .story-bubble{font-size:10px;padding:8px 10px}.camp-strengths{padding-inline:13px}.camp-years strong{font-size:62px}.camp-years>span{font-size:21px}.camp-years{padding-inline:10px}.camp-reason-number{font-size:56px}.camp-reason-panel{gap:10px;padding-inline:10px}.camp-reason-panel h3{font-size:15px}.camp-reasons>li{padding-right:26px}.camp-reasons>li:nth-child(even){padding-left:26px}.camp-reasons>li:nth-child(3){padding-left:10px;padding-right:16px}}

@@ -81,7 +81,7 @@ for link in d.xpath('//a[contains(@href,"lin.ee/")]'):
   for child in list(link):label.append(child)
   link.append(label)
   logo=etree.Element('img',{'class':'line-brand-icon','src':'assets/line-brand-icon.png','width':'40','height':'40','alt':'','aria-hidden':'true','decoding':'async'})
-  link.insert(0,logo)
+  if 'header-cta' not in link.get('class',''):link.insert(0,logo)
   link.set('class',(link.get('class','')+' line-branded-cta').strip())
 for mobile_line in d.xpath('//div[@class="mobile-contact"]/a[contains(@href,"lin.ee/")]'):
  mobile_line.set('aria-label','LINEで相談する（新しいタブで開きます）')

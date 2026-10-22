@@ -53,8 +53,8 @@ a.line-branded-cta:hover{transform:none}
  .camp-reason-content .camp-strength-art{max-width:285px;margin-top:16px}
 }
 @media(max-width:700px){
- .site-header a.header-cta.line-branded-cta{display:flex;width:40px;height:40px;padding:0;gap:0;background:transparent;border:0;border-radius:0;box-shadow:none;flex-shrink:0}
- .site-header a.header-cta.line-branded-cta .line-cta-label{display:none}
+ .site-header a.header-cta.line-branded-cta{display:flex;width:auto;min-height:40px;padding:9px 10px;gap:0;flex-shrink:0;white-space:nowrap;letter-spacing:0}
+ .site-header a.header-cta.line-branded-cta .line-cta-label{display:flex;gap:6px;padding-left:0}
  .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 90px;gap:20px 12px;padding:24px 18px}
  .story-consult .consult-face{height:190px;align-self:center}
  .story-consult h3{font-size:20px;line-height:1.6}

@@ -1,6 +1,7 @@
 (() => {
+  const camper = document.querySelector('.fixed-camper');
   const bubble = document.querySelector('.fixed-camper-bubble');
-  if (!bubble) return;
+  if (!camper || !bubble) return;
 
   const messages = [
     ['.poster-hero', '旅の前に、点検を。'],
@@ -20,12 +21,37 @@
     const element = document.querySelector(selector);
     return element ? [{ element, text }] : [];
   });
+  const departureScene = document.querySelector('#contact');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let scheduled = false;
   let transition;
+  let departed = false;
+  let drive;
+
+  function updateDeparture() {
+    if (!departureScene) return;
+    const reachedBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    const next = reachedBottom || departureScene.getBoundingClientRect().top <= window.innerHeight * 0.6;
+    if (next === departed) return;
+    departed = next;
+    camper.classList.toggle('is-departed', departed);
+    drive?.cancel();
+    if (reducedMotion.matches || !camper.animate) return;
+    // Facing left: leave forward to the left, come back forward from the right.
+    drive = departed
+      ? camper.animate(
+        [{ transform: 'translateX(0)' }, { transform: 'translateX(calc(-100vw - 100%))' }],
+        { duration: 1600, easing: 'cubic-bezier(.5,0,.85,.45)', fill: 'forwards' },
+      )
+      : camper.animate(
+        [{ transform: 'translateX(calc(100% + 30px))' }, { transform: 'translateX(0)' }],
+        { duration: 900, easing: 'cubic-bezier(.2,.7,.3,1)' },
+      );
+  }
 
   function updateMessage() {
     scheduled = false;
+    updateDeparture();
     // Read fresh positions so image loading and accordion changes stay in sync.
     const readingLine = window.innerHeight * 0.42;
     let active = scenes[0];
@@ -54,6 +80,9 @@
   window.addEventListener('pageshow', scheduleUpdate);
   document.addEventListener('toggle', scheduleUpdate, true);
   document.addEventListener('load', scheduleUpdate, true);
-  reducedMotion.addEventListener('change', () => transition?.cancel());
+  reducedMotion.addEventListener('change', () => {
+    transition?.cancel();
+    if (reducedMotion.matches) drive?.cancel();
+  });
   updateMessage();
 })();

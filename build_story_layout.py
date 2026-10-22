@@ -46,6 +46,7 @@ map_link.text='Google マップで場所・経路を確認 '
 map_frame=html.fromstring('''<div class="access-map"><iframe title="RV BASE Labの所在地：千葉県君津市俵田729-3" src="https://www.google.com/maps?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%90%9B%E6%B4%A5%E5%B8%82%E4%BF%B5%E7%94%B0729-3&amp;ll=35.3170053,140.0579389&amp;z=16&amp;hl=ja&amp;output=embed" width="600" height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>''')
 map_link.addprevious(map_frame)
 contact=d.xpath('//section[@id="contact"]')[0];contact.set('class',contact.get('class')+' story-contact')
+for form_link in contact.xpath('.//a[@class="contact-form"]'):form_link.drop_tree()
 for old in flow.xpath('.//p[@class="eyebrow"]'):old.text='HOW IT WORKS'
 for old in about.xpath('.//p[@class="eyebrow"]'):old.text='YOUR CAMPER’S HOME BASE'
 head=d.find('head');etree.SubElement(head,'link',{'rel':'stylesheet','href':'story-layout.css'});etree.SubElement(head,'script',{'src':'story-layout.js','defer':'defer'})

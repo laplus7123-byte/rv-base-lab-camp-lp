@@ -7,8 +7,11 @@
 .tire-rotation{transform-box:view-box;transform-origin:0 0;animation:whole-tire-roll 1.5s linear infinite}
 
 
+.fixed-camper-bubble{transition:opacity .25s ease}
+.fixed-camper.is-departed .fixed-camper-bubble{opacity:0}
+.fixed-camper.is-departed .tire-rotation{animation-duration:.45s}
 @keyframes whole-tire-roll{to{transform:rotate(-360deg)}}
 @keyframes fixed-camper-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
 .poster-hero+.manga-intro{padding-top:70px}
 @media(max-width:700px){.fixed-camper{width:105px;right:8px;bottom:calc(77px + env(safe-area-inset-bottom,0px));z-index:25}.fixed-camper-bubble{font-size:8px;border-width:1.5px;padding:5px 7px;margin-bottom:-5px}.fixed-camper-bubble:after{width:6px;height:6px;bottom:-5px;border-width:1.5px}.poster-hero+.manga-intro{padding-top:45px}}
-@media(prefers-reduced-motion:reduce){.fixed-camper-drawing,.tire-rotation{animation:none}}
+@media(prefers-reduced-motion:reduce){.fixed-camper-drawing,.tire-rotation{animation:none}.fixed-camper.is-departed{visibility:hidden}}

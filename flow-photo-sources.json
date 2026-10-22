@@ -1,0 +1,22 @@
+{
+  "source_page": "https://rvbaselab.com/",
+  "note": "Official site labels these assets as reference images; not represented as actual company staff or completed projects.",
+  "assets": [
+    {
+      "local": "dist/assets/flow-photo-custom.webp",
+      "source": "https://rvbaselab.com/assets/service-custom.webp"
+    },
+    {
+      "local": "dist/assets/flow-photo-electrical.webp",
+      "source": "https://rvbaselab.com/assets/service-electrical.webp"
+    },
+    {
+      "local": "dist/assets/flow-photo-parts.webp",
+      "source": "https://rvbaselab.com/assets/service-parts.webp"
+    },
+    {
+      "local": "dist/assets/flow-photo-repair.webp",
+      "source": "https://rvbaselab.com/assets/service-repair.webp"
+    }
+  ]
+}

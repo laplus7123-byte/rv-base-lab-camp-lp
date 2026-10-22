@@ -1,0 +1,34 @@
+{
+  "method": "Built-in image_gen",
+  "purpose": "ご相談の流れの実写風イメージ。実在のスタッフや顧客の写真ではありません。",
+  "assets": [
+    {
+      "name": "flow-photo-owner-capture-v2",
+      "prompt": "Create a photorealistic editorial photograph for a Japanese camper repair business website, landscape 3:2, natural daylight, professional but candid documentary photography. Realistic anatomy and hands, believable practical vehicle details. Warm ivory camper, forest green workshop exterior, gentle warm wood and neutral tones, natural colors, no stylized illustration, no cartoon, no glossy CGI, no text, no watermark, no logos, no readable license plates. People are fictional Japanese adults. Absolutely nobody looks at the camera. Frame the full action with faces/hands/important equipment inside central 80%.\nAn adult camper owner wearing an olive jacket photographing a specific small area on the outside of his ivory cabover camper with his smartphone. View from behind and to the side of the owner so we see both hands holding phone horizontally and the camper side wall and service hatch he is photographing. The phone is clearly aimed at the camper, not a selfie. Three-quarter rear view, whole upper body visible, camper fills background. Parked safely outside a tidy workshop, daylight. Camera captures the person taking a camper photo.",
+      "original": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-939e271b-478e-4e30-afc1-d4caf32f1ccc.png",
+      "saved_original": "illustration-originals/flow-photo-owner-capture-v2.png",
+      "web_asset": "dist/assets/flow-photo-owner-capture-v2.webp"
+    },
+    {
+      "name": "flow-photo-exterior-inspection-v2",
+      "prompt": "Create a photorealistic editorial photograph for a Japanese camper repair business website, landscape 3:2, natural daylight, professional but candid documentary photography. Realistic anatomy and hands, believable practical vehicle details. Warm ivory camper, forest green workshop exterior, gentle warm wood and neutral tones, natural colors, no stylized illustration, no cartoon, no glossy CGI, no text, no watermark, no logos, no readable license plates. People are fictional Japanese adults. Absolutely nobody looks at the camera. Frame the full action with faces/hands/important equipment inside central 80%.\nA Japanese male mechanic about 35, short black hair, clean-shaven, wearing charcoal work coveralls, carefully checking the exterior of an ivory cabover camper. In strict side profile he examines the outer window frame and weather seal, one gloved hand gently feels the seam, the other holds a small inspection flashlight. We can see his concentrated face looking directly at the seal, his hands and a broad expanse of the camper exterior. Medium view, parked workshop bay, no power tools.",
+      "original": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-2c9ce4b7-f00b-4041-b0a8-b5d9a892bd9b.png",
+      "saved_original": "illustration-originals/flow-photo-exterior-inspection-v2.png",
+      "web_asset": "dist/assets/flow-photo-exterior-inspection-v2.webp"
+    },
+    {
+      "name": "flow-photo-calculator-consult-v2",
+      "prompt": "Create a photorealistic editorial photograph for a Japanese camper repair business website, landscape 3:2, natural daylight, professional but candid documentary photography. Realistic anatomy and hands, believable practical vehicle details. Warm ivory camper, forest green workshop exterior, gentle warm wood and neutral tones, natural colors, no stylized illustration, no cartoon, no glossy CGI, no text, no watermark, no logos, no readable license plates. People are fictional Japanese adults. Absolutely nobody looks at the camera. Frame the full action with faces/hands/important equipment inside central 80%.\nAt a small workshop reception desk, a Japanese male mechanic about 35 with short black hair in charcoal coveralls shows a handheld calculator to a camper owner wearing an olive jacket. Candid side view of the two people looking at the calculator together, mechanic holding calculator tilted toward CUSTOMER not camera, customer hand resting on table. Calculator screen lit but no legible price or prominent digits. Simple blank estimate sheet with no readable text, pen on table, softly out-of-focus ivory camper outside window. Natural professional explanation of cost before work, friendly calm expression, no camera eye contact.",
+      "original": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-41bcf8a0-f70a-4b7c-8084-23a33fd45079.png",
+      "saved_original": "illustration-originals/flow-photo-calculator-consult-v2.png",
+      "web_asset": "dist/assets/flow-photo-calculator-consult-v2.webp"
+    },
+    {
+      "name": "flow-photo-driver-handover-v2",
+      "prompt": "Create a photorealistic editorial photograph for a Japanese camper repair business website, landscape 3:2, natural daylight, professional but candid documentary photography. Realistic anatomy and hands, believable practical vehicle details. Warm ivory camper, forest green workshop exterior, gentle warm wood and neutral tones, natural colors, no stylized illustration, no cartoon, no glossy CGI, no text, no watermark, no logos, no readable license plates. People are fictional Japanese adults. Absolutely nobody looks at the camera. Frame the full action with faces/hands/important equipment inside central 80%.\nAn adult Japanese customer seated properly in the RIGHT-HAND driver's seat of an ivory Japanese cabover camper, with driver's side window fully open. A Japanese male mechanic about 35 with short black hair in charcoal work coveralls stands OUTSIDE beside that open window, talking to the seated driver and explaining something with a small natural hand gesture. Both look at each other, friendly conversation before departure. View from outside the RIGHT side of the vehicle, medium-wide eye level clearly showing driver behind steering wheel through open window, mechanic's standing body outside, door and side mirror, roof cabover above. The vehicle is parked safely in front of a green workshop, engine off. Do not have mechanic lean unnaturally into window; anatomically correct, realistic perspective.",
+      "original": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-fbf98ab3-02d4-4a51-9a53-a0e2f8d9040b.png",
+      "saved_original": "illustration-originals/flow-photo-driver-handover-v2.png",
+      "web_asset": "dist/assets/flow-photo-driver-handover-v2.webp"
+    }
+  ]
+}

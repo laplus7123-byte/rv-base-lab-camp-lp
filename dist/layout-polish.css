@@ -33,6 +33,13 @@ a.line-branded-cta:hover{transform:none}
 .site-header .header-cta .line-cta-label{padding-left:0}
 .mobile-contact a.line-branded-cta{gap:10px;padding:10px 12px}
 .mobile-contact .line-cta-label{font-size:12px}
+.mobile-contact a.line-branded-cta .line-cta-label{white-space:nowrap;flex-wrap:nowrap;gap:12px;font-size:14px}
+.mobile-contact a.line-branded-cta .line-cta-label>span{flex-shrink:0;font-size:20px;line-height:1}
+/* Keep people, hands and equipment clear of the animated speech captions. */
+.consultation-panel figure{background:transparent}
+.consultation-panel figure>img{border-radius:12px}
+.consultation-panel .consultation-bubble,.consultation-step:nth-child(even) .consultation-bubble{position:relative;inset:auto;width:fit-content;max-width:calc(100% - 24px);margin:16px 12px 6px;padding:13px 19px;font-size:clamp(13px,1.6vw,19px)}
+.consultation-step:nth-child(even) .consultation-bubble{margin-left:auto}
 @media(max-width:800px){
  .camp-intro-visual{grid-template-columns:minmax(0,1fr) 165px;gap:28px}
 }

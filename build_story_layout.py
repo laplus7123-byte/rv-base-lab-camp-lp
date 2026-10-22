@@ -83,6 +83,11 @@ for link in d.xpath('//a[contains(@href,"lin.ee/")]'):
   logo=etree.Element('img',{'class':'line-brand-icon','src':'assets/line-brand-icon.png','width':'40','height':'40','alt':'','aria-hidden':'true','decoding':'async'})
   link.insert(0,logo)
   link.set('class',(link.get('class','')+' line-branded-cta').strip())
+for mobile_line in d.xpath('//div[@class="mobile-contact"]/a[contains(@href,"lin.ee/")]'):
+ mobile_line.set('aria-label','LINEで相談する（新しいタブで開きます）')
+ label=mobile_line.xpath('./span[@class="line-cta-label"]')[0]
+ label.clear();label.set('class','line-cta-label');label.text='LINE'
+ arrow=etree.SubElement(label,'span',{'aria-hidden':'true'});arrow.text='↗'
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'layout-polish.css'})
 # Remove decorative English captions; retain brand and service names.
 for caption in d.xpath('//p[contains(@class,"eyebrow")] | //p[@class="poster-english"] | //div[@class="story-service-title"]/div/p'):

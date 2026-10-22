@@ -63,5 +63,21 @@ faq_image.set('width','1086');faq_image.set('height','1448')
 faq_image.set('alt','質問の見出しに視線を向けて案内する整備士')
 faq_image.set('decoding','async')
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'illustration-refresh.css'})
+# Consultation copy before the right-hand character; logo on every LINE entry.
+consult=services.xpath('.//div[contains(@class,"story-consult")]')[0]
+consult.xpath('./div[not(@class)]')[0].set('class','consult-message')
+for link in d.xpath('//a[contains(@href,"lin.ee/")]'):
+ if 'header-cta' in link.get('class',''):link.set('aria-label','LINEで相談する（新しいタブで開きます）')
+ for generic_icon in link.xpath('./svg'):link.remove(generic_icon)
+ if not link.xpath('./img[@class="line-brand-icon"]'):
+  label=etree.Element('span',{'class':'line-cta-label'})
+  label.text=link.text or ''
+  link.text=None
+  for child in list(link):label.append(child)
+  link.append(label)
+  logo=etree.Element('img',{'class':'line-brand-icon','src':'assets/line-brand-icon.png','width':'40','height':'40','alt':'','aria-hidden':'true','decoding':'async'})
+  link.insert(0,logo)
+  link.set('class',(link.get('class','')+' line-branded-cta').strip())
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'layout-polish.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

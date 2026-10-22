@@ -1,0 +1,68 @@
+/* Consultation: readable copy on the left, mechanic on the right. */
+.comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 180px;gap:24px 28px;padding:32px;align-items:center}
+.story-consult .consult-message{grid-column:1;grid-row:1;min-width:0}
+.story-consult .consult-face{grid-column:2;grid-row:1;width:100%;height:250px;margin:0;align-self:end;border-radius:0;overflow:hidden}
+.story-consult .consult-face img{position:static;display:block;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;transform:none}
+.story-consult .manga-button{grid-column:1/-1;grid-row:2;justify-self:stretch;margin:0}
+.story-consult h3{font-size:clamp(22px,2.5vw,32px);line-height:1.6;line-break:strict}
+.story-consult .consult-message>span{display:block;line-height:1.8}
+/* Retain the full conversation and place the bubble above both faces. */
+.camp-life-art>img{aspect-ratio:3/4;object-fit:contain;object-position:center;border-radius:48% 48% 12px 12px;filter:none}
+.camp-life-art .story-bubble{top:0;left:0;font-size:15px;padding:12px 18px}
+.camp-intro-visual{grid-template-columns:minmax(0,1fr) 225px;max-width:790px;margin-inline:auto}
+/* Matching label and value rows on the two experience columns. */
+.camp-experience>div:nth-child(n){padding-top:0;min-width:0}
+.camp-experience>div:nth-child(n) .camp-tab{display:flex;align-items:center;width:100%;max-width:none;min-height:40px;padding:9px 12px;font-size:15px;line-height:1.4;white-space:nowrap;box-sizing:border-box}
+.camp-experience>div:nth-child(n) .camp-years{width:100%;max-width:none;height:116px;padding:10px 16px;gap:12px}
+.camp-experience>div:nth-child(n) .camp-years strong{font-size:96px;line-height:1}
+.camp-experience>div:nth-child(n) .camp-years>span{font-size:36px;line-height:1}
+/* Title, number, complete artwork, then explanatory text. */
+.camp-reason-content .camp-strength-art{margin:18px 0 0;max-width:286px}
+.camp-reason-content .camp-reason-description{margin-top:16px}
+/* Use the official, unmodified LINE brand asset at a readable size. */
+a.line-branded-cta{display:flex;align-items:center;gap:12px}
+a.line-branded-cta .line-brand-icon{display:block;flex:0 0 40px;width:40px;height:40px;max-width:none;object-fit:contain;filter:none;transform:none;animation:none}
+a.line-branded-cta .line-cta-label{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:10px;font:inherit;letter-spacing:inherit;line-height:1.5}
+a.line-branded-cta:hover{transform:none}
+.story-service .detail-body a.line-branded-cta{gap:12px}
+.header-cta.line-branded-cta{padding-block:8px}
+.site-header .header-cta .line-cta-label{padding-left:0}
+.mobile-contact a.line-branded-cta{gap:10px;padding:10px 12px}
+.mobile-contact .line-cta-label{font-size:12px}
+@media(max-width:800px){
+ .camp-intro-visual{grid-template-columns:minmax(0,1fr) 165px;gap:28px}
+}
+@media(max-width:767px){
+ .camp-experience>div:nth-child(n) .camp-tab{font-size:11px;min-height:33px;padding:8px}
+ .camp-experience>div:nth-child(n) .camp-years{height:91px;padding:10px 12px;gap:7px}
+ .camp-experience>div:nth-child(n) .camp-years strong{font-size:72px}
+ .camp-experience>div:nth-child(n) .camp-years>span{font-size:27px}
+ .camp-reason-content .camp-strength-art{max-width:285px;margin-top:16px}
+}
+@media(max-width:700px){
+ .site-header a.header-cta.line-branded-cta{display:flex;width:40px;height:40px;padding:0;gap:0;background:transparent;border:0;border-radius:0;box-shadow:none;flex-shrink:0}
+ .site-header a.header-cta.line-branded-cta .line-cta-label{display:none}
+ .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 90px;gap:20px 12px;padding:24px 18px}
+ .story-consult .consult-face{height:190px;align-self:center}
+ .story-consult h3{font-size:20px;line-height:1.6}
+ .story-consult .consult-message>span{font-size:10px}
+ .story-consult .manga-button{padding:15px 16px;font-size:12px;gap:12px}
+ .story-consult .manga-button b{font-size:22px}
+}
+@media(max-width:600px){
+ .camp-intro-visual{grid-template-columns:minmax(0,1fr) 96px;gap:13px}
+ .camp-life-art .story-bubble{font-size:10px;padding:8px 11px;top:-12px;left:-4px}
+}
+@media(max-width:380px){
+ .camp-experience>div:nth-child(n) .camp-tab{font-size:10px;min-height:31px;padding:7px}
+ .camp-experience>div:nth-child(n) .camp-years{height:82px;padding:9px 10px;gap:5px}
+ .camp-experience>div:nth-child(n) .camp-years strong{font-size:64px}
+ .camp-experience>div:nth-child(n) .camp-years>span{font-size:23px}
+ .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 76px;gap:18px 10px;padding-inline:16px}
+ .story-consult h3{font-size:18px}
+ .story-consult .consult-face{height:175px}
+ .story-consult .manga-button{padding-inline:12px;font-size:11px;gap:10px}
+}
+@media(max-width:360px){
+ .camp-intro-visual{grid-template-columns:minmax(0,1fr) 83px;gap:10px}
+}

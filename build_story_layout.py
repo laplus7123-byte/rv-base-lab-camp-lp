@@ -8,8 +8,16 @@ p=ROOT/'dist/index.html';d=html.fromstring(p.read_text())
 intro=d.xpath('//section[@class="manga-intro"]')[0]
 new=html.fromstring('''<section class="story-worries" aria-labelledby="worry-title"><div class="container"><p class="story-eyebrow">BEFORE YOUR NEXT JOURNEY</p><h2 id="worry-title">次の旅の前に、<br><em>愛車のこと</em>で<br class="mobile-only">気になっていませんか？</h2><div class="story-worry-grid"><article class="story-worry"><a href="#repair" class="story-circle"><img src="assets/manga-repair.png" width="1536" height="1024" loading="lazy" alt="キャンピングカーを点検する整備士"><span class="story-bubble">この音、<br>いつもと違うかも。</span></a><h3>小さな不調、<br>そのままにしていませんか。</h3><p>気になる異音や設備の不調。<br>旅に出る前に、<br>一度きちんと見ておきたい。</p></article><article class="story-worry"><a href="#electrical" class="story-circle"><img src="assets/manga-electrical.png" width="1536" height="1024" loading="lazy" alt="バッテリーを点検する整備士"><span class="story-bubble">旅先で電気、<br>足りるかな？</span></a><h3>旅先でも、<br>心地よく過ごしたい。</h3><p>バッテリーや充電、冬の暖房。<br>車内で過ごす時間も、<br>安心して楽しみたい。</p></article><article class="story-worry"><a href="#install" class="story-circle"><img src="assets/manga-install.png" width="1536" height="1024" loading="lazy" alt="車内の使い勝手を相談するオーナーと整備士"><span class="story-bubble">ここがもっと<br>使いやすければ！</span></a><h3>「こうしたい」を、<br>どこに相談しよう。</h3><p>部品の取付や収納の見直し。<br>自分たちの旅に合う一台に、<br>少しずつ整えていきたい。</p></article></div><div class="story-down" aria-hidden="true"><span></span><span></span></div></div></section>''')
 intro.getparent().replace(intro,new)
-for heading in new.xpath('.//article/h3'):
- heading.getparent().remove(heading)
+worry_copy=[
+ ('小さな不調も、<br>ご相談ください。','いつもと違う音や、設備の不調。気になることは、旅に出る前に一度確認しておきませんか。修理も点検も、愛車の状態からお伺いします。','修理・メンテナンスを見る'),
+ ('旅先でも、<br>心地よい車内に。','バッテリーや充電、寒い季節の暖房。旅先での使い方に合わせて、車内の設備を見直しませんか。今お使いの装備からご相談いただけます。','電装・バッテリーを見る'),
+ ('愛車を、もっと<br>使いやすく。','部品の取付や収納の見直し。「ここがこうなったら」というご希望をお聞かせください。自分たちの旅に合う一台を、一緒に考えます。','部品取付・カスタムを見る')]
+for card,(title,description,link_text) in zip(new.xpath('.//article'),worry_copy):
+ picture=card.xpath('./a')[0];picture.set('class','worry-picture')
+ for bubble in picture.xpath('./span'):picture.remove(bubble)
+ for item in card.xpath('./h3|./p'):card.remove(item)
+ copy=html.fromstring(f'<div class="worry-copy"><h3>{title}</h3><p>{description}</p><a class="worry-more" href="{picture.get("href")}">{link_text}<span aria-hidden="true">↗</span></a></div>')
+ card.append(copy)
 services=d.xpath('//section[@id="service"]')[0];services.set('class','story-services')
 for old in services.xpath('.//div[@class="chapter"]|.//div[@class="comic-section-title"]'):old.getparent().remove(old)
 grid=services.xpath('.//div[@class="comic-service-grid"]')[0];grid.set('class','story-solutions')
@@ -41,5 +49,6 @@ etree.SubElement(head,'link',{'rel':'stylesheet','href':'story-refinement.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-about.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-faq.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-proof.css'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'worry-editorial.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

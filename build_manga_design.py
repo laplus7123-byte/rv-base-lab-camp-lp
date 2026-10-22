@@ -44,6 +44,13 @@ for i,li in enumerate(flow.xpath('.//ol/li')):
  li.xpath('./h3')[0].text=flowtitles[i]
 faq=doc.xpath('//section[@id="faq"]')[0];faq.set('class','faq section manga-faq')
 contact=doc.xpath('//section[@id="contact"]')[0];contact.set('class','contact section manga-contact')
+lane=doc.xpath('//div[@class="camper-lane"]')[0]
+lane.set('class','camper-lane angle-lane')
+for kind,label in [('cabover','キャブコン'),('van','バンコン'),('mini','軽キャンパー')]:
+ car=lane.xpath('.//figure[contains(@class,"type-'+kind+'") ]')[0]
+ im=car.xpath('.//img')[0];im.set('src','assets/camper-front-'+kind+'.png');im.set('alt',label+'の斜め前向きイラスト');im.set('width','1280');im.set('height','1280')
+ for rim in car.xpath('.//*[contains(@class,"rim")]'):rim.getparent().remove(rim)
 head=doc.find('head');etree.SubElement(head,'link',{'rel':'stylesheet','href':'manga-design.css'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'camper-angle.css'})
 p.write_text('<!doctype html>\n'+html.tostring(doc,encoding='unicode',method='html'))
 print('Built illustrated manga LP, preserving poster FV.')

@@ -1,0 +1,15 @@
+/* Front three-quarter campers, matching the user's animated angle reference. */
+.poster-hero .angle-lane{display:grid;grid-template-columns:repeat(3,1fr);align-items:start;justify-items:center;gap:25px;height:258px;margin-top:4px;padding:15px 7% 25px;overflow:visible;pointer-events:none}
+.poster-hero .angle-lane .track-car{position:relative;left:auto;top:auto;bottom:auto;width:218px;height:220px;animation:none;transform:none;margin:0}
+.poster-hero .angle-lane .track-car figcaption{top:0;left:50%;font-size:11px;line-height:1.4;padding:8px 13px;max-width:200px;white-space:nowrap}
+.poster-hero .angle-lane .car-drawing{width:100%;margin:16px 0 0;transform-origin:50% 82%;animation:camper-idle 1.9s ease-in-out infinite}
+.poster-hero .angle-lane .car-drawing img{display:block;width:100%;height:auto;aspect-ratio:1;max-height:none;object-fit:contain}
+.poster-hero .angle-lane .type-van .car-drawing{animation-delay:-.7s}
+.poster-hero .angle-lane .type-mini .car-drawing{animation-delay:-1.3s;width:93%;margin-inline:auto}
+.poster-hero.is-paused .angle-lane .car-drawing{animation-play-state:paused}
+.poster-hero .angle-lane .motion-control{bottom:0;right:0;pointer-events:auto}
+@keyframes camper-idle{0%,100%{transform:translateY(0) rotate(-.45deg)}50%{transform:translateY(-3px) rotate(.45deg)}}
+@media(max-width:1000px){.poster-hero .angle-lane{height:225px;padding-inline:3%;gap:20px}.poster-hero .angle-lane .track-car{width:185px;height:190px}.poster-hero .angle-lane .track-car figcaption{font-size:10px;padding:7px 11px}}
+@media(max-width:700px){.poster-hero .angle-lane{height:166px;margin-top:23px;padding:0 0 24px;gap:7px}.poster-hero .angle-lane .track-car{width:100%;height:auto;min-width:0}.poster-hero .angle-lane .track-car figcaption{top:0;font-size:9px;line-height:1.45;padding:5px 7px;max-width:100%;white-space:normal;text-align:center;width:max-content;border-width:1.5px}.poster-hero .angle-lane .car-drawing{margin-top:34px}.poster-hero .angle-lane .motion-control{bottom:0}.manga-intro{padding-top:27px}}
+@media(max-width:360px){.poster-hero .angle-lane{height:150px;gap:4px}.poster-hero .angle-lane .track-car figcaption{font-size:8px;padding:5px}.poster-hero .angle-lane .car-drawing{margin-top:32px}}
+@media(prefers-reduced-motion:reduce){.poster-hero .angle-lane .car-drawing{animation:none}.poster-hero .angle-lane .motion-control{display:none}}

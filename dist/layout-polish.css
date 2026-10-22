@@ -1,4 +1,7 @@
 /* Consultation: readable copy on the left, mechanic on the right. */
+.story-access .access-map{width:100%;margin:26px 0 16px;border:1px solid #a4b193;border-radius:18px;overflow:hidden;background:#edf0e5}
+.story-access .access-map iframe{display:block;width:100%;height:360px;border:0}
+@media(max-width:700px){.story-access .access-map iframe{height:300px}.story-access .access-map{margin-top:22px;border-radius:14px}}
 .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 180px;gap:24px 28px;padding:32px;align-items:center}
 .story-consult .consult-message{grid-column:1;grid-row:1;min-width:0}
 .story-consult .consult-face{grid-column:2;grid-row:1;width:100%;height:250px;margin:0;align-self:end;border-radius:0;overflow:hidden}

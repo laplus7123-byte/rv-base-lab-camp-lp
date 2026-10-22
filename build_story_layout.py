@@ -40,6 +40,11 @@ faq_grid=faq.xpath('./div')[0];faq_grid.set('class','camp-faq-inner')
 faq_heading=html.fromstring('''<header class="camp-faq-intro"><div class="camp-faq-copy"><h2 id="camp-faq-title"><span>よくある</span><strong>質問</strong></h2><p>キャンピングカーのこと、<br>整備のこと。<br>よくあるご質問をまとめました。</p></div><figure class="camp-faq-guide"><figcaption class="story-bubble">わかりやすく<br class="faq-bubble-break">お答えします！</figcaption><img src="assets/rv-mechanic-ink-v2.png" width="1122" height="1402" loading="lazy" alt="工具を持って案内する整備士のイラスト"></figure></header>''')
 faq_grid.replace(faq_grid[0],faq_heading)
 access=d.xpath('//section[@id="store-info"]')[0];access.set('class',access.get('class')+' story-access')
+map_link=access.xpath('.//a[contains(@href,"google.com/maps")]')[0]
+map_link.set('href','https://maps.app.goo.gl/UdEobBBbQLo8JsiH7')
+map_link.text='Google マップで場所・経路を確認 '
+map_frame=html.fromstring('''<div class="access-map"><iframe title="RV BASE Labの所在地：千葉県君津市俵田729-3" src="https://www.google.com/maps?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%90%9B%E6%B4%A5%E5%B8%82%E4%BF%B5%E7%94%B0729-3&amp;ll=35.3170053,140.0579389&amp;z=16&amp;hl=ja&amp;output=embed" width="600" height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>''')
+map_link.addprevious(map_frame)
 contact=d.xpath('//section[@id="contact"]')[0];contact.set('class',contact.get('class')+' story-contact')
 for old in flow.xpath('.//p[@class="eyebrow"]'):old.text='HOW IT WORKS'
 for old in about.xpath('.//p[@class="eyebrow"]'):old.text='YOUR CAMPER’S HOME BASE'

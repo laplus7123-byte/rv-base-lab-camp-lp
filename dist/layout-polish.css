@@ -25,7 +25,9 @@
 .camp-reason-content .camp-reason-description{margin-top:16px}
 /* Use the official, unmodified LINE brand asset at a readable size. */
 a.line-branded-cta{display:flex;align-items:center;gap:12px}
-a.line-branded-cta .line-brand-icon{display:block;flex:0 0 40px;width:40px;height:40px;max-width:none;object-fit:contain;filter:none;transform:none;animation:none}
+a.line-branded-cta .line-brand-icon{display:block;flex:0 0 40px;width:40px;height:40px;max-width:none;aspect-ratio:1;background:transparent;object-fit:contain;filter:none;transform:none;animation:none}
+.consultation-caption{flex-direction:column;align-items:stretch}
+.consultation-caption a.line-branded-cta{align-self:center;justify-content:center;margin-inline:auto;max-width:100%}
 a.line-branded-cta .line-cta-label{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:10px;font:inherit;letter-spacing:inherit;line-height:1.5}
 a.line-branded-cta:hover{transform:none}
 .story-service .detail-body a.line-branded-cta{gap:12px}

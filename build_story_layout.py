@@ -84,5 +84,10 @@ for link in d.xpath('//a[contains(@href,"lin.ee/")]'):
   link.insert(0,logo)
   link.set('class',(link.get('class','')+' line-branded-cta').strip())
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'layout-polish.css'})
+# Remove decorative English captions; retain brand and service names.
+for caption in d.xpath('//p[contains(@class,"eyebrow")] | //p[@class="poster-english"] | //div[@class="story-service-title"]/div/p'):
+ caption.getparent().remove(caption)
+for location in d.xpath('//span[@class="poster-location"]'):location.text='千葉県君津市'
+for top_link in d.xpath('//a[@class="back-top"]'):top_link.text='ページの先頭へ ↑'
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

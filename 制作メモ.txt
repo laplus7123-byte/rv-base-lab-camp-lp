@@ -64,3 +64,5 @@ build_reference_demo.py の後に adapt_rv_content.py を実行。
 - タイヤ回転と吹き出し、動きを止める操作、reduced-motion対応。
 - 下部の6サービス・相談の流れ・FAQ・店舗情報は維持し、漫画的な太線のトーンへ統一。
 - 新規画像: dist/assets/rv-original-mechanic.png。生成方法と正確なプロンプト: original-mechanic-prompt.json。
+
+2026-10-22 添付の中央人物ポスター品質に合わせて再構成。現行再生成コマンド: python3 build_poster_design.py。黒い作業着のオリジナル整備士、横一列のブランド文字、緑と茶色の斜め切り替えを採用。モバイルは文字・人物・相談導線を縦に再配置。イラストは架空人物。生成条件は poster-mechanic-prompt.json。

@@ -84,10 +84,18 @@ for link in d.xpath('//a[contains(@href,"lin.ee/")]'):
   if 'header-cta' not in link.get('class',''):link.insert(0,logo)
   link.set('class',(link.get('class','')+' line-branded-cta').strip())
 for mobile_line in d.xpath('//div[@class="mobile-contact"]/a[contains(@href,"lin.ee/")]'):
- mobile_line.set('aria-label','LINEで相談する（新しいタブで開きます）')
+ mobile_line.set('aria-label','今すぐLINEでチャット相談（新しいタブで開きます）')
  label=mobile_line.xpath('./span[@class="line-cta-label"]')[0]
- label.clear();label.set('class','line-cta-label');label.text='LINE'
+ label.clear();label.set('class','line-cta-label')
+ copy=etree.SubElement(label,'span',{'class':'mobile-line-copy'})
+ copy.text='今すぐLINEで';etree.SubElement(copy,'br').tail='チャット相談'
  arrow=etree.SubElement(label,'span',{'aria-hidden':'true'});arrow.text='↗'
+for mobile_phone in d.xpath('//div[@class="mobile-contact"]/a[starts-with(@href,"tel:")]'):
+ mobile_phone.set('class','mobile-phone-cta')
+ mobile_phone.text=None
+ icon=html.fromstring('<svg class="phone-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.09 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.83.56 2.79.69A2 2 0 0 1 22 16.92z"/></svg>')
+ mobile_phone.append(icon)
+ etree.SubElement(mobile_phone,'span').text='電話で相談'
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'layout-polish.css'})
 for arrow in d.xpath('//a[contains(@class,"line-branded-cta")]//span[normalize-space(text())="↗"] | //a[contains(@class,"line-branded-cta")]//b[normalize-space(text())="↗"]'):
  arrow.set('class',(arrow.get('class','')+' cta-arrow').strip())

@@ -33,10 +33,15 @@ a.line-branded-cta:hover{transform:none}
 .story-service .detail-body a.line-branded-cta{gap:12px}
 .header-cta.line-branded-cta{padding-block:8px}
 .site-header .header-cta .line-cta-label{padding-left:0}
-.mobile-contact a.line-branded-cta{gap:10px;padding:10px 12px}
-.mobile-contact .line-cta-label{font-size:12px}
-.mobile-contact a.line-branded-cta .line-cta-label{white-space:nowrap;flex-wrap:nowrap;gap:12px;font-size:14px}
-.mobile-contact a.line-branded-cta .line-cta-label>span{flex-shrink:0;font-size:20px;line-height:1}
+/* Stable column widths, independent of the labels inside each button. */
+.mobile-contact{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr)}
+.mobile-contact>a{width:100%;min-width:0;height:64px;box-sizing:border-box}
+.mobile-contact .mobile-phone-cta{gap:6px;padding:8px 6px;white-space:nowrap;font-size:clamp(10px,2.8vw,12px)}
+.mobile-contact .phone-icon{display:block;width:18px;height:18px;flex:0 0 18px}
+.mobile-contact a.line-branded-cta{gap:8px;padding:8px}
+.mobile-contact a.line-branded-cta .line-cta-label{white-space:nowrap;flex-wrap:nowrap;gap:6px;font-size:12px}
+.mobile-contact a.line-branded-cta .mobile-line-copy{flex:1;text-align:center;font-size:12px;line-height:1.5}
+.mobile-contact a.line-branded-cta .cta-arrow{flex:0 0 16px;font-size:18px;line-height:1}
 /* Keep people, hands and equipment clear of the animated speech captions. */
 .consultation-panel figure{background:transparent}
 .consultation-panel figure>img{border-radius:12px}

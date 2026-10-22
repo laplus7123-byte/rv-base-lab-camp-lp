@@ -73,7 +73,7 @@ consult=services.xpath('.//div[contains(@class,"story-consult")]')[0]
 consult.xpath('./div[not(@class)]')[0].set('class','consult-message')
 for link in d.xpath('//a[contains(@href,"lin.ee/")]'):
  if 'header-cta' in link.get('class',''):link.set('aria-label','LINEで相談する（新しいタブで開きます）')
- for generic_icon in link.xpath('./svg'):link.remove(generic_icon)
+ for generic_icon in link.xpath('./svg'):generic_icon.drop_tree()
  if not link.xpath('./img[@class="line-brand-icon"]'):
   label=etree.Element('span',{'class':'line-cta-label'})
   label.text=link.text or ''
@@ -89,6 +89,11 @@ for mobile_line in d.xpath('//div[@class="mobile-contact"]/a[contains(@href,"lin
  label.clear();label.set('class','line-cta-label');label.text='LINE'
  arrow=etree.SubElement(label,'span',{'aria-hidden':'true'});arrow.text='↗'
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'layout-polish.css'})
+for arrow in d.xpath('//a[contains(@class,"line-branded-cta")]//span[normalize-space(text())="↗"] | //a[contains(@class,"line-branded-cta")]//b[normalize-space(text())="↗"]'):
+ arrow.set('class',(arrow.get('class','')+' cta-arrow').strip())
+ arrow.set('aria-hidden','true')
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'text-motion.css'})
+etree.SubElement(head,'script',{'src':'text-motion.js','defer':'defer'})
 # Remove decorative English captions; retain brand and service names.
 for caption in d.xpath('//p[contains(@class,"eyebrow")] | //p[@class="poster-english"] | //div[@class="story-service-title"]/div/p'):
  caption.getparent().remove(caption)

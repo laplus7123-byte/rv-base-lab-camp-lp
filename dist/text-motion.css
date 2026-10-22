@@ -1,0 +1,16 @@
+/* One restrained entrance per heading; no layout or line-break changes. */
+.text-motion-ready [data-text-reveal]{transition:opacity .55s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.text-motion-ready [data-text-reveal]:not(.is-text-visible){opacity:0;transform:translateY(12px)}
+.text-motion-ready [data-text-reveal].is-text-visible{opacity:1;transform:none}
+.text-motion-ready [data-text-reveal]:not(.is-text-visible) .text-reveal-unit{opacity:0}
+.text-motion-ready .is-text-visible .text-reveal-unit{animation:text-reveal-fade .6s ease both;animation-delay:var(--text-delay,0ms)}
+@keyframes text-reveal-fade{from{opacity:0}to{opacity:1}}
+.line-branded-cta .cta-arrow{display:inline-block;flex-shrink:0;transition:transform .2s ease}
+.line-branded-cta:hover .cta-arrow,.line-branded-cta:focus-visible .cta-arrow{transform:translate(3px,-3px)}
+@media(prefers-reduced-motion:reduce){
+ .text-motion-ready [data-text-reveal],.text-motion-ready [data-text-reveal]:not(.is-text-visible),.text-motion-ready [data-text-reveal] .text-reveal-unit{opacity:1;transform:none;transition:none;animation:none}
+ .line-branded-cta .cta-arrow,.line-branded-cta:hover .cta-arrow,.line-branded-cta:focus-visible .cta-arrow{transform:none;transition:none}
+}
+@media print{
+ .text-motion-ready [data-text-reveal],.text-motion-ready [data-text-reveal]:not(.is-text-visible),.text-motion-ready [data-text-reveal] .text-reveal-unit{opacity:1;transform:none;animation:none}
+}

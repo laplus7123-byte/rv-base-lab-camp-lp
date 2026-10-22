@@ -1,0 +1,10 @@
+/* Supplied official logo. Preserve its original colors, ratio and transparency. */
+.official-brand{display:block;flex-shrink:0;width:264px;line-height:0}
+.official-brand img{display:block;width:100%;height:auto;object-fit:contain}
+.site-header .header-inner{min-height:120px;gap:28px}
+.site-header nav{gap:24px}
+.footer-inner .official-brand{width:250px}
+@media(max-width:1200px){.site-header .official-brand{width:220px}.site-header .header-inner{gap:21px}.site-header nav{gap:17px}.site-header nav a{font-size:11px}.site-header .header-cta{padding-inline:24px;font-size:12px}}
+@media(max-width:1000px){.site-header .header-inner{min-height:102px}.site-header .official-brand{width:230px}}
+@media(max-width:700px){.site-header .header-inner{min-height:88px;gap:11px}.site-header .official-brand{width:155px}.site-header .header-cta{padding:11px 15px;font-size:11px;margin-left:auto}.site-header .header-cta span{padding-left:5px}.site-header .menu-toggle{flex-shrink:0;width:35px;height:38px;margin-left:0}.footer-inner .official-brand{width:230px}}
+@media(max-width:360px){.site-header .official-brand{width:130px}.site-header .header-inner{gap:8px}.site-header .header-cta{padding:10px 12px;font-size:10px}.site-header .header-cta span{display:none}.site-header .menu-toggle{width:33px}}

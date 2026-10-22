@@ -57,5 +57,10 @@ for script in doc.xpath('//script[@src="garage-design.js"]'):script.getparent().
 doc.find('body').append(html.fromstring((ROOT/'fixed-camper.html').read_text()))
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'fixed-camper.css'})
 etree.SubElement(head,'script',{'src':'fixed-camper.js','defer':'defer'})
+for old in doc.xpath('//header//a[@class="poster-brand"]|//footer//a[contains(@class,"brand")]'):
+ new=html.fromstring('<a class="official-brand" href="#top" aria-label="RV BASE Lab トップ"><img src="assets/rv-base-lab-official-logo.png" width="600" height="200" alt="RV BASE LAB — CAMPINGCAR SPECIALTY"></a>')
+ old.getparent().replace(old,new)
+for favicon in doc.xpath('//link[@rel="icon"]'):favicon.set('href','assets/rv-base-lab-official-logo.png')
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'official-brand.css'})
 p.write_text('<!doctype html>\n'+html.tostring(doc,encoding='unicode',method='html'))
 print('Built illustrated manga LP, preserving poster FV.')

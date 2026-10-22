@@ -70,3 +70,5 @@ build_reference_demo.py の後に adapt_rv_content.py を実行。
 2026-10-22 FV以下を漫画LP構成へ。現行再生成コマンド: python3 build_manga_design.py。6サービスに同一人物の漫画イラストを新規作成。悩み→サービス→強み→相談の流れ→FAQ→店舗→相談。吹き出しはHTMLテキスト。画像は説明用のイメージ。生成条件: manga-service-prompts.json。
 
 2026-10-22 FV下の3車種を添付動画の正面寄りの斜め前角度へ変更。camper-front-* を使用。従来の横流れと重ねタイヤを撤去し、車体の軽い上下動へ。生成条件 camper-angle-prompts.json。
+
+2026-10-22 キャブコンを右下固定に変更。横並び3台を撤去。画像本体を保持し、SVGで黒いゴム外周・接地面の模様・ホイールをまとめて回転。fixed-camper.html / dist/fixed-camper.css / dist/fixed-camper.js。モバイル相談バーから16px以上離して配置。

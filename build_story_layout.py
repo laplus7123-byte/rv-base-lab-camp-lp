@@ -50,5 +50,18 @@ etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-about.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-faq.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'camp-proof.css'})
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'worry-editorial.css'})
+# Purpose-made illustrations: keep the original hero and photo consultation flow.
+for img in d.xpath('//section[@class="story-worries"]//img | //section[@id="service"]//article//img'):
+ old_src=img.get('src','')
+ for service in ('repair','electrical','solar','heater','install','transport'):
+  if old_src == f'assets/manga-{service}.png':
+   img.set('src',f'assets/service-{service}-v3.webp')
+   img.set('width','1536');img.set('height','1024');img.set('decoding','async')
+faq_image=faq.xpath('.//figure[@class="camp-faq-guide"]/img')[0]
+faq_image.set('src','assets/faq-guide-v3.webp')
+faq_image.set('width','1086');faq_image.set('height','1448')
+faq_image.set('alt','質問の見出しに視線を向けて案内する整備士')
+faq_image.set('decoding','async')
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'illustration-refresh.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

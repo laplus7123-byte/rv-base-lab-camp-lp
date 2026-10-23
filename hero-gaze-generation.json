@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "asset": "dist/assets/hero-camper-family-v2.png",
+  "reference": "dist/assets/hero-camper-family-v1.png",
+  "prompt": "Edit only the face direction and eyes of the large central Japanese male mechanic in this existing website hero illustration. Make him look directly at the viewer/camera, with both eyes engaging the viewer and a natural friendly subtle closed-mouth smile. Turn his head toward the viewer just enough for a welcoming near-frontal face while retaining his identity, wavy black hair, light stubble, age, facial proportions, charcoal work uniform and body pose. This is the only character whose gaze changes. Preserve the same exact composition, two complete camping vehicles in the foreground, hands and wrench, tent, guardian and children playing in the background, trees, mountains, all colors and warm detailed manga illustration style. Leave the background people naturally engaged with each other, not looking at the camera. No added text or logos. Keep the existing image dimensions/aspect ratio, framing and full visible vehicles unchanged. This is a localized face/head edit, not a new composition."
+}

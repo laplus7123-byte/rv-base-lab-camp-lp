@@ -1,17 +1,14 @@
-.fixed-camper{position:fixed;right:20px;bottom:12px;width:174px;z-index:35;pointer-events:none;filter:drop-shadow(0 3px 2px #282b2417)}
-.fixed-camper-bubble{position:relative;width:max-content;max-width:100%;margin:0 auto -12px;background:#fffdf4;border:2px solid #34261e;border-radius:3px;padding:8px 12px;color:#282b24;font-size:10px;line-height:1.4;font-weight:800;text-align:center;z-index:2}
-.fixed-camper-bubble:after{content:'';position:absolute;left:48%;bottom:-6px;width:8px;height:8px;background:#fffdf4;transform:rotate(45deg);border-bottom:2px solid #34261e;border-right:2px solid #34261e}
+.fixed-camper-lane{position:fixed;top:0;bottom:0;left:max(0px,calc(50% - 195px));right:max(0px,calc(50% - 195px));overflow:hidden;pointer-events:none;z-index:25}
+.fixed-camper{position:absolute;right:8px;bottom:calc(77px + env(safe-area-inset-bottom,0px));width:105px;pointer-events:none;filter:drop-shadow(0 3px 2px #282b2417)}
+.fixed-camper-bubble{position:relative;width:max-content;max-width:100%;margin:0 auto -5px;background:#fffdf4;border:1.5px solid #34261e;border-radius:3px;padding:5px 7px;color:#282b24;font-size:8px;line-height:1.4;font-weight:800;text-align:center;z-index:2;transition:opacity .25s ease}
+.fixed-camper-bubble:after{content:'';position:absolute;left:48%;bottom:-5px;width:6px;height:6px;background:#fffdf4;transform:rotate(45deg);border-bottom:1.5px solid #34261e;border-right:1.5px solid #34261e}
 .fixed-camper-drawing{width:100%;position:relative;animation:fixed-camper-bob 1.8s ease-in-out infinite;transform-origin:50% 80%}
 .fixed-camper-drawing img{display:block;width:100%;height:auto}
 .animated-tires{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .tire-rotation{transform-box:view-box;transform-origin:0 0;animation:whole-tire-roll 1.5s linear infinite}
-
-
-.fixed-camper-bubble{transition:opacity .25s ease}
 .fixed-camper.is-departed .fixed-camper-bubble{opacity:0}
 .fixed-camper.is-departed .tire-rotation{animation-duration:.45s}
 @keyframes whole-tire-roll{to{transform:rotate(-360deg)}}
 @keyframes fixed-camper-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
-.poster-hero+.manga-intro{padding-top:70px}
-@media(max-width:700px){.fixed-camper{width:105px;right:8px;bottom:calc(77px + env(safe-area-inset-bottom,0px));z-index:25}.fixed-camper-bubble{font-size:8px;border-width:1.5px;padding:5px 7px;margin-bottom:-5px}.fixed-camper-bubble:after{width:6px;height:6px;bottom:-5px;border-width:1.5px}.poster-hero+.manga-intro{padding-top:45px}}
+.poster-hero+.manga-intro{padding-top:45px}
 @media(prefers-reduced-motion:reduce){.fixed-camper-drawing,.tire-rotation{animation:none}.fixed-camper.is-departed{visibility:hidden}}

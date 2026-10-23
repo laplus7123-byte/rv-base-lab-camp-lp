@@ -1,14 +1,14 @@
 /* Consultation: readable copy on the left, mechanic on the right. */
-@media(max-width:900px){.story-center-sticky h2{grid-row:1/3}}
+.story-center-sticky h2{grid-row:1/3}
 .story-access .access-map{width:100%;margin:26px 0 16px;border:1px solid #a4b193;border-radius:18px;overflow:hidden;background:#edf0e5}
 .story-access .access-map iframe{display:block;width:100%;height:360px;border:0}
-@media(max-width:700px){.story-access .access-map iframe{height:300px}.story-access .access-map{margin-top:22px;border-radius:14px}}
+.story-access .access-map iframe{height:300px}.story-access .access-map{margin-top:22px;border-radius:14px}
 .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 180px;gap:24px 28px;padding:32px;align-items:center}
 .story-consult .consult-message{grid-column:1;grid-row:1;min-width:0}
 .story-consult .consult-face{grid-column:2;grid-row:1;width:100%;height:250px;margin:0;align-self:end;border-radius:0;overflow:hidden}
 .story-consult .consult-face img{position:static;display:block;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;transform:none}
 .story-consult .manga-button{grid-column:1/-1;grid-row:2;justify-self:stretch;margin:0}
-.story-consult h3{font-size:clamp(22px,2.5vw,32px);line-height:1.6;line-break:strict}
+.story-consult h3{font-size:clamp(22px,9.75px,32px);line-height:1.6;line-break:strict}
 .story-consult .consult-message>span{display:block;line-height:1.8}
 /* Retain the full conversation and place the bubble above both faces. */
 .camp-life-art>img{aspect-ratio:3/4;object-fit:contain;object-position:center;border-radius:48% 48% 12px 12px;filter:none}
@@ -36,7 +36,7 @@ a.line-branded-cta:hover{transform:none}
 /* Stable column widths, independent of the labels inside each button. */
 .mobile-contact{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr)}
 .mobile-contact>a{width:100%;min-width:0;height:64px;box-sizing:border-box}
-.mobile-contact .mobile-phone-cta{gap:6px;padding:8px 6px;white-space:nowrap;font-size:clamp(10px,2.8vw,12px)}
+.mobile-contact .mobile-phone-cta{gap:6px;padding:8px 6px;white-space:nowrap;font-size:clamp(10px,10.92px,12px)}
 .mobile-contact .phone-icon{display:block;width:18px;height:18px;flex:0 0 18px}
 .mobile-contact a.line-branded-cta{gap:8px;padding:8px}
 .mobile-contact a.line-branded-cta .line-cta-label{white-space:nowrap;flex-wrap:nowrap;gap:6px;font-size:12px}
@@ -45,19 +45,19 @@ a.line-branded-cta:hover{transform:none}
 /* Keep people, hands and equipment clear of the animated speech captions. */
 .consultation-panel figure{background:transparent}
 .consultation-panel figure>img{border-radius:12px}
-.consultation-panel .consultation-bubble,.consultation-step:nth-child(even) .consultation-bubble{position:relative;inset:auto;width:fit-content;max-width:calc(100% - 24px);margin:16px 12px 6px;padding:13px 19px;font-size:clamp(13px,1.6vw,19px)}
+.consultation-panel .consultation-bubble,.consultation-step:nth-child(even) .consultation-bubble{position:relative;inset:auto;width:fit-content;max-width:calc(100% - 24px);margin:16px 12px 6px;padding:13px 19px;font-size:clamp(13px,6.24px,19px)}
 .consultation-step:nth-child(even) .consultation-bubble{margin-left:auto}
-@media(max-width:800px){
+
  .camp-intro-visual{grid-template-columns:minmax(0,1fr) 165px;gap:28px}
-}
-@media(max-width:767px){
+
+
  .camp-experience>div:nth-child(n) .camp-tab{font-size:11px;min-height:33px;padding:8px}
  .camp-experience>div:nth-child(n) .camp-years{height:91px;padding:10px 12px;gap:7px}
  .camp-experience>div:nth-child(n) .camp-years strong{font-size:72px}
  .camp-experience>div:nth-child(n) .camp-years>span{font-size:27px}
  .camp-reason-content .camp-strength-art{max-width:285px;margin-top:16px}
-}
-@media(max-width:700px){
+
+
  .site-header a.header-cta.line-branded-cta{display:flex;width:auto;min-height:40px;padding:9px 10px;gap:0;flex-shrink:0;white-space:nowrap;letter-spacing:0}
  .site-header a.header-cta.line-branded-cta .line-cta-label{display:flex;gap:6px;padding-left:0}
  .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 90px;gap:20px 12px;padding:24px 18px}
@@ -66,21 +66,9 @@ a.line-branded-cta:hover{transform:none}
  .story-consult .consult-message>span{font-size:10px}
  .story-consult .manga-button{padding:15px 16px;font-size:12px;gap:12px}
  .story-consult .manga-button b{font-size:22px}
-}
-@media(max-width:600px){
+
+
  .camp-intro-visual{grid-template-columns:minmax(0,1fr) 96px;gap:13px}
  .camp-life-art .story-bubble{font-size:10px;padding:8px 11px;top:-12px;left:-4px}
-}
-@media(max-width:380px){
- .camp-experience>div:nth-child(n) .camp-tab{font-size:10px;min-height:31px;padding:7px}
- .camp-experience>div:nth-child(n) .camp-years{height:82px;padding:9px 10px;gap:5px}
- .camp-experience>div:nth-child(n) .camp-years strong{font-size:64px}
- .camp-experience>div:nth-child(n) .camp-years>span{font-size:23px}
- .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) 76px;gap:18px 10px;padding-inline:16px}
- .story-consult h3{font-size:18px}
- .story-consult .consult-face{height:175px}
- .story-consult .manga-button{padding-inline:12px;font-size:11px;gap:10px}
-}
-@media(max-width:360px){
- .camp-intro-visual{grid-template-columns:minmax(0,1fr) 83px;gap:10px}
-}
+
+

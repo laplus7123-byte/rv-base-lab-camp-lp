@@ -5,14 +5,14 @@
 .worry-picture{display:block;aspect-ratio:3/2;width:100%;border-bottom:2px solid #30372a;background:#e8e2d4;flex-shrink:0}
 .worry-picture>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:0;filter:none}
 .worry-copy{position:relative;padding:26px 25px 23px;display:flex;flex-direction:column;flex:1;background:radial-gradient(ellipse at 0 0,#fffef9 0 79%,#edf0e6 79.2%)}
-.story-worry .worry-copy h3{font-size:clamp(21px,2vw,28px);line-height:1.5;letter-spacing:.01em;font-weight:900;text-align:left;color:#252d20;margin:0 0 18px}
+.story-worry .worry-copy h3{font-size:clamp(21px,7.8px,28px);line-height:1.5;letter-spacing:.01em;font-weight:900;text-align:left;color:#252d20;margin:0 0 18px}
 .worry-copy>p{font-size:14px;line-height:2.05;letter-spacing:.025em;color:#526047;margin:0 0 23px;text-align:left;overflow-wrap:anywhere}
 .worry-more{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #c8d0bb;padding-top:15px;color:var(--green);font-size:11px;line-height:1.7;font-weight:800;text-decoration:none}
 .worry-more>span{font-size:19px;line-height:1;flex-shrink:0}
 .worry-more:hover{color:var(--brown)}
 .worry-picture:focus-visible,.worry-more:focus-visible{outline:3px solid var(--brown);outline-offset:-4px}
-@media(max-width:1000px) and (min-width:701px){.story-worries .container{width:calc(100% - 48px)}.story-worry-grid{gap:16px}.worry-copy{padding:21px 17px}.story-worry .worry-copy h3{font-size:20px}.worry-copy>p{font-size:13px;line-height:1.95}.worry-more{font-size:10px}}
-@media(max-width:700px){
+
+
  .story-worries .container{width:calc(100% - 32px)}
  .story-worry-grid{grid-template-columns:1fr;gap:27px;max-width:480px;margin-inline:auto}
  .story-worries h2{margin-bottom:32px}
@@ -20,5 +20,5 @@
  .story-worry .worry-copy h3{font-size:27px;line-height:1.5;letter-spacing:0;margin-bottom:17px}
  .worry-copy>p{font-size:15px;line-height:2;letter-spacing:.025em;margin-bottom:23px}
  .worry-more{font-size:12px;padding-top:16px}
-}
-@media(max-width:360px){.story-worries .container{width:calc(100% - 24px)}.worry-copy{padding:23px 20px 21px}.story-worry .worry-copy h3{font-size:24px}.worry-copy>p{font-size:14px;line-height:2}.worry-more{font-size:11px}}
+
+

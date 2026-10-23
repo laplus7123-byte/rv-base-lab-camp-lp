@@ -19,7 +19,7 @@
 .camp-faq .faq-list summary>b{font-size:24px;line-height:1;color:var(--brown);margin:0;justify-self:end}
 .camp-faq .faq-list summary:focus-visible{outline:2px solid var(--brown);outline-offset:-3px;border-radius:8px}
 .camp-faq .faq-list details>p{border-top:1px solid #e0e5d5;margin:0;padding:20px 0 24px 51px;font-size:14px;line-height:2;color:#566047}
-@media(max-width:700px){
+
  .camp-faq{margin:28px 8px 0;padding:34px 18px 35px;border-radius:20px}
  .camp-faq-intro{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:8px;min-height:270px;margin-bottom:27px;align-items:start}
  .camp-faq-copy{padding-top:13px}
@@ -36,5 +36,5 @@
  .camp-faq .faq-list summary>span{width:27px;height:27px;font-size:16px}
  .camp-faq .faq-list summary>b{font-size:22px}
  .camp-faq .faq-list details>p{padding:16px 0 20px;font-size:12px;line-height:1.95}
-}
-@media(max-width:360px){.camp-faq{padding-inline:14px}.camp-faq-intro{gap:5px;min-height:250px}.camp-faq-copy h2>span{font-size:25px}.camp-faq-copy h2>strong{font-size:64px}.camp-faq-copy>p{font-size:11px;margin-top:16px}.camp-faq-guide .story-bubble{font-size:9px;padding:8px 10px}.camp-faq .faq-list details,.camp-faq .faq-list details:first-child{padding-inline:13px}.camp-faq .faq-list summary{gap:9px;font-size:12px}}
+
+

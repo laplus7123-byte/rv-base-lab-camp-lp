@@ -1,0 +1,4 @@
+html{background:#d9d3c5;overflow-x:hidden}
+body{width:100%;max-width:390px;margin-inline:auto;overflow-x:clip;box-shadow:0 0 0 1px #34261e14,0 18px 50px #282b2429}
+.mobile-contact{left:max(0px,calc(50% - 195px));right:max(0px,calc(50% - 195px))}
+.skip-link{left:calc(max(0px,calc(50% - 195px)) + 20px)}

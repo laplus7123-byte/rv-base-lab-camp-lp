@@ -4,14 +4,11 @@
 .camp-reasons>li,.camp-reasons>li:nth-child(even),.camp-reasons>li:nth-child(3){padding-top:0}
 .camp-reasons .camp-strength-art{display:block;position:static;width:100%;max-width:286px;height:auto;aspect-ratio:1;object-fit:contain;object-position:center bottom;margin:0 0 18px;filter:none}
 .camp-faq-guide>img{object-fit:contain;filter:none}
-@media(max-width:767px){
+
  .camp-reasons{row-gap:42px}
  .camp-reasons .camp-strength-art{width:100%;max-width:285px;margin-bottom:14px}
  .camp-reasons>li:nth-child(2){margin-left:18%}
  .camp-reasons>li:nth-child(3){margin-left:7%}
  .camp-reason-panel{width:100%;max-width:285px}
-}
-@media(max-width:380px){
- .camp-reasons>li:nth-child(2){margin-left:12%}
- .camp-reasons>li:nth-child(3){margin-left:5%}
-}
+
+

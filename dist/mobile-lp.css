@@ -1,0 +1,54 @@
+/* A single-column LP that fits the device, capped at a comfortable phone width. */
+body.mobile-lp{padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-area-inset-bottom,0px))}
+.mobile-lp .site-header .header-inner{min-height:72px;width:calc(100% - 24px);padding-block:8px;gap:8px}
+.mobile-lp .site-header .official-brand{width:clamp(120px,36vw,155px)}
+.mobile-lp .site-header a.header-cta{padding:9px 10px;min-height:44px;font-size:11px;white-space:nowrap}
+.mobile-lp .site-header .menu-toggle{width:40px;height:44px;padding:10px}
+.mobile-lp .site-header nav a{min-height:44px}
+.mobile-lp .poster-hero.poster-hero-camp-scene{width:100%;margin:0 auto;background:#fffdf7}
+.mobile-lp .poster-hero-camp-scene .poster-panel{border:0;border-radius:0;overflow:visible}
+.mobile-lp .poster-hero-camp-scene .poster-heading{padding:22px 16px 10px}
+.mobile-lp .poster-hero-camp-scene .poster-heading>p{font-size:12px;letter-spacing:.08em}
+.mobile-lp .poster-hero-camp-scene .poster-heading h1{font-size:clamp(24px,6.5vw,28px);line-height:1.45}
+.mobile-lp .poster-hero-camp-scene .poster-camp-art{width:100%;height:auto;object-fit:contain}
+.mobile-lp .poster-hero-camp-scene .poster-tagline{font-size:clamp(23px,6.3vw,27px);line-height:1.5;margin:8px 16px 0}
+.mobile-lp .poster-hero-camp-scene .poster-location{margin:10px 0 0;font-size:11px}
+.mobile-lp .poster-hero-camp-scene .poster-follow{margin:0;padding:20px 20px 28px;gap:12px}
+.mobile-lp .poster-hero-camp-scene .poster-consult{min-height:64px;font-size:14px;border-radius:32px;box-shadow:none}
+.mobile-lp .poster-hero-camp-scene .poster-menu{min-height:44px;display:flex;align-items:center;padding:0 4px;font-size:12px}
+.mobile-lp .story-worries .container,.mobile-lp .story-services .container{width:calc(100% - 32px)}
+.mobile-lp .worry-copy{padding:24px 20px}
+.mobile-lp .story-worry .worry-copy h3{font-size:clamp(22px,6.1vw,26px)}
+.mobile-lp .worry-copy>p,.mobile-lp .story-service-copy>p{font-size:15px;line-height:1.95}
+.mobile-lp .worry-more{min-height:44px;font-size:13px}
+.mobile-lp .camp-intro-copy,.mobile-lp .camp-reason-description{font-size:14px;line-height:1.95}
+.mobile-lp .consultation-intro,.mobile-lp .consultation-step summary p,.mobile-lp .consultation-caption p{font-size:14px;line-height:1.9}
+.mobile-lp .consultation-step summary{padding:20px 14px;gap:10px}
+.mobile-lp .consultation-step h3{font-size:clamp(18px,4.8vw,21px)}
+.mobile-lp .consultation-caption a.line-branded-cta{min-height:56px}
+.mobile-lp .faq-list summary{font-size:14px;line-height:1.8;min-height:64px}
+.mobile-lp .faq-list details>p{font-size:14px;line-height:1.9}
+.mobile-lp .mobile-contact{padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:8px}
+.mobile-lp .mobile-contact>a{height:64px;min-width:0}
+.mobile-lp .mobile-contact .mobile-phone-cta{font-size:12px;gap:5px}
+.mobile-lp .mobile-contact a.line-branded-cta{padding:8px;gap:8px}
+.mobile-lp .mobile-contact .mobile-line-copy{font-size:13px}
+.mobile-lp .fixed-camper{width:92px;bottom:calc(var(--contact-bar-height) + 12px + env(safe-area-inset-bottom,0px))}
+@media(max-width:360px){
+ .mobile-lp .site-header a.header-cta{font-size:10px;padding-inline:8px}
+ .mobile-lp .site-header .official-brand{width:120px}
+ .mobile-lp .camp-intro{padding-inline:14px}
+ .mobile-lp .camp-intro-visual{grid-template-columns:minmax(0,1fr) 82px;gap:10px}
+ .mobile-lp .camp-intro h2{font-size:23px;gap:6px}
+ .mobile-lp .camp-strengths{padding-inline:12px}
+ .mobile-lp .camp-experience{gap:10px}
+ .mobile-lp .camp-experience>div:nth-child(n) .camp-tab{font-size:10px;padding-inline:5px}
+ .mobile-lp .camp-experience>div:nth-child(n) .camp-years{padding-inline:8px;gap:4px}
+ .mobile-lp .camp-experience>div:nth-child(n) .camp-years strong{font-size:62px}
+ .mobile-lp .camp-experience>div:nth-child(n) .camp-years>span{font-size:22px}
+ .mobile-lp .mobile-contact .mobile-phone-cta{font-size:10px;gap:4px;padding-inline:4px}
+ .mobile-lp .mobile-contact a.line-branded-cta{gap:6px;padding-inline:6px}
+ .mobile-lp .mobile-contact .line-brand-icon{width:34px;height:34px;flex-basis:34px}
+ .mobile-lp .mobile-contact a.line-branded-cta .mobile-line-copy{font-size:12px}
+ .mobile-lp .fixed-camper{width:82px}
+}

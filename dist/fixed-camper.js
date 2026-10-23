@@ -40,7 +40,7 @@
     // Facing left: leave forward to the left, come back forward from the right.
     drive = departed
       ? camper.animate(
-        [{ transform: 'translateX(0)' }, { transform: 'translateX(calc(-390px - 100%))' }],
+        [{ transform: 'translateX(0)' }, { transform: `translateX(-${camper.parentElement.getBoundingClientRect().width + camper.getBoundingClientRect().width + 30}px)` }],
         { duration: 1600, easing: 'cubic-bezier(.5,0,.85,.45)', fill: 'forwards' },
       )
       : camper.animate(

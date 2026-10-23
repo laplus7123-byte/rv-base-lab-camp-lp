@@ -39,7 +39,7 @@ HTML を変更したらプロジェクトルートで:
 - `dist/assets/hero-camper-family-v2.png`: 新しく生成した完成イラスト。
 - `hero-scene-generation.json`: 内蔵画像生成ツールのプロンプトと参照元。
 - `apply_hero_scene.py`: FVのみを置き換える処理。`build_story_layout.py` の最後から呼ばれる。
-- Cursor側で設定された幅390pxの表示と、それまでの修正を維持。
+- スマホLPとして端末幅に追従し、PCでは最大430px幅で中央配置。`dist/mobile-lp.css` でFV・余白・文字・固定CTAを調整。
 
 
 ### 画面下の固定相談ボタン

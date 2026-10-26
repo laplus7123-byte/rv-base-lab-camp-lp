@@ -1,11 +1,12 @@
 /* A single-column LP that fits the device, capped at a comfortable phone width. */
-body.mobile-lp{padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-area-inset-bottom,0px))}
+body.mobile-lp{--lp-panel-inset:8px;--lp-panel-radius:20px;padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-area-inset-bottom,0px))}
 .mobile-lp .site-header .header-inner{min-height:72px;width:calc(100% - 24px);padding-block:8px;gap:8px}
 .mobile-lp .site-header .official-brand{width:clamp(120px,36vw,155px)}
 .mobile-lp .site-header a.header-cta{padding:9px 10px;min-height:44px;font-size:11px;white-space:nowrap}
 .mobile-lp .site-header .menu-toggle{width:40px;height:44px;padding:10px}
 .mobile-lp .site-header nav a{min-height:44px}
-.mobile-lp .poster-hero.poster-hero-camp-scene{width:100%;margin:0 auto;background:var(--hero-background)}
+.mobile-lp .poster-hero.poster-hero-camp-scene{width:calc(100% - var(--lp-panel-inset) - var(--lp-panel-inset));margin:8px auto 0;border-radius:var(--lp-panel-radius);background:var(--hero-background)}
+.mobile-lp .camp-about{margin-inline:var(--lp-panel-inset);border-radius:var(--lp-panel-radius)}
 .mobile-lp .poster-hero-camp-scene .poster-panel{border:0;border-radius:0;overflow:hidden}
 .mobile-lp .poster-hero-camp-scene .poster-heading{padding:28px 16px 12px}
 .mobile-lp .poster-hero-camp-scene .poster-heading>p{font-size:12px;letter-spacing:.08em}

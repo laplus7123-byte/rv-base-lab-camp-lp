@@ -33,6 +33,13 @@ HTML を変更したらプロジェクトルートで:
 
 ## 直近の変更
 
+### 店舗紹介の漫画を異なる距離・角度に描き分け（2026-10-26・最新）
+
+- 3つの強みのイラストを新規生成して差し替え。状態確認は給水設備を点検する手元の接写、整備提案は入口から見た車内の引き、事前相談はお客様の肩越しに見た整備士の表情アップ。
+- `dist/assets/manga-strength-{inspection,proposal,consultation}-v2.png`。各1448×1086px、透過PNG。内蔵 `image_gen` 使用。参照画像・最終プロンプト・保存先は `about-composition-generation.json` に記録。
+- `camp-about.html`、`dist/index.html`、`manga-style-generation.json` を更新。`dist/mobile-lp.css` で旧正方形枠を外し、画像本来の比率で全体を表示。430px固定幅を維持。
+- 公開先はGitHub Pages。旧v1素材は保持。
+
 ### プレビューの430px幅をページ全体に固定（2026-10-26・最新）
 
 - `dist/fixed-width.css`: 本文、下部の相談ボタン、固定キャンピングカーの領域を430pxに統一。PCでは中央に配置。

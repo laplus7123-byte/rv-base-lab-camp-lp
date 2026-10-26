@@ -52,6 +52,8 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp .camp-experience,.mobile-lp .camp-reasons{max-width:none}
 .mobile-lp .camp-reasons>li:nth-child(n){margin:0;padding:0}
 .mobile-lp .camp-reason-panel,.mobile-lp .camp-reason-content .camp-strength-art,.mobile-lp .camp-reason-description{width:100%;max-width:none}
+/* Let the new close-up / wide / portrait shots use their native frame. */
+.mobile-lp .camp-reason-content .camp-strength-art{height:auto;aspect-ratio:auto}
 .mobile-lp .story-service-title,.mobile-lp .story-service-copy{padding-inline:16px}
 .mobile-lp .story-access .access-info{padding-inline:18px}
 /* Larger consultation character and a rectangular workshop illustration. */

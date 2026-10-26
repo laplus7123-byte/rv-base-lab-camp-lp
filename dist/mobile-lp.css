@@ -81,3 +81,21 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
  .mobile-lp .story-consult h3{font-size:18px;line-height:1.65}
  .mobile-lp .story-consult .consult-message>p{font-size:12px;line-height:1.9}
 }
+/* Fixed portrait and vertical-copy columns share the same top and bottom. */
+.mobile-lp .camp-intro{--intro-art-width:248px;--intro-art-height:331px;--intro-title-width:94px;--intro-gap:18px;--intro-font:32px;padding:44px 8px 30px}
+.mobile-lp .camp-intro-inner{width:360px;max-width:100%;margin-inline:auto}
+.mobile-lp .camp-intro-visual{display:grid;width:100%;max-width:none;grid-template-columns:var(--intro-art-width) var(--intro-title-width);gap:var(--intro-gap);align-items:start;margin:0}
+.mobile-lp .camp-life-art{width:var(--intro-art-width);height:var(--intro-art-height);margin:0;align-self:start}
+.mobile-lp .camp-life-art>img{width:100%;height:100%;max-width:none;object-fit:contain;object-position:center;border-radius:0}
+.mobile-lp .camp-intro h2{width:var(--intro-title-width);height:var(--intro-art-height);display:flex;flex-direction:row-reverse;justify-content:center;align-items:flex-start;align-self:start;gap:8px;margin:0;padding:0;font-size:var(--intro-font);line-height:1.15;letter-spacing:.02em}
+.mobile-lp .camp-life-art .story-bubble{inset:-18px auto auto 10px;width:max-content;max-width:calc(100% - 20px);padding:8px 12px;font-size:12px;line-height:1.6;box-sizing:border-box}
+.mobile-lp .camp-intro-copy{margin:24px 0 0}
+@media(max-width:383px){
+ .mobile-lp .camp-intro{--intro-art-width:222px;--intro-art-height:296px;--intro-title-width:86px;--intro-gap:16px;--intro-font:28px}
+ .mobile-lp .camp-intro-inner{width:324px}
+}
+@media(max-width:347px){
+ .mobile-lp .camp-intro{--intro-art-width:194px;--intro-art-height:259px;--intro-title-width:76px;--intro-gap:12px;--intro-font:25px}
+ .mobile-lp .camp-intro-inner{width:282px}
+ .mobile-lp .camp-intro h2{gap:6px}
+}

@@ -33,10 +33,16 @@ HTML を変更したらプロジェクトルートで:
 
 ## 直近の変更
 
+### FV主人公の画風（2026-10-26）
+
+- 添付の漫画を参考に、FVの整備士を丸みのある顔立ち、大きく表情豊かな目、明るい笑顔に変更。カメラ目線・黒い作業着・2台のキャンピングカーとキャンプの構図は維持。
+- 最新画像は `dist/assets/hero-camper-family-v3.png`、生成条件は `hero-tone-generation.json`。
+
+
 ### FVのキャンプイラスト（2026-10-23）
 
 - `hero-scene.html` / `dist/hero-scene.css`: FVの文字と画像の配置。
-- `dist/assets/hero-camper-family-v2.png`: 新しく生成した完成イラスト。
+- `dist/assets/hero-camper-family-v3.png`: 新しく生成した完成イラスト。
 - `hero-scene-generation.json`: 内蔵画像生成ツールのプロンプトと参照元。
 - `apply_hero_scene.py`: FVのみを置き換える処理。`build_story_layout.py` の最後から呼ばれる。
 - スマホLPとして端末幅に追従し、PCでは最大430px幅で中央配置。`dist/mobile-lp.css` でFV・余白・文字・固定CTAを調整。

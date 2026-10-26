@@ -1,5 +1,5 @@
 /* A single-column LP that fits the device, capped at a comfortable phone width. */
-body.mobile-lp{--lp-panel-inset:8px;--lp-panel-radius:20px;padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-area-inset-bottom,0px))}
+body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20px;padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-area-inset-bottom,0px))}
 .mobile-lp .site-header .header-inner{min-height:72px;width:calc(100% - 24px);padding-block:8px;gap:8px}
 .mobile-lp .site-header .official-brand{width:clamp(120px,36vw,155px)}
 .mobile-lp .site-header a.header-cta{padding:9px 10px;min-height:44px;font-size:11px;white-space:nowrap}
@@ -17,8 +17,8 @@ body.mobile-lp{--lp-panel-inset:8px;--lp-panel-radius:20px;padding-bottom:calc(v
 .mobile-lp .poster-hero-camp-scene .poster-follow{margin:0;padding:20px 20px 28px;gap:12px}
 .mobile-lp .poster-hero-camp-scene .poster-consult{min-height:64px;font-size:14px;border-radius:32px;box-shadow:none}
 .mobile-lp .poster-hero-camp-scene .poster-menu{min-height:44px;display:flex;align-items:center;padding:0 4px;font-size:12px}
-.mobile-lp .story-worries .container,.mobile-lp .story-services .container{width:calc(100% - 32px)}
-.mobile-lp .worry-copy{padding:24px 20px}
+.mobile-lp .story-worries .container,.mobile-lp .story-services .container,.mobile-lp .story-access .container,.mobile-lp .story-contact .contact-inner{width:calc(100% - var(--lp-content-inset) - var(--lp-content-inset))}
+.mobile-lp .worry-copy{padding:24px 16px}
 .mobile-lp .story-worry .worry-copy h3{font-size:clamp(22px,6.1vw,26px)}
 .mobile-lp .worry-copy>p,.mobile-lp .story-service-copy>p{font-size:15px;line-height:1.95}
 .mobile-lp .worry-more{min-height:44px;font-size:13px}
@@ -53,6 +53,14 @@ body.mobile-lp{--lp-panel-inset:8px;--lp-panel-radius:20px;padding-bottom:calc(v
  .mobile-lp .mobile-contact a.line-branded-cta .mobile-line-copy{font-size:12px}
  .mobile-lp .fixed-camper{width:82px}
 }
+/* Wider illustrations and cards, with a shared narrow outer gutter. */
+.mobile-lp .story-worries,.mobile-lp .story-services,.mobile-lp .consultation-flow,.mobile-lp .camp-faq,.mobile-lp .story-access,.mobile-lp .story-contact{margin-inline:var(--lp-panel-inset)}
+.mobile-lp .camp-intro,.mobile-lp .camp-strengths,.mobile-lp .camp-faq,.mobile-lp .consultation-flow{padding-inline:var(--lp-content-inset)}
+.mobile-lp .camp-experience,.mobile-lp .camp-reasons{max-width:none}
+.mobile-lp .camp-reasons>li:nth-child(n){margin:0;padding:0}
+.mobile-lp .camp-reason-panel,.mobile-lp .camp-reason-content .camp-strength-art,.mobile-lp .camp-reason-description{width:100%;max-width:none}
+.mobile-lp .story-service-title,.mobile-lp .story-service-copy{padding-inline:16px}
+.mobile-lp .story-access .access-info{padding-inline:18px}
 /* Larger consultation character and a rectangular workshop illustration. */
 .mobile-lp .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) clamp(124px,39vw,166px);gap:20px 10px;padding:24px 16px}
 .mobile-lp .story-consult .consult-face{width:100%;height:auto;aspect-ratio:1122/1402;align-self:center;overflow:visible}

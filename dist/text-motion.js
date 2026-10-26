@@ -10,6 +10,7 @@
     '.camp-faq-copy h2', '.story-access h2', '.story-contact h2'
   ].join(','))];
   let observer;
+  let arrowObserver;
   try {
     observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -19,6 +20,16 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -16px 0px' });
     headings.forEach(heading => {
+      const vertical = heading.matches('.story-center-sticky h2, .camp-intro h2');
+      heading.setAttribute('data-text-reveal', vertical ? 'vertical' : '');
+      if (vertical) {
+        // Reveal the right-hand column first, preserving vertical Japanese text.
+        [...heading.children].forEach((column, index) => {
+          column.style.setProperty('--vertical-delay', `${index * 240}ms`);
+        });
+        observer.observe(heading);
+        return;
+      }
       const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
       const nodes = [];
       while (walker.nextNode()) {
@@ -32,17 +43,24 @@
         node.replaceWith(unit);
         unit.appendChild(node);
       });
-      heading.setAttribute('data-text-reveal', '');
       observer.observe(heading);
     });
+    arrowObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('is-motion-active', entry.isIntersecting);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.story-down').forEach(arrow => arrowObserver.observe(arrow));
     root.classList.add('text-motion-ready');
     reduced.addEventListener?.('change', event => {
       if (!event.matches) return;
       observer.disconnect();
+      arrowObserver.disconnect();
       root.classList.remove('text-motion-ready');
     });
   } catch {
     observer?.disconnect();
+    arrowObserver?.disconnect();
     root.classList.remove('text-motion-ready');
   }
 })();

@@ -8,11 +8,11 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp .poster-hero.poster-hero-camp-scene{width:calc(100% - var(--lp-panel-inset) - var(--lp-panel-inset));margin:8px auto 0;border-radius:var(--lp-panel-radius);background:var(--hero-background)}
 .mobile-lp .camp-about{margin-inline:var(--lp-panel-inset);border-radius:var(--lp-panel-radius)}
 .mobile-lp .poster-hero-camp-scene .poster-panel{border:0;border-radius:0;overflow:hidden}
-.mobile-lp .poster-hero-camp-scene .poster-heading{padding:28px 16px 12px}
-.mobile-lp .poster-hero-camp-scene .poster-heading>p{font-size:12px;letter-spacing:.08em}
-.mobile-lp .poster-hero-camp-scene .poster-heading h1{font-size:clamp(24px,6.5vw,28px);line-height:1.45}
+.mobile-lp .poster-hero-camp-scene .poster-heading{padding:22px 14px 10px}
+.mobile-lp .poster-hero-camp-scene .poster-heading>p{font-size:13px;line-height:1.7;letter-spacing:.05em;color:#fff8e7;text-shadow:0 1px 2px #191c17}
+.mobile-lp .poster-hero-camp-scene .poster-heading h1{font-size:clamp(27px,7.6vw,32px);line-height:1.3;font-feature-settings:normal}
 .mobile-lp .poster-hero-camp-scene .poster-camp-art{width:100%;height:auto;object-fit:contain}
-.mobile-lp .poster-hero-camp-scene .poster-tagline{font-size:clamp(23px,6.3vw,27px);line-height:1.5;margin:8px 16px 0}
+.mobile-lp .poster-hero-camp-scene .poster-tagline{width:calc(100% - 28px);max-width:380px;line-height:0;margin:10px auto 0}
 .mobile-lp .poster-hero-camp-scene .poster-location{margin:10px 0 0;font-size:11px}
 .mobile-lp .poster-hero-camp-scene .poster-follow{margin:0;padding:20px 20px 28px;gap:12px}
 .mobile-lp .poster-hero-camp-scene .poster-consult{min-height:64px;font-size:14px;border-radius:32px;box-shadow:none}

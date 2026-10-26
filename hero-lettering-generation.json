@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "use_case": "ads-marketing",
+  "transparent_background": true,
+  "prompt": "Use case: ads-marketing.\nAsset type: a finished Japanese hand-lettered slogan image for a camper-repair landing page, genuine transparent PNG background.\nPrimary request: hand-draw exactly these TWO centered horizontal lines of Japanese text, with warm ivory ink and a crisp near-black outline around every stroke so it is very readable on both dark olive green #455a35 and warm brown #80664d.\n\nExact text (verbatim, no quotation marks, no extra characters):\n直して、整えて。\nまた旅をしよう！\n\nStyle: polished professional Japanese hand-painted advertising lettering, bold friendly brush-marker strokes, energetic and warm, slightly organic character shapes, restrained brush texture, beautiful large open counters, fully legible. NOT a standard typeset font, NOT thin cursive, NOT graffiti. Keep both lines visually balanced, second line about 10% larger. Off-white ivory #fff8e7 interiors and clean dark charcoal #191c17 stroke outlines, subtle small dark offset under the lettering only. Do not add any colored background, panels, badges, decorative icons, vehicles, people, stars or English.\nComposition: wide landscape banner approximately 2.7:1, lettering fills most of the canvas with only about 4% clear transparent margin on all edges. Both complete lines fit comfortably with generous line separation. Every Japanese character and both punctuation marks must be correct, especially the final ！. Transparent spaces inside letter counters as appropriate. It will be displayed around 350px wide, so keep strong simple lettering that reads at that size. Return only this finished typography asset, with real alpha transparency, no mockup or checkerboard.",
+  "asset": "dist/assets/hero-handwritten-tagline-v1.png",
+  "width": 2060,
+  "height": 763,
+  "generated_source": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-3e1e1113-905d-49db-b8dd-9f482204abdb.png"
+}

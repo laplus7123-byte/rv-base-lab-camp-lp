@@ -30,12 +30,12 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 /* The mechanic speaks from beside a proper manga balloon below the photograph. */
 .mobile-lp .consultation-panel figure{border-radius:0;overflow:visible;background:transparent}
 .mobile-lp .consultation-panel figure>img{border-radius:12px}
-.mobile-lp .consultation-dialogue{display:grid;grid-template-columns:minmax(0,1fr) 120px;align-items:start;gap:10px;margin:18px 2px 0;padding:0;background:transparent}
-.mobile-lp .consultation-dialogue .consultation-bubble{position:relative;inset:auto;display:block;box-sizing:border-box;width:auto;min-width:0;max-width:none;margin:0;padding:18px 14px;border:2px solid #292c24;border-radius:26px 28px 24px 30px;background:#fffef9;color:var(--green);box-shadow:none;font-size:16px;font-weight:800;line-height:1.75;letter-spacing:0;text-align:left;overflow-wrap:anywhere;z-index:1}
+.mobile-lp .consultation-dialogue{--dialogue-height:120px;display:grid;grid-template-columns:minmax(0,1fr) 90px;align-items:center;gap:10px;margin:18px 2px 0;padding:0;background:transparent}
+.mobile-lp .consultation-dialogue .consultation-bubble{position:relative;inset:auto;display:flex;align-items:center;box-sizing:border-box;width:auto;min-width:0;max-width:none;min-height:var(--dialogue-height);margin:0;padding:12px 14px;border:2px solid #292c24;border-radius:26px 28px 24px 30px;background:#fffef9;color:var(--green);box-shadow:none;font-size:16px;font-weight:800;line-height:1.75;letter-spacing:0;text-align:left;overflow-wrap:anywhere;z-index:1}
 .mobile-lp .consultation-dialogue .consultation-bubble::before,.mobile-lp .consultation-dialogue .consultation-bubble::after{content:'';position:absolute;clip-path:polygon(0 0,100% 55%,0 100%);pointer-events:none}
 .mobile-lp .consultation-dialogue .consultation-bubble::before{right:-20px;top:31px;width:22px;height:22px;background:#292c24}
 .mobile-lp .consultation-dialogue .consultation-bubble::after{right:-16px;top:34px;width:18px;height:16px;background:#fffef9}
-.mobile-lp .consultation-dialogue>img.consultation-speaker{display:block;width:100%;max-width:none;height:auto;aspect-ratio:1086/1448;object-fit:contain;object-position:center top;margin:2px 0 0;background:transparent;border-radius:0}
+.mobile-lp .consultation-dialogue>img.consultation-speaker{display:block;width:90px;max-width:none;height:var(--dialogue-height);aspect-ratio:1086/1448;object-fit:contain;object-position:center;margin:0;background:transparent;border-radius:0}
 .mobile-lp .consultation-step[open] .consultation-bubble{animation:none}
 .mobile-lp .consultation-caption{padding:18px 16px 16px}
 .mobile-lp .faq-list summary{font-size:14px;line-height:1.8;min-height:64px}

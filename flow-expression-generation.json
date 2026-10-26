@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-26",
+  "mode": "built-in image_gen",
+  "purpose": "ご相談の流れ4ステップの表情を個別化。1と4はカメラ目線。人物高さ120pxと吹き出しの高さをそろえる。",
+  "images": [
+    {
+      "id": "listen",
+      "step": 1,
+      "name": "manga-flow-guide-listen-v1.png",
+      "description": "カメラ目線で親しみやすく話を聞く笑顔",
+      "source": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-0a8220e3-f55f-4a23-9b06-5e312bfd81c8.png",
+      "prompt": "Use case: identity-preserve. Edit the supplied transparent manga mechanic cutout for a Japanese camper repair consultation guide. Preserve this exact original adult mechanic, wavy black hair, clean-shaven face, charcoal coveralls with pale stitching over ivory T-shirt, olive notebook held under one arm, and existing clean ink/cel-shaded manga rendering. Keep the waist-up crop and 3:4 portrait shape, head in the upper third, all fingers and hair inside canvas, same approximate body proportions. TRUE transparent alpha background, no white box, no halo or colored backdrop. No text, icons, logo or speech bubble. Change his head orientation so the face is front-facing or only very slightly turned, BOTH EYES clearly LOOKING DIRECTLY AT THE CAMERA / READER. Eye contact must be unmistakable, not looking off to the left. Hands have coherent left/right anatomy and five fingers each. STEP 1 welcoming/listening: a warm modest smile with slightly parted lips, attentive open eyes making direct eye contact and relaxed eyebrows. The free hand remains extended gently palm-up to invite the viewer to talk. A friendly approachable professional, not a huge grin or exaggerated anime pose. Preserve the existing notebook and hand positions as much as possible; focus the change on direct camera gaze and head angle.",
+      "generated_path": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-1a4ec640-5bd8-49d7-86d2-2c433f66314c.png",
+      "transparent_background": true,
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-flow-guide-listen-v1.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "inspect",
+      "step": 2,
+      "name": "manga-flow-guide-inspect-v1.png",
+      "description": "状態確認：考えながら点検する表情",
+      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-faq-v1.png",
+      "generated_path": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-fc0356a4-ed9a-4413-ab5d-1d8dc84366aa.png",
+      "prompt": "Use case: identity-preserve. Edit target: the supplied transparent manga mechanic cutout. Create ONE individual expression variant for a camper repair consultation guide, not a sheet or collage. Preserve the EXACT character identity: original Japanese adult mechanic early 30s, wavy black hair, clean-shaven, adult face proportions, charcoal work coveralls with pale stitching over ivory T-shirt, olive notebook held securely against his lower chest. Match existing precise dark ink and full-color cel shading. Preserve the same waist-up crop, 3:4 portrait canvas, similar head size and head position in upper third, and overall silhouette width, so all four variants can align next to speech balloons. His face and eyes orient toward the LEFT side of the image, where the text balloon appears. Make the specified emotion clearly legible at small size through brow/eyes/mouth, but not cartoonishly exaggerated. Keep a genuine transparent alpha background with no white or colored rectangle, no halo, no shadow backdrop. No text, speech bubbles, icons, badges, logos or watermark. The notebook stays in one arm; the other natural anatomical hand performs the requested gesture, five fingers and coherent wrists. Do not add props.\n\nSTEP 2: CAREFUL INSPECTION. Focused thoughtful expression, lips gently CLOSED in a neutral line, eyebrows drawn inward very slightly, eyes focused down-left, chin lowered in a small thoughtful nod. Professional and attentive, not angry, worried or sad. Keep the notebook held with one arm. Free hand rests lightly near the chin in a natural thinking gesture, fingers clearly drawn and not covering the mouth. This expression must read distinctly more serious than the welcoming smile, while remaining the same friendly adult mechanic.",
+      "transparent_background": true,
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-flow-guide-inspect-v1.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "explain",
+      "step": 3,
+      "name": "manga-flow-guide-explain-v1.png",
+      "description": "内容・費用のご案内：穏やかに話しながら説明",
+      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-faq-v1.png",
+      "generated_path": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-7f838e60-5857-43e4-a2be-23a639f818e2.png",
+      "prompt": "Use case: identity-preserve. Edit target: the supplied transparent manga mechanic cutout. Create ONE individual expression variant for a camper repair consultation guide, not a sheet or collage. Preserve the EXACT character identity: original Japanese adult mechanic early 30s, wavy black hair, clean-shaven, adult face proportions, charcoal work coveralls with pale stitching over ivory T-shirt, olive notebook held securely against his lower chest. Match existing precise dark ink and full-color cel shading. Preserve the same waist-up crop, 3:4 portrait canvas, similar head size and head position in upper third, and overall silhouette width, so all four variants can align next to speech balloons. His face and eyes orient toward the LEFT side of the image, where the text balloon appears. Make the specified emotion clearly legible at small size through brow/eyes/mouth, but not cartoonishly exaggerated. Keep a genuine transparent alpha background with no white or colored rectangle, no halo, no shadow backdrop. No text, speech bubbles, icons, badges, logos or watermark. The notebook stays in one arm; the other natural anatomical hand performs the requested gesture, five fingers and coherent wrists. Do not add props.\n\nSTEP 3: CLEAR EXPLANATION. Calm confident mid-speaking expression, mouth slightly open in a natural explaining shape, attentive eyes looking left, one eyebrow subtly raised with a reassuring small smile. Free hand raised around chest level with ONE index finger gently pointing upward to explain an important detail, other fingers folded naturally; keep the notebook in the opposite arm. Not a lecturing/scolding face, not exaggerated shock, no wink. The face and hand should be distinct from welcoming/listening and concentrated inspection.",
+      "transparent_background": true,
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-flow-guide-explain-v1.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "id": "farewell",
+      "step": 4,
+      "name": "manga-flow-guide-farewell-v1.png",
+      "description": "カメラ目線で明るく旅へ送り出す笑顔",
+      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-faq-v1.png",
+      "prompt": "Use case: identity-preserve. Edit the supplied transparent manga mechanic cutout for a Japanese camper repair consultation guide. Preserve this exact original adult mechanic, wavy black hair, clean-shaven face, charcoal coveralls with pale stitching over ivory T-shirt, olive notebook held under one arm, and existing clean ink/cel-shaded manga rendering. Keep the waist-up crop and 3:4 portrait shape, head in the upper third, all fingers and hair inside canvas, same approximate body proportions. TRUE transparent alpha background, no white box, no halo or colored backdrop. No text, icons, logo or speech bubble. Change his head orientation so the face is front-facing or only very slightly turned, BOTH EYES clearly LOOKING DIRECTLY AT THE CAMERA / READER. Eye contact must be unmistakable, not looking off to the left. Hands have coherent left/right anatomy and five fingers each. STEP 4 send-off: a visibly broader cheerful smile, upper teeth lightly showing, cheeks lifted, friendly OPEN eyes making direct eye contact with the viewer. Do not close the eyes: the camera gaze must remain clear. The free hand is raised beside the shoulder in a small relaxed farewell wave, palm toward viewer and fingers naturally separated, no higher than the head, within canvas. Same notebook in the other arm. Warm confident adult face, distinct from the modest listening smile and thoughtful inspection variant.",
+      "generated_path": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-440242d3-076e-49be-9e7b-9c68f68ac0e7.png",
+      "transparent_background": true,
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-flow-guide-farewell-v1.png",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA"
+    }
+  ]
+}

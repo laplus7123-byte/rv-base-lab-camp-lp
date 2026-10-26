@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-26",
+  "mode": "built-in image_gen",
+  "use_case": "background-extraction",
+  "input": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-hero-split-v3.png",
+  "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-0f592314-6083-4e8b-9c48-3f97f474c8b1.png",
+  "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-hero-cutout-v4.png",
+  "width": 1402,
+  "height": 1122,
+  "transparent_background": true,
+  "prompts": [
+    {
+      "stage": "extract",
+      "prompt": "Use case: background-extraction. Edit this finished manga hero artwork to create a sophisticated clean TRANSPARENT cutout composition for a website with a continuous two-color background supplied by CSS. Preserve EXACTLY the existing primary composition and graphic style: ONE large cream motorhome centered and frontal; original black-haired adult mechanic in charcoal coveralls working on its left-side service hatch at LEFT; camping family (father, mother and one child) seated interacting naturally around the table at RIGHT. Preserve all faces, gaze direction, bodies, poses, hands, clothing, camper shape and details, headlamp and grille shapes, vehicle scale and center placement. Keep the green rolling tool chest at far left, the mechanic's visible work props, the camping chairs, table, lantern, mugs and canvas tent at right. Remove the full rectangular environmental BACKDROP: workshop ceiling, roof beams, walls, shutter, garage floor, far mountains, all sky/sun/clouds, lake, distant forest and broad foreground grass/ground planes. They must become actual alpha transparency, NOT white or another fill color. Keep only a few small grounded natural details immediately around the chair feet if needed, and soft small translucent contact shadows directly under objects. There must be NO hard rectangular horizon, floor baseline, ceiling edge, vignette rectangle, picture frame, painted background or flat color plate behind the objects. The entire top and bottom edges of the image must be empty true transparency, enough margin to avoid any seam against the webpage. Keep left and right props comfortably inside the canvas; if needed slightly bring only the far-left tool chest and far-right tent edge inward to avoid cropping at outer edges. Do not crop or cut off the camper, people, hands or table. Balanced advertising cutout collage with generous negative space, clean precise outlines and refined cel shading, no white halos or colored fringe. No additional characters, no added floating heads, no added objects, no typography, logos, text or speech bubbles. Output same landscape 5:4 composition, approximately 1402x1122, with genuine transparent alpha. This is background removal and visual simplification, NOT a redesign of the central vehicle or people."
+    },
+    {
+      "stage": "edge_cleanup",
+      "prompt": "Use case: background-extraction. Refine this TRANSPARENT manga composition. Preserve the EXACT existing objects, their appearance, positions, scale, proportions and facial expressions: one cream camper at center, mechanic and green tool chest at left, family, table and tent at right. Fix only the cutout edges and unwanted background remnants: remove EVERY bright red, yellow, lime-green and white matte fringe, fleck or stray pixel around the tent's ropes, canopy edges, mechanic, tool chest and camper. Where any old colored-background residue remains between tent ropes or around figures, make it fully alpha-transparent. Smooth natural antialiased edges using the correct local ink/object color, no halo. Do not create an outline around the whole composition. Preserve only the natural dark manga linework and legitimate yellow tent fabric, green grass directly under the chairs, and olive clothing. Keep actual true alpha transparency everywhere outside the objects; keep empty upper and lower margins exactly as they are. Do not replace transparency with black, white, checkerboard or color. No new backdrop, no rectangular scenery, no redesign, no typography. Final website-ready clean cutout suitable on muted pale sage at left and sand beige at right, with no colored extraction artifacts."
+    }
+  ]
+}

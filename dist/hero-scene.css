@@ -1,11 +1,11 @@
-/* Sage travel-poster background, with the complete illustration visible. */
-.poster-hero.poster-hero-camp-scene{--hero-sage:#d1dcc3;width:calc(100% - 24px);margin:18px auto 0;background:var(--hero-sage);position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid #7c8e6652}
+/* One camper connects a cool workshop and a warm campsite. */
+.poster-hero.poster-hero-camp-scene{--hero-background:linear-gradient(90deg,#dce3df 0 50%,#f1e4c9 50% 100%);width:calc(100% - 24px);margin:18px auto 0;background:var(--hero-background);position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid #7c8e6652}
 .poster-hero-camp-scene::before{content:'';position:absolute;pointer-events:none;width:300px;height:300px;right:-165px;top:-195px;border:1px solid #7f906e40;border-radius:50%;box-shadow:0 0 0 22px #7f906e10,0 0 0 44px #f4efdf40,0 0 0 66px #7f906e10;z-index:0}
 .poster-hero-camp-scene .poster-panel{height:auto;min-height:0;display:flex;flex-direction:column;overflow:hidden;background:transparent;color:var(--green);border:0;border-radius:0;padding:0;isolation:isolate}
 .poster-hero-camp-scene .poster-heading{position:static;max-width:none;width:auto;margin:0;padding:22px 12px 8px;text-align:center}
 .poster-hero-camp-scene .poster-heading>p{display:table;margin:0 auto 10px;padding:4px 13px;border:1px solid #7c8e665c;border-radius:999px;background:#f4efdf9c;font-size:11px;font-weight:700;letter-spacing:.1em;color:#526342}
 .poster-hero-camp-scene .poster-heading h1{margin:0;font-size:25px;line-height:1.5;letter-spacing:0;white-space:normal;color:#33472d}
-.poster-hero-camp-scene .poster-camp-art{position:static;display:block;width:100%;max-width:none;height:auto;aspect-ratio:1402/1122;object-fit:contain;margin:0;transform:none;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 2%,#000 98%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 2%,#000 98%,transparent)}
+.poster-hero-camp-scene .poster-camp-art{position:static;display:block;width:100%;max-width:none;height:auto;aspect-ratio:1402/1122;object-fit:contain;margin:0;transform:none}
 .poster-hero-camp-scene .poster-tagline{position:static;align-self:center;margin:8px 16px 0;font-size:23px;line-height:1.55;letter-spacing:.04em;text-align:center;white-space:normal}
 .poster-hero-camp-scene .poster-location{position:static;display:block;margin:10px 0 18px;font-size:10px;font-weight:700;letter-spacing:.15em;color:#526342;text-align:center;opacity:1}
 .poster-hero-camp-scene .poster-follow{position:static;display:flex;flex-direction:column;align-items:center;gap:14px;margin:18px 8px 0}

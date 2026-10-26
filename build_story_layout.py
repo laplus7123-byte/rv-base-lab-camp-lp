@@ -113,6 +113,8 @@ d.xpath('//meta[@name="viewport"]')[0].set('content','width=device-width, initia
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'fixed-width.css'})
 from apply_hero_scene import apply_hero_scene
 apply_hero_scene(d)
+from apply_manga_style import apply_manga_style
+apply_manga_style(d)
 d.find('body').set('class',(d.find('body').get('class','')+' mobile-lp').strip())
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))

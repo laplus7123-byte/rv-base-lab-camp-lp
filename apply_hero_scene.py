@@ -14,4 +14,6 @@ if __name__ == '__main__':
     path = ROOT / 'dist/index.html'
     document = html.fromstring(path.read_text())
     apply_hero_scene(document)
+    from apply_manga_style import apply_manga_style
+    apply_manga_style(document)
     path.write_text('<!doctype html>\n' + html.tostring(document, encoding='unicode', method='html'))

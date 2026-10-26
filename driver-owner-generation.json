@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-26",
+  "mode": "built-in image_gen",
+  "purpose": "運転席の人物をFV右側の父親を参考にした一般男性へ変更。",
+  "prompt": "Use case: identity-preserve / precise-object-edit. Asset type: full-color manga camper landing-page illustration. Image 1 is the EDIT TARGET, a seated camper driver. Image 2 is the exact CHARACTER REFERENCE: the ordinary father camping on the RIGHT of the site's hero. Image 3 is the complete hero, for a clearer version of that same father on its far RIGHT; ignore the black-uniformed mechanic on the left. Replace ONLY the driver in image 1 with the casual male camper owner/father from image 2: approachable Japanese man in his late 30s/early 40s, normal adult build, simple short straight dark-brown hair, warm ordinary facial features, a subtle relaxed smile. Give him the reference father's plain tan/beige brimmed outdoor cap, light beige open casual overshirt with rolled sleeves, plain light gray T-shirt underneath, olive trousers. He must be recognizably the man enjoying camping with his child in the hero, not the handsome mechanic character: no voluminous styled wavy hair, no black coveralls, no mechanic uniform, no heavy contrasting uniform seams. Preserve the driver seat, seated body proportions, right-hand-drive cab, steering wheel, dashboard, woods/mountain road outside, cream seats, wooden camper interior, camera angle, exact 3:2 landscape framing, colors and illumination of image 1. Keep the securely fastened three-point seatbelt clearly visible over the casual clothes, correct separate left/right hands holding the steering wheel in the same natural pose, and eyes looking forward through the windshield. Match the existing clean ink contours and restrained cel-shaded manga rendering. Make no other scene changes. Full opaque rectangular background. No text, logos, watermarks or frames. Output 1536x1024.",
+  "source": "dist/assets/manga-worry-ride-v1.png",
+  "character_reference": "dist/assets/manga-hero-cutout-v4.png (右側の父親)",
+  "user_reference": "/var/folders/_p/m4fk39ps4252p2618kh94z300000gn/T/codex-clipboard-f1b844d7-c8c3-4ab5-af3f-6374717a6e2f.png",
+  "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-32b5ad63-5c0c-4462-911f-7242cfa76366.png",
+  "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-worry-ride-v2.png",
+  "width": 1536,
+  "height": 1024
+}

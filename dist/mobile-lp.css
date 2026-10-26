@@ -27,6 +27,14 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp .consultation-step summary{padding:20px 14px;gap:10px}
 .mobile-lp .consultation-step h3{font-size:clamp(18px,4.8vw,21px)}
 .mobile-lp .consultation-caption a.line-branded-cta{min-height:56px}
+/* A readable full-width caption joins each photograph to its explanation. */
+.mobile-lp .consultation-step{--flow-caption-accent:var(--green);--flow-caption-bg:#edf2e7}
+.mobile-lp .consultation-step:nth-child(even){--flow-caption-accent:var(--brown);--flow-caption-bg:#f8f2e9}
+.mobile-lp .consultation-panel figure{border-radius:12px;background:var(--flow-caption-bg)}
+.mobile-lp .consultation-panel figure>img{border-radius:0}
+.mobile-lp .consultation-panel .consultation-bubble{position:relative;inset:auto;display:block;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:16px 18px;border:0;border-inline-start:3px solid var(--flow-caption-accent);border-radius:0;background:var(--flow-caption-bg);color:var(--flow-caption-accent);box-shadow:none;font-size:clamp(16px,4.6vw,18px);font-weight:800;line-height:1.8;letter-spacing:.02em;text-align:left;overflow-wrap:anywhere}
+.mobile-lp .consultation-step[open] .consultation-bubble{animation:none}
+.mobile-lp .consultation-caption{padding:18px 16px 16px}
 .mobile-lp .faq-list summary{font-size:14px;line-height:1.8;min-height:64px}
 .mobile-lp .faq-list details>p{font-size:14px;line-height:1.9}
 .mobile-lp .mobile-contact{padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:8px}

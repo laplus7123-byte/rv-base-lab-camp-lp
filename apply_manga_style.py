@@ -21,3 +21,5 @@ def apply_manga_style(document):
         image.set('width', str(asset['width']))
         image.set('height', str(asset['height']))
         image.set('decoding', 'async')
+        if asset.get('alt'):
+            image.set('alt', asset['alt'])

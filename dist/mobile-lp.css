@@ -52,3 +52,12 @@ body.mobile-lp{padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-a
  .mobile-lp .mobile-contact a.line-branded-cta .mobile-line-copy{font-size:12px}
  .mobile-lp .fixed-camper{width:82px}
 }
+/* Larger consultation character and a rectangular workshop illustration. */
+.mobile-lp .comic-consult.story-consult{grid-template-columns:minmax(0,1fr) clamp(124px,39vw,166px);gap:20px 10px;padding:24px 16px}
+.mobile-lp .story-consult .consult-face{width:100%;height:auto;aspect-ratio:1122/1402;align-self:center;overflow:visible}
+.mobile-lp .story-consult .consult-face img{width:100%;height:auto;max-width:100%;object-fit:contain;object-position:center;display:block}
+.mobile-lp .camp-life-art>img{border-radius:0;aspect-ratio:3/4;object-fit:contain}
+@media(max-width:360px){
+ .mobile-lp .story-consult h3{font-size:18px;line-height:1.65}
+ .mobile-lp .story-consult .consult-message>p{font-size:12px;line-height:1.9}
+}

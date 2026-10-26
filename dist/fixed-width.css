@@ -1,5 +1,6 @@
 :root{--lp-width:430px;--lp-half-width:215px;--contact-bar-height:82px}
-html{background:#d9d3c5;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{width:100%;max-width:var(--lp-width);margin-inline:auto;overflow-x:clip;box-shadow:0 0 0 1px #34261e14,0 18px 50px #282b2429}
-.mobile-contact,.fixed-camper-lane{left:max(0px,calc(50% - var(--lp-half-width)));right:max(0px,calc(50% - var(--lp-half-width)))}
+/* Keep the preview composition at 430px; the mobile viewport scales it to fit. */
+html{min-width:var(--lp-width);background:#d9d3c5;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{width:var(--lp-width);min-width:var(--lp-width);max-width:var(--lp-width);margin-inline:auto;overflow-x:clip;box-shadow:0 0 0 1px #34261e14,0 18px 50px #282b2429}
+.mobile-contact,.fixed-camper-lane{width:var(--lp-width);left:max(0px,calc(50% - var(--lp-half-width)));right:auto}
 .skip-link{left:calc(max(0px,calc(50% - var(--lp-half-width))) + 16px)}

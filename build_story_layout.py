@@ -108,14 +108,14 @@ for caption in d.xpath('//p[contains(@class,"eyebrow")] | //p[@class="poster-eng
  caption.getparent().remove(caption)
 for location in d.xpath('//span[@class="poster-location"]'):location.text='千葉県君津市'
 for top_link in d.xpath('//a[@class="back-top"]'):top_link.text='ページの先頭へ ↑'
-# Phone-first LP: use the actual device width, centered on larger screens.
-d.xpath('//meta[@name="viewport"]')[0].set('content','width=device-width, initial-scale=1, viewport-fit=cover')
-etree.SubElement(head,'link',{'rel':'stylesheet','href':'fixed-width.css'})
+# Preserve the 430px preview layout; mobile browsers choose the fit-to-screen scale.
+d.xpath('//meta[@name="viewport"]')[0].set('content','width=430, viewport-fit=cover')
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'fixed-width.css?v=preview430-20261026'})
 from apply_hero_scene import apply_hero_scene
 apply_hero_scene(d)
 from apply_manga_style import apply_manga_style
 apply_manga_style(d)
 d.find('body').set('class',(d.find('body').get('class','')+' mobile-lp').strip())
-etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css?v=about-fixed-20261026'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css?v=preview430-20261026'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

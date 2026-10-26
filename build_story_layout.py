@@ -115,6 +115,11 @@ from apply_hero_scene import apply_hero_scene
 apply_hero_scene(d)
 from apply_manga_style import apply_manga_style
 apply_manga_style(d)
+# Give the first concern card its own headlight replacement scene.
+worry_image=d.xpath('//section[@class="story-worries"]//a[@href="#repair"]/img')[0]
+worry_image.set('src','assets/manga-worry-headlight-v1.png')
+worry_image.set('width','1536');worry_image.set('height','1024')
+worry_image.set('alt','キャンピングカーのヘッドライト本体を支え、配線をつなぎながら交換する整備士')
 d.find('body').set('class',(d.find('body').get('class','')+' mobile-lp').strip())
 etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))

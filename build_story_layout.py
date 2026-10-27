@@ -6,18 +6,8 @@ ROOT=Path(__file__).resolve().parent
 runpy.run_path(str(ROOT/'build_manga_design.py'))
 p=ROOT/'dist/index.html';d=html.fromstring(p.read_text())
 intro=d.xpath('//section[@class="manga-intro"]')[0]
-new=html.fromstring('''<section class="story-worries" aria-labelledby="worry-title"><div class="container"><p class="story-eyebrow">BEFORE YOUR NEXT JOURNEY</p><h2 id="worry-title">次の旅の前に、<br><em>愛車のこと</em>で<br class="mobile-only">気になっていませんか？</h2><div class="story-worry-grid"><article class="story-worry"><a href="#repair" class="story-circle"><img src="assets/manga-line-worry-headlight-v1.png" width="1536" height="1024" loading="lazy" alt="キャンピングカーのヘッドライトを交換する整備士"><span class="story-bubble">この音、<br>いつもと違うかも。</span></a><h3>小さな不調、<br>そのままにしていませんか。</h3><p>気になる異音や設備の不調。<br>旅に出る前に、<br>一度きちんと見ておきたい。</p></article><article class="story-worry"><a href="#electrical" class="story-circle"><img src="assets/manga-line-worry-comfort-v1.png" width="1536" height="1024" loading="lazy" alt="夕暮れのキャンプ場で、両親と子供がキャンピングカーの車内で旅の地図を囲む様子"><span class="story-bubble">旅先で電気、<br>足りるかな？</span></a><h3>旅先でも、<br>心地よく過ごしたい。</h3><p>バッテリーや充電、冬の暖房。<br>車内で過ごす時間も、<br>安心して楽しみたい。</p></article><article class="story-worry"><a href="#install" class="story-circle"><img src="assets/manga-line-worry-ride-v1.png" width="1536" height="1024" loading="lazy" alt="ベージュの帽子と普段着で、シートベルトを着けてキャンピングカーを運転する男性"><span class="story-bubble">ここがもっと<br>使いやすければ！</span></a><h3>「こうしたい」を、<br>どこに相談しよう。</h3><p>部品の取付や収納の見直し。<br>自分たちの旅に合う一台に、<br>少しずつ整えていきたい。</p></article></div><div class="story-down" aria-hidden="true"><span></span><span></span></div></div></section>''')
+new=html.fromstring((ROOT/'worry-section.html').read_text())
 intro.getparent().replace(intro,new)
-worry_copy=[
- ('小さな不調も、<br>ご相談ください。','いつもと違う音や、設備の不調。気になることは、旅に出る前に一度確認しておきませんか。修理も点検も、愛車の状態からお伺いします。','修理・メンテナンスを見る'),
- ('旅先でも、<br>心地よい車内に。','バッテリーや充電、寒い季節の暖房。旅先での使い方に合わせて、車内の設備を見直しませんか。今お使いの装備からご相談いただけます。','電装・バッテリーを見る'),
- ('愛車を、もっと<br>使いやすく。','部品の取付や収納の見直し。「ここがこうなったら」というご希望をお聞かせください。自分たちの旅に合う一台を、一緒に考えます。','部品取付・カスタムを見る')]
-for card,(title,description,link_text) in zip(new.xpath('.//article'),worry_copy):
- picture=card.xpath('./a')[0];picture.set('class','worry-picture')
- for bubble in picture.xpath('./span'):picture.remove(bubble)
- for item in card.xpath('./h3|./p'):card.remove(item)
- copy=html.fromstring(f'<div class="worry-copy"><h3>{title}</h3><p>{description}</p><a class="worry-more" href="{picture.get("href")}">{link_text}<span aria-hidden="true">↗</span></a></div>')
- card.append(copy)
 services=d.xpath('//section[@id="service"]')[0];services.set('class','story-services')
 for old in services.xpath('.//div[@class="chapter"]|.//div[@class="comic-section-title"]'):old.getparent().remove(old)
 grid=services.xpath('.//div[@class="comic-service-grid"]')[0];grid.set('class','story-solutions')
@@ -116,6 +106,6 @@ apply_hero_scene(d)
 from apply_manga_style import apply_manga_style
 apply_manga_style(d)
 d.find('body').set('class',(d.find('body').get('class','')+' mobile-lp').strip())
-etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css?v=flow-expression-20261026'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css?v=lithium-20261027'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

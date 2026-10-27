@@ -22,6 +22,19 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp .story-worry .worry-copy h3{font-size:26px}
 .mobile-lp .worry-copy>p,.mobile-lp .story-service-copy>p{font-size:15px;line-height:1.95}
 .mobile-lp .worry-more{min-height:44px;font-size:13px}
+/* Introduce lithium upgrades alongside the existing repair and custom services. */
+.mobile-lp .story-worries h2{margin-bottom:18px}
+.mobile-lp .story-worries .worry-intro{margin:0 0 30px;font-size:14px;line-height:1.9;text-align:center;color:#526047}
+.mobile-lp .story-worry-lithium{scroll-margin-top:92px}
+.mobile-lp .story-worry-lithium .worry-copy{background:#fffef9}
+.mobile-lp .story-worry-lithium .lithium-subtitle{margin:0 0 24px;padding-left:12px;border-left:4px solid var(--brown);color:var(--green);font-size:17px;line-height:1.65;font-weight:700}
+.mobile-lp .lithium-concerns{list-style:none;margin:0 0 22px;padding:0;color:#30372a;font-size:15px;font-weight:700;line-height:1.8}
+.mobile-lp .lithium-concerns li+li{margin-top:12px}
+.mobile-lp a.worry-lithium-cta{box-sizing:border-box;width:100%;min-height:64px;margin:0 0 16px;padding:12px;gap:10px;border:2px solid #30372a;border-radius:8px;background:var(--green);color:#fffef9;font-size:14px;font-weight:800;text-decoration:none}
+.mobile-lp a.worry-lithium-cta .line-cta-label{gap:8px}
+.mobile-lp a.worry-lithium-cta .cta-arrow{font-size:20px}
+.mobile-lp a.worry-lithium-cta:hover{background:#354729;color:#fffef9}
+.mobile-lp a.worry-lithium-cta:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
 .mobile-lp .camp-intro-copy,.mobile-lp .camp-reason-description{font-size:14px;line-height:1.95}
 .mobile-lp .consultation-intro,.mobile-lp .consultation-step summary p,.mobile-lp .consultation-caption p{font-size:14px;line-height:1.9}
 .mobile-lp .consultation-step summary{padding:20px 14px;gap:10px}

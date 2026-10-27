@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "mode": "built-in image_gen",
+  "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/design/character-redesign-20261027/mechanic-fine-line-flat-v1.png",
+  "prompt": "Use case: identity-preserve.\nEdit the supplied original mechanic illustration to show a STRAIGHT-ON FRONT VIEW of the SAME man. Preserve his original character identity, apparent age about 38, ordinary sturdy build, short side-swept dark-gray hair, clean-shaven face, natural small eyes, eyebrows and approachable modest smile. Rotate his head AND upper torso so BOTH shoulders and BOTH sides of his face are visible from directly in front, with nose centered and both eyes looking straight at the viewer. This must be unmistakably frontal, not a three-quarter or profile view. His expression is a small relaxed closed-mouth smile, not a broad toothy grin.\n\nPreserve the exact supplied DRAWING STYLE: fine slightly scratchy irregular black pen contours, economical facial lines, low-saturation smooth flat color fills, sparse short hatch marks at neck, and a few small flat hard-edged shadow shapes. Keep the simple muted charcoal-blue work coveralls, two chest pockets and rolled sleeves, pale gray undershirt, small steel open-ended wrench naturally held in his right hand around lower chest height (viewer's left), other hand resting casually near his waist. Anatomically natural paired hands, five fingers. Do not add a notebook or other props.\nKeep the same simple neutral light-gray background and 4:5 portrait waist-up framing, with the whole head and both elbows inside canvas. Keep colors neutral; no sepia, yellow cast, aged paper, texture overlay, orange skin, glossy hair highlights, painterly or photographic shading, airbrush, 3D, thick smooth cartoon outline or overly polished anime face. No text, labels, panels, speech bubbles, logo or watermark. Change only the viewing orientation and necessary pose projection; preserve the visual tone and character design.",
+  "generated_path": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-d3b9c59f-365d-4d44-a335-4317fc9264f4.png",
+  "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/design/character-redesign-20261027/mechanic-fine-line-front-v1.png",
+  "status": "front_view_style_sample_not_published",
+  "dimensions": [
+    1122,
+    1402
+  ]
+}

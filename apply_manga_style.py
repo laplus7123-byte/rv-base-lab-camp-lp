@@ -11,7 +11,7 @@ def apply_manga_style(document):
     replacements = {
         f"assets/{name}": asset
         for asset in assets
-        for name in (asset['old'], asset['name'])
+        for name in (asset['old'], asset['name'], *asset.get('previous_names', []))
     }
     for image in document.xpath('//img[@src]'):
         asset = replacements.get(image.get('src'))

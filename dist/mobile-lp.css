@@ -29,6 +29,24 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp a.worry-lithium-cta .cta-arrow{font-size:20px}
 .mobile-lp a.worry-lithium-cta:hover{background:#354729;color:#fffef9}
 .mobile-lp a.worry-lithium-cta:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+.mobile-lp .lithium-details{margin:0 0 20px;border-block:1px solid #b7c0aa;scroll-margin-top:20px}
+.mobile-lp .lithium-details summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:12px 0;box-sizing:border-box;list-style:none;cursor:pointer;color:var(--green);font-size:15px;font-weight:800;line-height:1.65}
+.mobile-lp .lithium-details summary::-webkit-details-marker{display:none}
+.mobile-lp .lithium-details summary:hover{color:var(--brown)}
+.mobile-lp .lithium-details summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.mobile-lp .lithium-details-toggle{position:relative;flex:0 0 24px;width:24px;height:24px;border:1px solid currentColor;border-radius:50%}
+.mobile-lp .lithium-details-toggle::before,.mobile-lp .lithium-details-toggle::after{content:'';position:absolute;inset:50% auto auto 50%;width:10px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
+.mobile-lp .lithium-details-toggle::after{transform:translate(-50%,-50%) rotate(90deg)}
+.mobile-lp .lithium-details[open] .lithium-details-toggle::after{display:none}
+.mobile-lp .lithium-details-body{padding:4px 0 18px;color:#3e4b35;font-size:14px;line-height:1.9;overflow-wrap:anywhere}
+.mobile-lp .lithium-details-body h4{margin:0 0 10px;color:var(--green);font-size:17px;line-height:1.75}
+.mobile-lp .lithium-details-body p{margin:0 0 16px}
+.mobile-lp .lithium-details-body dl{margin:20px 0 24px;padding-left:14px;border-left:3px solid #a4b093}
+.mobile-lp .lithium-details-body dt{margin:16px 0 4px;font-weight:800;color:var(--green)}
+.mobile-lp .lithium-details-body dt:first-child{margin-top:0}
+.mobile-lp .lithium-details-body dd{margin:0}
+.mobile-lp .lithium-details-body .lithium-details-note{font-size:12px;color:#5d6655}
+.mobile-lp .lithium-details-body .lithium-details-consult{margin-bottom:0;font-weight:700}
 .mobile-lp .camp-intro-copy,.mobile-lp .camp-reason-description{font-size:14px;line-height:1.95}
 .mobile-lp .consultation-intro,.mobile-lp .consultation-step summary p,.mobile-lp .consultation-caption p{font-size:14px;line-height:1.9}
 .mobile-lp .consultation-step summary{padding:20px 14px;gap:10px}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "mode": "built-in image_gen",
   "use_case": "style-transfer",
   "reference": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/design/character-redesign-20261027/mechanic-fine-line-front-v1.png",
@@ -395,25 +395,22 @@
     {
       "id": "worry_comfort",
       "old": "manga-worry-comfort-v2.png",
-      "name": "manga-line-worry-comfort-v1.png",
+      "name": "manga-line-worry-appliances-v1.png",
       "transparent": false,
-      "prompt": "Use case: style-transfer.\nImage 1 is the EDIT TARGET for scene/framing/action. Images 2 and 3 show the SAME USER-APPROVED MECHANIC from front and side and are the identity and drawing-style references.\nReplace the target's mechanic with EXACTLY this approved person: ordinary adult Japanese man, short dark-gray swept hair with short sides, softly rectangular jaw, natural small eyes and brows, friendly modest smile, clean-shaven, sturdy average build. Match reference facial construction at the scene's angle. Workwear must match references: desaturated charcoal-BLUE coveralls, two simple chest pockets, rolled sleeves, pale-gray undershirt. NO old glamorous curls, model jaw, thick fashionable eyebrows or shiny black uniform.\n\nRender the ENTIRE illustration with the references' thin slightly scratchy BLACK pen contours, sparse economical lines, low-saturation smooth FLAT fills, and just a few flat muted purple-gray shadows. No thick smooth cartoon outlines; no glossy anime hair strands, huge eyes, photographic or airbrushed shading, detailed reflective highlights, dense stitching or microfolds. NO SEPIA, orange/yellow color cast, brown wash, paper texture, grain or mottling. Skin is flat natural low-saturation beige-pink; whites and grays stay neutral. Retain scene objects' true muted colors, e.g. cream camper, wood cabinetry and green foliage, without a warm filter across everything. Keep the reference's relaxed human expression and slightly irregular hand-ink line. Only a few hatch marks at neck/cuffs.\nPreserve the target's exact shot size, viewpoint, pose/action, important equipment/tool geometry, object count, aspect ratio and crop. Customers, spouses and children retain their distinct casual-clothed identities; do not turn them into the mechanic. No added face in hand-only closeups. Coherent left/right hands, five fingers, natural grip. No text, logos, letter labels, bubbles, watermark, multiple panels or character sheets. No extra people or missing existing people.\nScene-specific instructions: Landscape 3:2. There is NO MECHANIC in this scene. Preserve the distinct ordinary FATHER, MOTHER and CHILD relaxing around map inside warmly lit camper at dusk with camping scene outside. Keep same poses, face identities, clothes, child present, room arrangement and dusk palette. Use only the drawing STYLE of reference A, NOT the mechanic's face or uniform on family. Fewer glossy details, natural unposed expressions.\nBackground: Full opaque scene matching original edges and background. Preserve day/time and lighting mood.",
-      "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-eb6c13db-6d66-4fe2-90af-b54dc4689d78.png",
-      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-comfort-v1.png",
+      "prompt": "Use case: identity-preserve.\nAsset type: landscape 3:2 illustration (1536 x 1024) for a Japanese camper lithium-battery service card.\nInput image 1 is the edit target and the reference for the SAME FAMILY, camper interior, linework and muted palette. Change the activity and camera framing so power-hungry appliances are clearly being used.\nScene: a comfortable camper at a dusk forest campsite, viewed diagonally from INSIDE across a compact kitchen and dining nook. A clearly recognizable WHITE AIR-CONDITIONER with open air louvers is installed high on the back wall, cooling the interior; no cartoon wind arrows. A clearly recognizable built-in MICROWAVE is at convenient counter/chest height at left, door CLOSED, interior gently illuminated with a food container visible, indicating cooking. Father in the same olive-green casual overshirt over gray T-shirt and dark casual trousers stands beside it naturally pressing its start button with one hand. Mother in the same cream knit and olive trousers sits at the dining table with their same child in an olive hoodie, smiling and preparing for dinner; she can hold a simple air-conditioner remote. A few plates and cups on the table. Frame both appliances large enough to recognize at mobile-card size. The campsite and twilight sky are seen through CLOSED windows, keep doors closed while air-conditioning is used. Do not let the camper doorway dominate the image.\nStyle: preserve thin slightly irregular black pen lines, modest facial features, low-saturation flat fills, simple restrained shadows. Natural ordinary family, NOT glamorous anime. Warm wood cabinets and olive seats, neutral whites, blue dusk outside. Keep existing father, mother and child identities. Father is a CUSTOMER, not the short-haired mechanic; no blue coveralls. Three people only.\nConstraints: coherent anatomy and natural hands, credible cabinet/appliance installation with ventilation gaps. No extra limbs, no steaming microwave, no open microwave while operating, no flames, no electrical diagrams. No product brands, logos, readable lettering, wattage/capacity/runtime numbers, labels, speech bubbles, decorative text or watermarks. No dramatic glow or excessive glossy rendering. Full opaque scene to all edges.",
+      "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-37ddaae9-67da-4aa0-bdcf-7b850642dbcc.png",
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v1.png",
       "width": 1536,
       "height": 1024,
-      "alt": "夕暮れのキャンプ場で、両親と子供がキャンピングカーの車内で旅の地図を囲む様子",
-      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-worry-comfort-v2.png",
+      "alt": "エアコンの効いたキャンピングカーの車内で、父親が電子レンジを使い、母親と子供が食卓を囲む様子",
+      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-comfort-v1.png",
       "references": [
-        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/design/character-redesign-20261027/mechanic-fine-line-front-v1.png",
-        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/design/character-redesign-20261027/mechanic-fine-line-flat-v1.png"
+        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-comfort-v1.png"
       ],
-      "provenance": "mechanic-fine-line-rollout.json",
-      "refinement": {
-        "input": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-09712499-e8e4-4726-85e9-7a71e315e475.png",
-        "prompt": "Edit image 1 ONLY the FATHER at the left side of the table. Image 2 is the original FAMILY identity reference. Father is an ordinary camper owner, NOT a mechanic. Restore the father from image 2: medium-length dark wavy hair, olive-green casual overshirt over pale gray T-shirt, separate dark charcoal casual trousers. He has an ordinary friendly face distinct from the short-cropped mechanic. Keep his existing seated pose, elbow resting on table and hand under chin, looking at child and map. Keep the thin slightly scratchy pen drawing, simple muted flat colors and economical shadows of image 1. Preserve mother, child, camper interior, map, lighting, scenery, exact framing and dimensions from image 1. No workwear, no coveralls, no gray-blue uniform. No text or logo. Do not change anyone else's face.",
-        "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-eb6c13db-6d66-4fe2-90af-b54dc4689d78.png"
-      }
+      "provenance": "lithium-details-generation.json",
+      "previous_names": [
+        "manga-line-worry-comfort-v1.png"
+      ]
     },
     {
       "id": "worry_ride",

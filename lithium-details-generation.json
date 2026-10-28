@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-28",
+  "mode": "built-in image_gen",
+  "use_case": "identity-preserve",
+  "input": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-comfort-v1.png",
+  "prompt": "Use case: identity-preserve.\nAsset type: landscape 3:2 illustration (1536 x 1024) for a Japanese camper lithium-battery service card.\nInput image 1 is the edit target and the reference for the SAME FAMILY, camper interior, linework and muted palette. Change the activity and camera framing so power-hungry appliances are clearly being used.\nScene: a comfortable camper at a dusk forest campsite, viewed diagonally from INSIDE across a compact kitchen and dining nook. A clearly recognizable WHITE AIR-CONDITIONER with open air louvers is installed high on the back wall, cooling the interior; no cartoon wind arrows. A clearly recognizable built-in MICROWAVE is at convenient counter/chest height at left, door CLOSED, interior gently illuminated with a food container visible, indicating cooking. Father in the same olive-green casual overshirt over gray T-shirt and dark casual trousers stands beside it naturally pressing its start button with one hand. Mother in the same cream knit and olive trousers sits at the dining table with their same child in an olive hoodie, smiling and preparing for dinner; she can hold a simple air-conditioner remote. A few plates and cups on the table. Frame both appliances large enough to recognize at mobile-card size. The campsite and twilight sky are seen through CLOSED windows, keep doors closed while air-conditioning is used. Do not let the camper doorway dominate the image.\nStyle: preserve thin slightly irregular black pen lines, modest facial features, low-saturation flat fills, simple restrained shadows. Natural ordinary family, NOT glamorous anime. Warm wood cabinets and olive seats, neutral whites, blue dusk outside. Keep existing father, mother and child identities. Father is a CUSTOMER, not the short-haired mechanic; no blue coveralls. Three people only.\nConstraints: coherent anatomy and natural hands, credible cabinet/appliance installation with ventilation gaps. No extra limbs, no steaming microwave, no open microwave while operating, no flames, no electrical diagrams. No product brands, logos, readable lettering, wattage/capacity/runtime numbers, labels, speech bubbles, decorative text or watermarks. No dramatic glow or excessive glossy rendering. Full opaque scene to all edges.",
+  "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-37ddaae9-67da-4aa0-bdcf-7b850642dbcc.png",
+  "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v1.png",
+  "width": 1536,
+  "height": 1024,
+  "alt": "エアコンの効いたキャンピングカーの車内で、父親が電子レンジを使い、母親と子供が食卓を囲む様子",
+  "review": "Visually reviewed: three ordinary family members, clear air conditioner and closed microwave in use, coherent hands, matching illustration style, no text or logos.",
+  "detail_copy_sources": [
+    {
+      "url": "https://www.victronenergy.com/media/pg/Inverter_Smart_2k5_%26_4k_230V_-_new_models/en/installation.html",
+      "supports": "Inverter, battery capacity, cabling and protection must be considered together; no model-specific ratings reused."
+    },
+    {
+      "url": "https://www.victronenergy.com/media/pg/Lithium_Battery_Smart/en/installation.html",
+      "supports": "Charging equipment and configuration must be compatible with the selected battery."
+    }
+  ]
+}

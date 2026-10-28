@@ -1,18 +1,16 @@
 /* Fixed 430px composition: scale the viewport, not individual content blocks. */
 body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20px;padding-bottom:calc(var(--contact-bar-height) + 18px + env(safe-area-inset-bottom,0px))}
-.mobile-lp .site-header .header-inner{min-height:72px;width:calc(100% - 24px);padding-block:8px;gap:8px}
-.mobile-lp .site-header .official-brand{width:155px}
-.mobile-lp .site-header a.header-cta{padding:9px 10px;min-height:44px;font-size:11px;white-space:nowrap}
-.mobile-lp .site-header .menu-toggle{width:40px;height:44px;padding:10px}
-.mobile-lp .site-header nav a{min-height:44px}
 .mobile-lp .poster-hero.poster-hero-camp-scene{width:calc(100% - var(--lp-panel-inset) - var(--lp-panel-inset));margin:8px auto 0;border-radius:var(--lp-panel-radius);background:var(--hero-background)}
 .mobile-lp .camp-about{margin-inline:var(--lp-panel-inset);border-radius:var(--lp-panel-radius)}
 .mobile-lp .poster-hero-camp-scene .poster-panel{border:0;border-radius:0;overflow:hidden}
-.mobile-lp .poster-hero-camp-scene .poster-heading{padding:22px 14px 10px}
+.mobile-lp .poster-hero-camp-scene .poster-heading{padding:16px 8px 10px}
+.mobile-lp .poster-hero-camp-scene .poster-brand-logo{display:block;box-sizing:border-box;width:224px;margin:0 auto 12px;padding:8px 12px;border-radius:6px;background:#fff8e7;line-height:0}
+.mobile-lp .poster-hero-camp-scene .poster-brand-logo img{display:block;width:100%;height:auto;object-fit:contain}
+.mobile-lp .poster-hero-camp-scene .poster-brand-logo:focus-visible{outline:2px solid #fff8e7;outline-offset:4px}
 .mobile-lp .poster-hero-camp-scene .poster-heading>p{font-size:13px;line-height:1.7;letter-spacing:.05em;color:#fff8e7;text-shadow:0 1px 2px #191c17}
-.mobile-lp .poster-hero-camp-scene .poster-heading h1{font-size:32px;line-height:1.3;font-feature-settings:normal}
+.mobile-lp .poster-hero-camp-scene .poster-heading h1{font-size:40px;line-height:1.3;letter-spacing:-.025em;font-feature-settings:normal}
 .mobile-lp .poster-hero-camp-scene .poster-camp-art{width:100%;height:auto;object-fit:contain}
-.mobile-lp .poster-hero-camp-scene .poster-tagline{width:calc(100% - 28px);max-width:380px;line-height:0;margin:10px auto 0}
+.mobile-lp .poster-hero-camp-scene .poster-tagline{width:320px;max-width:100%;line-height:0;margin:10px auto 0}
 .mobile-lp .poster-hero-camp-scene .poster-location{margin:10px 0 0;font-size:11px}
 .mobile-lp .poster-hero-camp-scene .poster-follow{margin:0;padding:20px 20px 28px;gap:12px}
 .mobile-lp .poster-hero-camp-scene .poster-consult{min-height:64px;font-size:14px;border-radius:32px;box-shadow:none}
@@ -23,14 +21,10 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp .worry-copy>p,.mobile-lp .story-service-copy>p{font-size:15px;line-height:1.95}
 .mobile-lp .worry-more{min-height:44px;font-size:13px}
 /* Introduce lithium upgrades alongside the existing repair and custom services. */
-.mobile-lp .story-worries h2{margin-bottom:18px}
-.mobile-lp .story-worries .worry-intro{margin:0 0 30px;font-size:14px;line-height:1.9;text-align:center;color:#526047}
-.mobile-lp .story-worry-lithium{scroll-margin-top:92px}
+.mobile-lp .story-worries h2{margin-bottom:32px}
+.mobile-lp .story-worry-lithium{scroll-margin-top:20px}
 .mobile-lp .story-worry-lithium .worry-copy{background:#fffef9}
-.mobile-lp .story-worry-lithium .lithium-subtitle{margin:0 0 24px;padding-left:12px;border-left:4px solid var(--brown);color:var(--green);font-size:17px;line-height:1.65;font-weight:700}
-.mobile-lp .lithium-concerns{list-style:none;margin:0 0 22px;padding:0;color:#30372a;font-size:15px;font-weight:700;line-height:1.8}
-.mobile-lp .lithium-concerns li+li{margin-top:12px}
-.mobile-lp a.worry-lithium-cta{box-sizing:border-box;width:100%;min-height:64px;margin:0 0 16px;padding:12px;gap:10px;border:2px solid #30372a;border-radius:8px;background:var(--green);color:#fffef9;font-size:14px;font-weight:800;text-decoration:none}
+.mobile-lp a.worry-lithium-cta{box-sizing:border-box;width:100%;min-height:64px;margin:0;padding:12px;gap:10px;border:2px solid #30372a;border-radius:8px;background:var(--green);color:#fffef9;font-size:14px;font-weight:800;text-decoration:none}
 .mobile-lp a.worry-lithium-cta .line-cta-label{gap:8px}
 .mobile-lp a.worry-lithium-cta .cta-arrow{font-size:20px}
 .mobile-lp a.worry-lithium-cta:hover{background:#354729;color:#fffef9}

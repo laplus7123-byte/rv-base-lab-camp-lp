@@ -106,6 +106,6 @@ apply_hero_scene(d)
 from apply_manga_style import apply_manga_style
 apply_manga_style(d)
 d.find('body').set('class',(d.find('body').get('class','')+' mobile-lp').strip())
-etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css?v=subtle-logo-20261028'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'mobile-lp.css?v=transparent-logo-20261028'})
 p.write_text('<!doctype html>\n'+html.tostring(d,encoding='unicode',method='html'))
 print('Built reference-inspired storytelling. Poster FV, official logo and fixed camper preserved.')

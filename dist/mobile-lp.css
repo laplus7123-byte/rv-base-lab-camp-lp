@@ -4,7 +4,7 @@ body.mobile-lp{--lp-panel-inset:4px;--lp-content-inset:8px;--lp-panel-radius:20p
 .mobile-lp .camp-about{margin-inline:var(--lp-panel-inset);border-radius:var(--lp-panel-radius)}
 .mobile-lp .poster-hero-camp-scene .poster-panel{border:0;border-radius:0;overflow:hidden}
 .mobile-lp .poster-hero-camp-scene .poster-heading{padding:16px 8px 10px}
-.mobile-lp .poster-hero-camp-scene .poster-brand-logo{display:block;box-sizing:border-box;width:144px;margin:0 auto 10px;padding:4px 6px;border-radius:3px;background:rgb(255 248 231 / 80%);line-height:0}
+.mobile-lp .poster-hero-camp-scene .poster-brand-logo{display:block;box-sizing:border-box;width:144px;margin:0 auto 10px;padding:4px 6px;background:transparent;line-height:0}
 .mobile-lp .poster-hero-camp-scene .poster-brand-logo img{display:block;width:100%;height:auto;object-fit:contain}
 .mobile-lp .poster-hero-camp-scene .poster-brand-logo:focus-visible{outline:2px solid #fff8e7;outline-offset:4px}
 .mobile-lp .poster-hero-camp-scene .poster-heading>p{font-size:13px;line-height:1.7;letter-spacing:.05em;color:#fff8e7;text-shadow:0 1px 2px #191c17}

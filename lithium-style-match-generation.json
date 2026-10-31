@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-31",
+  "mode": "built-in image_gen",
+  "use_case": "style-transfer",
+  "inputs": [
+    {
+      "role": "edit target",
+      "path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v1.png"
+    },
+    {
+      "role": "style reference",
+      "path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-headlight-v1.png"
+    }
+  ],
+  "prompt": "Use case: style-transfer.\nAsset type: 1536 x 1024 landscape illustration for a Japanese camper service website.\nInput 1: edit target, the family using a microwave and air conditioner inside a camper.\nInput 2: STRICT STYLE REFERENCE ONLY, the mechanic replacing a headlight. Match its drawing style closely enough that both images feel drawn by the same illustrator.\n\nRedraw the ENTIRE illustration in input 1 in the restrained hand-inked manga style of input 2. This is a real illustration redraw, not a color filter. Use fine slightly irregular black pen contours, economical small facial features, simpler hair masses with sparse pen marks, flat muted local colors, only one or two quiet shadow shapes, and small restrained hatching. Skin has almost flat color like the mechanic in input 2; no glowing skin or polished anime faces. Fabric has sparse drawn folds, not dense rendering. Wood, seats, food and scenery are likewise drawn simply. The current excessive glowing cinematic illumination, highly detailed wavy hair, textured surfaces, soft airbrushed gradients and glamorous anime eyes in input 1 must be removed. Reduce the orange/yellow cast so cream cabinets, muted olive clothes and natural skin are clear and calm, with the neutral restrained color treatment of input 2. Keep a blue dusk outside and gentle indoor lighting without halos.\n\nPreserve input 1's exact scene and camera composition: father standing on the LEFT pressing the controls of the CLOSED microwave, large white wall-mounted AIR CONDITIONER upper center with open louvers, child seated at the table in the middle, mother seated RIGHT holding the air-conditioner remote. Three ordinary family members only. Keep their apparent ages, general hairstyles, expressions, identities and casual clothing colors, but redraw faces and hair in input 2's simpler style. The father stays an ordinary customer in an olive overshirt and gray T-shirt; do NOT turn him into the mechanic, do NOT copy the mechanic's short spiky haircut or blue workwear. Maintain the appliances and credible anatomy and natural hands. Closed windows, wooden camper interior, olive seats and tableware in the same positions. Same 3:2 framing, full opaque image to every edge.\nAvoid: copying the scene, truck, headlight or person from input 2; photorealistic rendering, glossy 3D, painterly shading, excessive highlights or texturing, watercolor texture, big glittery eyes, added people, extra fingers, new objects, readable lettering, logos, labels, speech bubbles, borders or watermark.",
+  "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-32794634-b974-49f5-8d80-4311ab90e1b0.png",
+  "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v2.png",
+  "width": 1536,
+  "height": 1024,
+  "review": "Visual review passed: finer pen contours, simplified hair and faces, flatter restrained shading, reduced orange lighting and gloss. Same family, composition, air conditioner and closed microwave retained."
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "date": "2026-10-28",
+  "date": "2026-10-31",
   "mode": "built-in image_gen",
   "use_case": "style-transfer",
   "reference": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/design/character-redesign-20261027/mechanic-fine-line-front-v1.png",
@@ -395,21 +395,22 @@
     {
       "id": "worry_comfort",
       "old": "manga-worry-comfort-v2.png",
-      "name": "manga-line-worry-appliances-v1.png",
+      "name": "manga-line-worry-appliances-v2.png",
       "transparent": false,
-      "prompt": "Use case: identity-preserve.\nAsset type: landscape 3:2 illustration (1536 x 1024) for a Japanese camper lithium-battery service card.\nInput image 1 is the edit target and the reference for the SAME FAMILY, camper interior, linework and muted palette. Change the activity and camera framing so power-hungry appliances are clearly being used.\nScene: a comfortable camper at a dusk forest campsite, viewed diagonally from INSIDE across a compact kitchen and dining nook. A clearly recognizable WHITE AIR-CONDITIONER with open air louvers is installed high on the back wall, cooling the interior; no cartoon wind arrows. A clearly recognizable built-in MICROWAVE is at convenient counter/chest height at left, door CLOSED, interior gently illuminated with a food container visible, indicating cooking. Father in the same olive-green casual overshirt over gray T-shirt and dark casual trousers stands beside it naturally pressing its start button with one hand. Mother in the same cream knit and olive trousers sits at the dining table with their same child in an olive hoodie, smiling and preparing for dinner; she can hold a simple air-conditioner remote. A few plates and cups on the table. Frame both appliances large enough to recognize at mobile-card size. The campsite and twilight sky are seen through CLOSED windows, keep doors closed while air-conditioning is used. Do not let the camper doorway dominate the image.\nStyle: preserve thin slightly irregular black pen lines, modest facial features, low-saturation flat fills, simple restrained shadows. Natural ordinary family, NOT glamorous anime. Warm wood cabinets and olive seats, neutral whites, blue dusk outside. Keep existing father, mother and child identities. Father is a CUSTOMER, not the short-haired mechanic; no blue coveralls. Three people only.\nConstraints: coherent anatomy and natural hands, credible cabinet/appliance installation with ventilation gaps. No extra limbs, no steaming microwave, no open microwave while operating, no flames, no electrical diagrams. No product brands, logos, readable lettering, wattage/capacity/runtime numbers, labels, speech bubbles, decorative text or watermarks. No dramatic glow or excessive glossy rendering. Full opaque scene to all edges.",
-      "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-37ddaae9-67da-4aa0-bdcf-7b850642dbcc.png",
-      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v1.png",
+      "prompt": "Use case: style-transfer.\nAsset type: 1536 x 1024 landscape illustration for a Japanese camper service website.\nInput 1: edit target, the family using a microwave and air conditioner inside a camper.\nInput 2: STRICT STYLE REFERENCE ONLY, the mechanic replacing a headlight. Match its drawing style closely enough that both images feel drawn by the same illustrator.\n\nRedraw the ENTIRE illustration in input 1 in the restrained hand-inked manga style of input 2. This is a real illustration redraw, not a color filter. Use fine slightly irregular black pen contours, economical small facial features, simpler hair masses with sparse pen marks, flat muted local colors, only one or two quiet shadow shapes, and small restrained hatching. Skin has almost flat color like the mechanic in input 2; no glowing skin or polished anime faces. Fabric has sparse drawn folds, not dense rendering. Wood, seats, food and scenery are likewise drawn simply. The current excessive glowing cinematic illumination, highly detailed wavy hair, textured surfaces, soft airbrushed gradients and glamorous anime eyes in input 1 must be removed. Reduce the orange/yellow cast so cream cabinets, muted olive clothes and natural skin are clear and calm, with the neutral restrained color treatment of input 2. Keep a blue dusk outside and gentle indoor lighting without halos.\n\nPreserve input 1's exact scene and camera composition: father standing on the LEFT pressing the controls of the CLOSED microwave, large white wall-mounted AIR CONDITIONER upper center with open louvers, child seated at the table in the middle, mother seated RIGHT holding the air-conditioner remote. Three ordinary family members only. Keep their apparent ages, general hairstyles, expressions, identities and casual clothing colors, but redraw faces and hair in input 2's simpler style. The father stays an ordinary customer in an olive overshirt and gray T-shirt; do NOT turn him into the mechanic, do NOT copy the mechanic's short spiky haircut or blue workwear. Maintain the appliances and credible anatomy and natural hands. Closed windows, wooden camper interior, olive seats and tableware in the same positions. Same 3:2 framing, full opaque image to every edge.\nAvoid: copying the scene, truck, headlight or person from input 2; photorealistic rendering, glossy 3D, painterly shading, excessive highlights or texturing, watercolor texture, big glittery eyes, added people, extra fingers, new objects, readable lettering, logos, labels, speech bubbles, borders or watermark.",
+      "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-32794634-b974-49f5-8d80-4311ab90e1b0.png",
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v2.png",
       "width": 1536,
       "height": 1024,
       "alt": "エアコンの効いたキャンピングカーの車内で、父親が電子レンジを使い、母親と子供が食卓を囲む様子",
-      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-comfort-v1.png",
+      "source": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v1.png",
       "references": [
-        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-comfort-v1.png"
+        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-headlight-v1.png"
       ],
-      "provenance": "lithium-details-generation.json",
+      "provenance": "lithium-style-match-generation.json",
       "previous_names": [
-        "manga-line-worry-comfort-v1.png"
+        "manga-line-worry-comfort-v1.png",
+        "manga-line-worry-appliances-v1.png"
       ]
     },
     {

@@ -5,6 +5,13 @@
 .text-motion-ready [data-text-reveal]:not(.is-text-visible) .text-reveal-unit{opacity:0}
 .text-motion-ready .is-text-visible .text-reveal-unit{animation:text-reveal-fade .6s ease both;animation-delay:var(--text-delay,0ms)}
 @keyframes text-reveal-fade{from{opacity:0}to{opacity:1}}
+/* Draw each lithium headline underline once, in reading order. */
+#lithium-title .lithium-underline{position:relative;display:inline-block;white-space:nowrap}
+#lithium-title .lithium-underline::after{content:'';position:absolute;left:0;right:0;bottom:.08em;height:3px;border-radius:2px;background:#9ead8d;transform:scaleX(1);transform-origin:left center;pointer-events:none}
+#lithium-title .lithium-underline:last-child{--underline-delay:.95s}
+.text-motion-ready #lithium-title:not(.is-text-visible) .lithium-underline::after{transform:scaleX(0)}
+.text-motion-ready #lithium-title.is-text-visible .lithium-underline::after{animation:lithium-underline-draw .8s cubic-bezier(.25,.65,.3,1) both;animation-delay:var(--underline-delay,.3s)}
+@keyframes lithium-underline-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 /* Follow the vertical reading direction, one column at a time. */
 .text-motion-ready [data-text-reveal="vertical"].is-text-visible>span,
 .text-motion-ready [data-text-reveal="vertical"].is-text-visible>strong{animation:vertical-copy-in 1.1s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--vertical-delay,0ms)}
@@ -17,12 +24,14 @@
 .line-branded-cta .cta-arrow{display:inline-block;flex-shrink:0;transition:transform .2s ease}
 .line-branded-cta:hover .cta-arrow,.line-branded-cta:focus-visible .cta-arrow{transform:translate(3px,-3px)}
 @media(prefers-reduced-motion:reduce){
+ .text-motion-ready #lithium-title .lithium-underline::after,.text-motion-ready #lithium-title:not(.is-text-visible) .lithium-underline::after,.text-motion-ready #lithium-title.is-text-visible .lithium-underline::after{animation:none;transform:scaleX(1)}
  .text-motion-ready [data-text-reveal],.text-motion-ready [data-text-reveal]:not(.is-text-visible),.text-motion-ready [data-text-reveal] .text-reveal-unit{opacity:1;transform:none;transition:none;animation:none}
  .line-branded-cta .cta-arrow,.line-branded-cta:hover .cta-arrow,.line-branded-cta:focus-visible .cta-arrow{transform:none;transition:none}
  .text-motion-ready [data-text-reveal="vertical"].is-text-visible>span,.text-motion-ready [data-text-reveal="vertical"].is-text-visible>strong{animation:none;opacity:1;clip-path:none;transform:none}
  .text-motion-ready .story-down span{animation:none;transform:none}
 }
 @media print{
+ .text-motion-ready #lithium-title .lithium-underline::after,.text-motion-ready #lithium-title:not(.is-text-visible) .lithium-underline::after,.text-motion-ready #lithium-title.is-text-visible .lithium-underline::after{animation:none;transform:scaleX(1)}
  .text-motion-ready [data-text-reveal],.text-motion-ready [data-text-reveal]:not(.is-text-visible),.text-motion-ready [data-text-reveal] .text-reveal-unit{opacity:1;transform:none;animation:none}
  .text-motion-ready [data-text-reveal="vertical"].is-text-visible>span,.text-motion-ready [data-text-reveal="vertical"].is-text-visible>strong{animation:none;opacity:1;clip-path:none;transform:none}
  .text-motion-ready .story-down span{animation:none;transform:none}

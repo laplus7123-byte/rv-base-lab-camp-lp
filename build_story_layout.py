@@ -91,7 +91,7 @@ etree.SubElement(head,'link',{'rel':'stylesheet','href':'layout-polish.css'})
 for arrow in d.xpath('//a[contains(@class,"line-branded-cta")]//span[normalize-space(text())="↗"] | //a[contains(@class,"line-branded-cta")]//b[normalize-space(text())="↗"]'):
  arrow.set('class',(arrow.get('class','')+' cta-arrow').strip())
  arrow.set('aria-hidden','true')
-etree.SubElement(head,'link',{'rel':'stylesheet','href':'text-motion.css?v=lithium-underline-20261031'})
+etree.SubElement(head,'link',{'rel':'stylesheet','href':'text-motion.css?v=card-underline-20261031'})
 etree.SubElement(head,'script',{'src':'text-motion.js','defer':'defer'})
 # Remove decorative English captions; retain brand and service names.
 for caption in d.xpath('//p[contains(@class,"eyebrow")] | //p[@class="poster-english"] | //div[@class="story-service-title"]/div/p'):

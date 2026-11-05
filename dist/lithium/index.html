@@ -16,9 +16,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/camp-lights-on.png">
-  <link rel="stylesheet" href="styles.css?v=20261105-4">
+  <link rel="stylesheet" href="styles.css?v=20261106-1">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="app.js?v=20261105-3" defer></script>
+  <script src="app.js?v=20261106-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#life">本文へ進む</a>
@@ -31,7 +31,6 @@
     <symbol id="icon-wind" viewBox="0 0 32 32"><path d="M3 12h19c7 0 7-9 1-9-3 0-4 2-4 4M3 18h24M3 24h15c7 0 7 7 1 7M8 5H3"/></symbol>
     <symbol id="icon-moon" viewBox="0 0 32 32"><path d="M25 22A13 13 0 0 1 12 3a13 13 0 1 0 13 19Z"/><path d="m25 3 .8 3.2L29 7l-3.2.8L25 11l-.8-3.2L21 7l3.2-.8Z"/></symbol>
   </defs></svg>
-  <div class="ambient-light" aria-hidden="true"></div>
 
   <aside class="desktop-brand" aria-label="RV BASE Labのご案内">
     <a href="#top"><img src="assets/rv-base-lab-official-logo.png" alt="RV BASE Lab" width="600" height="200"></a>
@@ -130,7 +129,7 @@
         <div class="battery-unit"><div class="battery-illustration" aria-hidden="true"><span class="battery-cell"></span><span class="battery-cell"></span><span class="battery-cell"></span><svg class="icon"><use href="#icon-bolt"/></svg></div><p>リチウムイオン電池</p></div>
         <div class="power-route" aria-hidden="true"><svg viewBox="0 0 24 42" focusable="false"><path class="power-output-wire" d="M12 1v29"/><path class="power-output-flow" d="M12 1v29"/><path class="power-output-arrow" d="m6 29 6 10 6-10z"/></svg></div>
         <p class="household-power">照明・冷蔵庫・使いたい家電へ</p>
-        <button class="charge-replay" type="button" hidden><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg>もう一度、充電の動きを見る</button>
+        <button class="charge-toggle" type="button" aria-label="充電アニメーションを一時停止" hidden><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path class="pause-mark" d="M9 5v14M15 5v14"/><path class="play-mark" d="m8 5 10 7-10 7z"/></svg><span>一時停止</span></button>
         <figcaption id="power-map-caption">電源の流れのイメージ。充電器やインバーターなど、必要な機器も合わせて確認します。</figcaption>
       </figure>
       <div class="power-points">
@@ -151,7 +150,7 @@
     </section>
 
     <section class="consult-section" id="consult" aria-labelledby="consult-title" data-chapter>
-      <div class="section-heading reveal"><p class="chapter-label"><span>04</span>相談の進め方</p><h2 id="consult-title">はじまりは、<br>写真と「使いたい」から。</h2><p>詳しい仕様が分からなくても大丈夫。<br>分かるところから、お聞かせください。</p></div>
+      <div class="section-heading reveal"><p class="chapter-label"><span>04</span>相談の進め方</p><h2 id="consult-title">はじまりは、<br><span class="serif-line">写真と「使いたい」から。</span></h2><p>詳しい仕様が分からなくても大丈夫。<br>分かるところから、お聞かせください。</p></div>
       <ol class="consult-steps">
         <li class="reveal"><span class="step-number">1</span><div><h3>LINEで、気軽に相談。</h3><p>車種・年式、今の設備の写真、使いたい家電をお送りください。</p><div class="photo-list"><span>車両の情報</span><span>設備の写真</span><span>使いたい家電</span></div></div></li>
         <li class="reveal"><span class="step-number">2</span><div><h3>愛車を確認。構成をご提案。</h3><p>車両と設備の状態を確認し、必要な構成・費用・作業日程をご案内します。</p></div></li>
@@ -161,7 +160,7 @@
     </section>
 
     <section class="faq-section paper-section" id="faq" aria-labelledby="faq-title" data-chapter>
-      <div class="section-heading reveal"><p class="chapter-label"><span>05</span>よくあるご質問</p><h2 id="faq-title">電気のこと、<br>ひとつずつ。</h2></div>
+      <div class="section-heading reveal"><p class="chapter-label"><span>05</span>よくあるご質問</p><h2 id="faq-title">電気のこと、<br><em class="marker">ひとつずつ。</em></h2></div>
       <div class="faq-list reveal">
         <details><summary><span>Q</span>リチウムイオン電池にすれば、エアコンや電子レンジを使えますか？<i aria-hidden="true"></i></summary><p>家電の消費電力と、バッテリー・インバーターなどの構成によって異なります。使いたい機種や時間、同時に使う家電を伺って確認します。</p></details>
         <details><summary><span>Q</span>今のバッテリーを交換するだけで大丈夫ですか？<i aria-hidden="true"></i></summary><p>充電器やインバーター、配線なども確認が必要です。現在の設備と、新しいバッテリーとの組み合わせからご案内します。</p></details>
@@ -171,8 +170,7 @@
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title" data-chapter>
-      <div class="contact-stars" aria-hidden="true">✦ <span>✧</span> ✦</div>
-      <div class="section-heading reveal"><p class="chapter-label">次の旅に、電気のゆとりを。</p><h2 id="contact-title">あなたの「使いたい」を、<br>聞かせてください。</h2><p>サブバッテリーのリチウムイオン化。<br>まずは、愛車の話からはじめましょう。</p></div>
+      <div class="section-heading reveal"><p class="chapter-label">次の旅に、電気のゆとりを。</p><h2 id="contact-title">あなたの「使いたい」を、<br><em>聞かせてください。</em></h2><p>サブバッテリーのリチウムイオン化。<br>まずは、愛車の話からはじめましょう。</p></div>
       <a class="line-cta" href="https://lin.ee/bryjnk0" target="_blank" rel="noopener noreferrer"><img src="assets/line-brand-icon.png" width="40" height="40" alt=""><span>LINEで電源の相談をする</span><svg class="icon"><use href="#icon-arrow"/></svg></a>
       <a class="contact-phone" href="tel:05055859522"><svg class="icon"><use href="#icon-phone"/></svg><span><small>お電話でのご相談</small><strong>050-5585-9522</strong></span></a>
       <p class="contact-note">ご来店前にご相談ください。</p>

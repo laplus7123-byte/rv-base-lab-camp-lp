@@ -51,7 +51,6 @@
     let autoTimer;
     let settleTimer;
     let inView = false;
-    let hovered = false;
     let focused = false;
     let explicitPlay = false;
     let wantsRotation = !reduced.matches;
@@ -66,7 +65,7 @@
     };
     const scheduleRotation = () => {
       clearTimeout(autoTimer);
-      if (!wantsRotation || !inView || hovered || (focused && !explicitPlay) || document.hidden || moving) return;
+      if (!wantsRotation || !inView || pointerStart || (focused && !explicitPlay) || document.hidden || moving) return;
       autoTimer = setTimeout(() => moveTo(position + 1), 4800);
     };
     const stopRotation = () => {
@@ -97,7 +96,6 @@
       scheduleRotation();
     };
     const moveTo = (next, manual = false) => {
-      if (manual) stopRotation();
       if (moving) return;
       clearTimeout(autoTimer);
       position = Math.max(0, Math.min(slides.length - 1, next));
@@ -140,21 +138,26 @@
       if (!event.isPrimary || event.button !== 0) return;
       pointerStart = {x: event.clientX, y: event.clientY, id: event.pointerId};
       suppressClick = false;
-      stopRotation();
+      clearTimeout(autoTimer);
     });
     window.addEventListener('pointerup', event => {
       if (!pointerStart || event.pointerId !== pointerStart.id) return;
       const dx = event.clientX - pointerStart.x;
       const dy = event.clientY - pointerStart.y;
       pointerStart = null;
-      if (Math.abs(dx) < 35 || Math.abs(dx) < Math.abs(dy) * 1.25) return;
+      if (Math.abs(dx) < 35 || Math.abs(dx) < Math.abs(dy) * 1.25) { scheduleRotation(); return; }
       suppressClick = true;
       moveTo(position + (dx < 0 ? 1 : -1), true);
     });
-    window.addEventListener('pointercancel', () => { pointerStart = null; });
-    carousel.addEventListener('mouseenter', () => { hovered = true; clearTimeout(autoTimer); });
-    carousel.addEventListener('mouseleave', () => { hovered = false; scheduleRotation(); });
-    carousel.addEventListener('focusin', () => { focused = true; explicitPlay = false; clearTimeout(autoTimer); });
+    window.addEventListener('pointercancel', () => { pointerStart = null; scheduleRotation(); });
+    // Pointer controls reset the interval; keyboard focus pauses for reading.
+    carousel.addEventListener('pointerdown', () => { focused = false; }, {capture: true});
+    carousel.addEventListener('focusin', event => {
+      focused = event.target.matches(':focus-visible');
+      explicitPlay = false;
+      scheduleRotation();
+    });
+    carousel.addEventListener('keydown', () => { focused = true; explicitPlay = false; clearTimeout(autoTimer); });
     carousel.addEventListener('focusout', event => {
       if (carousel.contains(event.relatedTarget)) return;
       focused = false;
@@ -182,31 +185,25 @@
 
   const powerMap = document.querySelector('.power-map');
   if (powerMap && 'IntersectionObserver' in window) {
-    const replayCharge = powerMap.querySelector('.charge-replay');
+    const chargeToggle = powerMap.querySelector('.charge-toggle');
     let chargeInView = false;
-    const playCharge = () => {
-      if (reduced.matches || !chargeInView) return;
-      powerMap.classList.remove('charge-running');
-      // Restart the complete sequence together, including when replaying mid-fill.
-      void powerMap.offsetWidth;
-      powerMap.classList.add('charge-running');
-    };
-    const updateChargePreference = () => {
-      powerMap.classList.toggle('charge-animated', !reduced.matches);
-      replayCharge.hidden = reduced.matches;
-      powerMap.classList.remove('charge-running');
-      if (!reduced.matches) playCharge();
+    let chargePaused = false;
+    const updateCharge = () => {
+      powerMap.classList.toggle('charge-running', !reduced.matches);
+      powerMap.classList.toggle('charge-paused', chargePaused || !chargeInView || document.hidden);
+      chargeToggle.hidden = reduced.matches;
+      chargeToggle.classList.toggle('is-paused', chargePaused);
+      chargeToggle.setAttribute('aria-label', chargePaused ? '充電アニメーションを再生' : '充電アニメーションを一時停止');
+      chargeToggle.querySelector('span').textContent = chargePaused ? '再生' : '一時停止';
     };
     new IntersectionObserver(entries => {
-      const visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .45;
-      if (visible === chargeInView) return;
-      chargeInView = visible;
-      if (visible) playCharge();
-      else powerMap.classList.remove('charge-running');
-    }, {threshold: .45}).observe(powerMap);
-    replayCharge.addEventListener('click', playCharge);
-    reduced.addEventListener?.('change', updateChargePreference);
-    updateChargePreference();
+      chargeInView = entries[0].isIntersecting && entries[0].intersectionRatio >= .35;
+      updateCharge();
+    }, {threshold: .35}).observe(powerMap);
+    chargeToggle.addEventListener('click', () => { chargePaused = !chargePaused; updateCharge(); });
+    document.addEventListener('visibilitychange', updateCharge);
+    reduced.addEventListener?.('change', updateCharge);
+    updateCharge();
   }
 
   let revealObserver;

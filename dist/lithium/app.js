@@ -180,6 +180,35 @@
     reduced.addEventListener?.('change', () => { stopRotation(); settle(); });
   }
 
+  const powerMap = document.querySelector('.power-map');
+  if (powerMap && 'IntersectionObserver' in window) {
+    const replayCharge = powerMap.querySelector('.charge-replay');
+    let chargeInView = false;
+    const playCharge = () => {
+      if (reduced.matches || !chargeInView) return;
+      powerMap.classList.remove('charge-running');
+      // Restart the complete sequence together, including when replaying mid-fill.
+      void powerMap.offsetWidth;
+      powerMap.classList.add('charge-running');
+    };
+    const updateChargePreference = () => {
+      powerMap.classList.toggle('charge-animated', !reduced.matches);
+      replayCharge.hidden = reduced.matches;
+      powerMap.classList.remove('charge-running');
+      if (!reduced.matches) playCharge();
+    };
+    new IntersectionObserver(entries => {
+      const visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .45;
+      if (visible === chargeInView) return;
+      chargeInView = visible;
+      if (visible) playCharge();
+      else powerMap.classList.remove('charge-running');
+    }, {threshold: .45}).observe(powerMap);
+    replayCharge.addEventListener('click', playCharge);
+    reduced.addEventListener?.('change', updateChargePreference);
+    updateChargePreference();
+  }
+
   let revealObserver;
   try {
     if (!reduced.matches && 'IntersectionObserver' in window) {

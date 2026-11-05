@@ -15,6 +15,7 @@ shared_assets = {
     'rv-base-lab-official-logo.png': 'rv-base-lab-official-logo.png',
     'line-brand-icon.png': 'line-brand-icon.png',
     'manga-line-worry-appliances-v2.png': 'family-appliances.png',
+    'manga-line-worry-comfort-v1.png': 'family-comfort.png',
     'manga-line-service-electrical-v1.png': 'electrical-inspection.png',
     'manga-line-flow-guide-listen-v1.png': 'mechanic-guide.png',
 }

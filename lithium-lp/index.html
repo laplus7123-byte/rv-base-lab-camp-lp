@@ -16,10 +16,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/camp-lights-on.png">
-  <link rel="stylesheet" href="styles.css?v=20261105-1">
+  <link rel="stylesheet" href="styles.css?v=20261105-2">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="app.js?v=20261105-1" defer></script>
-  <noscript><style>.scene-tabs{display:none}.scene-panel[hidden]{display:block!important}.scene-panel+.scene-panel{border-top:1px solid #c9d0bf}</style></noscript>
+  <script src="app.js?v=20261105-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#life">本文へ進む</a>
@@ -83,16 +82,38 @@
 
     <section class="life-section paper-section" id="life" aria-labelledby="life-title" data-chapter>
       <div class="section-heading reveal"><p class="chapter-label"><span>01</span>旅先で、したいこと</p><h2 id="life-title">電気の心配より、<br><em class="marker">楽しみな予定を。</em></h2><p>「連泊すると、残量が気になる」<br>「電子レンジも、エアコンも使いたい」<br>そんな電気の悩みから、ご相談ください。</p></div>
-      <figure class="family-scene reveal"><img src="assets/family-appliances.png" width="1536" height="1024" loading="lazy" decoding="async" alt="エアコンのある車内で、父親が電子レンジを使い、母親と子供が食事を楽しむ様子"><figcaption>旅先でも、いつもの「いただきます」。</figcaption></figure>
-      <div class="scene-explorer reveal">
-        <div class="scene-tabs" role="tablist" aria-label="旅で楽しみたい場面">
-          <button type="button" role="tab" id="tab-meal" aria-selected="true" aria-controls="panel-meal" data-scene="meal"><svg class="icon"><use href="#icon-food"/></svg><span>食事の時間</span></button>
-          <button type="button" role="tab" id="tab-comfort" aria-selected="false" aria-controls="panel-comfort" tabindex="-1" data-scene="comfort"><svg class="icon"><use href="#icon-wind"/></svg><span>くつろぐ時間</span></button>
-          <button type="button" role="tab" id="tab-stay" aria-selected="false" aria-controls="panel-stay" tabindex="-1" data-scene="stay"><svg class="icon"><use href="#icon-moon"/></svg><span>もう一泊</span></button>
+      <div class="scene-carousel reveal" role="region" aria-roledescription="カルーセル" aria-label="旅先で楽しむ3つのシーン">
+        <div class="scene-viewport">
+          <div class="scene-track" id="scene-track">
+            <article class="scene-card scene-meal" data-scene="0" role="group" aria-roledescription="スライド" aria-label="1 / 3 食事の時間">
+              <p class="scene-tag"><svg class="icon" aria-hidden="true"><use href="#icon-food"/></svg>食事の時間</p>
+              <img src="assets/family-appliances.png" width="1536" height="1024" loading="lazy" decoding="async" draggable="false" alt="電子レンジで食事を温める父親と、食卓で待つ母親と子供">
+              <div class="scene-card-copy"><span class="scene-count">01</span><h3>できたてを、<br>家族で囲もう。</h3><p>電子レンジで食事を温めて、みんなで食卓へ。使いたい家電から、愛車の電源を考えます。</p></div>
+            </article>
+            <article class="scene-card scene-comfort" data-scene="1" role="group" aria-roledescription="スライド" aria-label="2 / 3 くつろぐ時間">
+              <p class="scene-tag"><svg class="icon" aria-hidden="true"><use href="#icon-wind"/></svg>くつろぐ時間</p>
+              <img src="assets/family-comfort.png" width="1536" height="1024" loading="lazy" decoding="async" draggable="false" alt="灯りのともったキャンピングカーの車内で、地図を広げてくつろぐ家族">
+              <div class="scene-card-copy"><span class="scene-count">02</span><h3>車内の時間も、<br>心地よく。</h3><p>エアコンや冷蔵庫など、快適な車内に必要な電気。使う時間と、家電の組み合わせから。</p></div>
+            </article>
+            <article class="scene-card scene-stay" data-scene="2" role="group" aria-roledescription="スライド" aria-label="3 / 3 もう一泊">
+              <p class="scene-tag"><svg class="icon" aria-hidden="true"><use href="#icon-moon"/></svg>もう一泊</p>
+              <img src="assets/camp-lights-on.png" width="1024" height="1536" loading="lazy" decoding="async" draggable="false" alt="湖畔の夜、キャンピングカーとランタンの灯りで夕食を楽しむ家族">
+              <div class="scene-card-copy"><span class="scene-count">03</span><h3>「もう一泊」を、<br>旅の選択肢に。</h3><p>連泊するときの電気も相談を。旅の日数や移動のしかたに合わせて、容量と充電方法を。</p></div>
+            </article>
+          </div>
         </div>
-        <div class="scene-panel" id="panel-meal" role="tabpanel" aria-labelledby="tab-meal" tabindex="0"><p class="scene-number">01</p><h3>できたてを、<br>家族で囲もう。</h3><p>電子レンジで食事を温めて、みんなで食卓へ。旅先で使いたい家電を、まずはお聞かせください。</p></div>
-        <div class="scene-panel" id="panel-comfort" role="tabpanel" aria-labelledby="tab-comfort" tabindex="0" hidden><p class="scene-number">02</p><h3>車内の時間も、<br>心地よく。</h3><p>エアコンや冷蔵庫など、快適な車内に必要な電気。使う時間と、家電の組み合わせから考えます。</p></div>
-        <div class="scene-panel" id="panel-stay" role="tabpanel" aria-labelledby="tab-stay" tabindex="0" hidden><p class="scene-number">03</p><h3>「もう一泊」を、<br>旅の選択肢に。</h3><p>連泊するときの電気の使い方も相談を。旅の日数や移動のしかたに合わせて、容量と充電方法を見直します。</p></div>
+        <div class="scene-controls" hidden>
+          <button type="button" class="scene-prev" aria-label="前のシーン" aria-controls="scene-track">←</button>
+          <div class="scene-dots" role="group" aria-label="シーンを選ぶ">
+            <button type="button" aria-label="食事の時間を表示" aria-current="true" data-slide-to="0"><span></span></button>
+            <button type="button" aria-label="くつろぐ時間を表示" data-slide-to="1"><span></span></button>
+            <button type="button" aria-label="もう一泊を表示" data-slide-to="2"><span></span></button>
+          </div>
+          <button type="button" class="scene-next" aria-label="次のシーン" aria-controls="scene-track">→</button>
+          <button type="button" class="scene-autoplay" aria-label="自動切り替えを一時停止" title="自動切り替えを一時停止"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path class="pause-mark" d="M9 5v14M15 5v14"/><path class="play-mark" d="m8 5 10 7-10 7z"/></svg></button>
+        </div>
+        <p class="scene-hint" hidden>左右にスワイプして見る</p>
+        <p class="visually-hidden scene-status" aria-live="polite" aria-atomic="true"></p>
       </div>
       <p class="small-note">使える家電・同時使用・稼働時間は、設備構成と使用条件によって異なります。</p>
     </section>

@@ -27,29 +27,158 @@
     });
   }
 
-  const tabs = [...document.querySelectorAll('[role="tab"][data-scene]')];
-  const selectScene = (selected, focus = false) => {
-    tabs.forEach(tab => {
-      const active = tab === selected;
-      tab.setAttribute('aria-selected', String(active));
-      tab.tabIndex = active ? 0 : -1;
-      document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+  const carousel = document.querySelector('.scene-carousel');
+  if (carousel) {
+    const viewport = carousel.querySelector('.scene-viewport');
+    const track = carousel.querySelector('.scene-track');
+    const originals = [...track.children];
+    const dots = [...carousel.querySelectorAll('[data-slide-to]')];
+    const rotation = carousel.querySelector('.scene-autoplay');
+    const status = carousel.querySelector('.scene-status');
+    const clone = slide => {
+      const copy = slide.cloneNode(true);
+      copy.classList.add('is-clone');
+      copy.setAttribute('aria-hidden', 'true');
+      return copy;
+    };
+    // End copies make the final-to-first transition travel in the same direction.
+    track.prepend(clone(originals[originals.length - 1]));
+    track.append(clone(originals[0]));
+    const slides = [...track.children];
+    let position = 1;
+    let logicalIndex = 0;
+    let moving = false;
+    let autoTimer;
+    let settleTimer;
+    let inView = false;
+    let hovered = false;
+    let focused = false;
+    let explicitPlay = false;
+    let wantsRotation = !reduced.matches;
+    let pointerStart;
+    let suppressClick = false;
+
+    const updateRotationButton = () => {
+      rotation.classList.toggle('is-paused', !wantsRotation);
+      const label = wantsRotation ? '自動切り替えを一時停止' : '自動切り替えを再生';
+      rotation.setAttribute('aria-label', label);
+      rotation.title = label;
+    };
+    const scheduleRotation = () => {
+      clearTimeout(autoTimer);
+      if (!wantsRotation || !inView || hovered || (focused && !explicitPlay) || document.hidden || moving) return;
+      autoTimer = setTimeout(() => moveTo(position + 1), 4800);
+    };
+    const stopRotation = () => {
+      wantsRotation = false;
+      explicitPlay = false;
+      clearTimeout(autoTimer);
+      updateRotationButton();
+    };
+    const render = animate => {
+      track.classList.toggle('is-moving', animate && !reduced.matches);
+      const cardWidth = slides[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      const x = (viewport.clientWidth - cardWidth) / 2 - position * (cardWidth + gap);
+      track.style.transform = `translate3d(${x}px,0,0)`;
+      slides.forEach((slide, index) => slide.classList.toggle('is-active', index === position));
+      originals.forEach((slide, index) => slide.setAttribute('aria-hidden', String(index !== logicalIndex)));
+      dots.forEach((dot, index) => {
+        if (index === logicalIndex) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+    };
+    const settle = () => {
+      clearTimeout(settleTimer);
+      if (position === 0) position = originals.length;
+      else if (position === slides.length - 1) position = 1;
+      render(false);
+      moving = false;
+      scheduleRotation();
+    };
+    const moveTo = (next, manual = false) => {
+      if (manual) stopRotation();
+      if (moving) return;
+      clearTimeout(autoTimer);
+      position = Math.max(0, Math.min(slides.length - 1, next));
+      logicalIndex = (position - 1 + originals.length) % originals.length;
+      moving = !reduced.matches;
+      render(true);
+      if (manual) status.textContent = originals[logicalIndex].getAttribute('aria-label');
+      if (moving) settleTimer = setTimeout(settle, 650);
+      else settle();
+    };
+    track.addEventListener('transitionend', event => {
+      if (event.target === track && event.propertyName === 'transform' && moving) settle();
     });
-    if (focus) selected.focus();
-  };
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => selectScene(tab));
-    tab.addEventListener('keydown', event => {
-      let next;
-      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-      else if (event.key === 'Home') next = 0;
-      else if (event.key === 'End') next = tabs.length - 1;
-      else return;
+    carousel.classList.add('carousel-ready');
+    carousel.querySelector('.scene-controls').hidden = false;
+    carousel.querySelector('.scene-hint').hidden = false;
+    render(false);
+    updateRotationButton();
+    carousel.querySelector('.scene-prev').addEventListener('click', () => moveTo(position - 1, true));
+    carousel.querySelector('.scene-next').addEventListener('click', () => moveTo(position + 1, true));
+    dots.forEach((dot, index) => dot.addEventListener('click', () => moveTo(index + 1, true)));
+    carousel.addEventListener('keydown', event => {
+      const next = {ArrowLeft: position - 1, ArrowRight: position + 1, Home: 1, End: originals.length}[event.key];
+      if (next === undefined) return;
       event.preventDefault();
-      selectScene(tabs[next], true);
+      moveTo(next, true);
     });
-  });
+    rotation.addEventListener('click', () => {
+      wantsRotation = !wantsRotation;
+      explicitPlay = wantsRotation;
+      updateRotationButton();
+      scheduleRotation();
+    });
+    track.addEventListener('click', event => {
+      if (suppressClick) { suppressClick = false; return; }
+      const card = event.target.closest('.scene-card');
+      if (card && !card.classList.contains('is-active')) moveTo(slides.indexOf(card), true);
+    });
+    viewport.addEventListener('pointerdown', event => {
+      if (!event.isPrimary || event.button !== 0) return;
+      pointerStart = {x: event.clientX, y: event.clientY, id: event.pointerId};
+      suppressClick = false;
+      stopRotation();
+    });
+    window.addEventListener('pointerup', event => {
+      if (!pointerStart || event.pointerId !== pointerStart.id) return;
+      const dx = event.clientX - pointerStart.x;
+      const dy = event.clientY - pointerStart.y;
+      pointerStart = null;
+      if (Math.abs(dx) < 35 || Math.abs(dx) < Math.abs(dy) * 1.25) return;
+      suppressClick = true;
+      moveTo(position + (dx < 0 ? 1 : -1), true);
+    });
+    window.addEventListener('pointercancel', () => { pointerStart = null; });
+    carousel.addEventListener('mouseenter', () => { hovered = true; clearTimeout(autoTimer); });
+    carousel.addEventListener('mouseleave', () => { hovered = false; scheduleRotation(); });
+    carousel.addEventListener('focusin', () => { focused = true; explicitPlay = false; clearTimeout(autoTimer); });
+    carousel.addEventListener('focusout', event => {
+      if (carousel.contains(event.relatedTarget)) return;
+      focused = false;
+      scheduleRotation();
+    });
+    document.addEventListener('visibilitychange', scheduleRotation);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        inView = entries[0].isIntersecting && entries[0].intersectionRatio >= .35;
+        scheduleRotation();
+      }, {threshold: .35}).observe(carousel);
+    } else {
+      const checkVisibility = () => {
+        const box = carousel.getBoundingClientRect();
+        inView = box.top < innerHeight * .7 && box.bottom > innerHeight * .3;
+        scheduleRotation();
+      };
+      window.addEventListener('scroll', checkVisibility, {passive: true});
+      checkVisibility();
+    }
+    if ('ResizeObserver' in window) new ResizeObserver(settle).observe(viewport);
+    else window.addEventListener('resize', settle);
+    reduced.addEventListener?.('change', () => { stopRotation(); settle(); });
+  }
 
   let revealObserver;
   try {

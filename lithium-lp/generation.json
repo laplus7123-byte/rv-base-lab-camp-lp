@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-05",
+  "mode": "built-in image_gen",
+  "preserved_site": {
+    "url": "https://laplus7123-byte.github.io/rv-base-lab-camp-lp/",
+    "commit": "05afa8b0528da5a8de6ac4144b41d81c76746d0f"
+  },
+  "new_page": "https://laplus7123-byte.github.io/rv-base-lab-camp-lp/lithium/",
+  "motion_reference": {
+    "url": "https://wad-no-wad.com/otaku-x/",
+    "observations": [
+      "staggered rising headings",
+      "gently floating illustrations",
+      "horizontal flowing bands",
+      "scroll-triggered sections and active desktop chapter navigation"
+    ],
+    "adaptation": "Original night camping illustration and light-on crossfade; original CSS/JS implementation, no reference assets or source copied."
+  },
+  "images": [
+    {
+      "id": "camp-lights-on",
+      "prompt": "Use case: illustration-story.\nAsset type: portrait 1024 x 1536 hero illustration for a Japanese camper lithium-battery landing page.\nInput image 1 is a STRICT DRAWING STYLE reference: fine slightly irregular black pen lines, understated ordinary faces, simple flat restrained colors, sparse hand hatching, minimal highlights. Input 2 is the FAMILY identity reference: ordinary father in olive overshirt, mother with brown hair tied back and cream knit, one young child. Use the same family but in a NEW campsite composition.\n\nCreate a beautiful evening campsite, deep forest-green and midnight-blue night sky, low mountains and trees at a lakeside. A cream Japanese cab-over camper with an olive stripe, fully visible in a three-quarter side view, sits across the LOWER HALF of the portrait, front cab pointing toward the lower left. At its right-hand side an open door and lit windows reveal cozy amber electric interior lighting. An extended awning has a short strand of gently glowing electric string lights. The father, mother and child happily share a simple meal at a low camping table and chairs beside the vehicle in the lower right. A small rechargeable electric lantern on their table and a standing lamp by the door cast warm amber pools of light. Clearly ELECTRIC light, no bonfire, no flames, no grills. Their expressions are natural and relaxed, the child smiling. This image is the LIGHTS ON state for an opening animation.\nComposition: TOP 35 PERCENT must be clean deep dark-green/blue night sky with only a few tiny stars and very subtle tree silhouettes around the outside edges, reserved for headline overlay. Camper, awning, family and table fit ENTIRELY within the lower 60 percent, with a little margin around them. The scene is cohesive and vertically balanced with an atmospheric night sky, NOT a collage. Family visible at mobile size, RV is the central hero. Keep the horizon at roughly 45 percent from the top. Dark grassy ground at the bottom.\nStyle: closely match image 1, not painterly or photorealistic, not glossy anime. Warm illumination as clear restrained flat shapes and a little soft local bloom ONLY at lamps. Thin ink contours, muted cream/olive/ochre, calm dark green surroundings, simple readable forms. Hand-drawn commercial manga illustration.\nConstraints: no logos, no readable text, no watermarks, no balloons, no typography, no border, no product branding, no electrical cables connected to external grid, no roof diagrams, no extra people, no extra arms. Preserve ordinary family identities and avoid glamorous anime faces. Full opaque scene to all edges.",
+      "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-ac8d47fa-fe95-43b0-9d1d-3e779935262c.png",
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/lithium/assets/camp-lights-on.png",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-headlight-v1.png",
+        "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/assets/manga-line-worry-appliances-v2.png"
+      ]
+    },
+    {
+      "id": "camp-lights-off",
+      "prompt": "Use case: lighting-weather.\nInput image is the exact LIGHTS ON hero frame. Create its matching LIGHTS OFF frame for a smooth crossfade animation.\nChange ONLY the illumination: every electric light is switched off — the camper's interior ceiling lights, windows and doorway, the awning string bulbs, the standing lantern, and the tabletop lantern. Remove their amber glow and all warm light spill from the grass, camper, table, faces and clothing. The bulbs and lantern shades become dim unlit gray-cream objects. The only remaining lighting is soft blue moonlight, so the whole campsite is darker, cooler and quieter, but the camper and all three family members remain visible.\nCRITICAL: lock every contour, person, facial expression, pose, dish, hand, chair, vehicle part, tree, star, mountain, sky gradient, and camera framing to the input. Do not move, resize or replace anything. No changes to anatomy, object geometry, textures or drawing style. Preserve the exact 1024 x 1536 portrait dimensions and the exact composition. No new elements. No text or logos. This is a lighting-only matching animation frame.",
+      "output": "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-949381f1-b14d-4bd6-bef0-e0f6ecbb5f97.png",
+      "saved_path": "/Users/kasaikyohei/Documents/ChatGPT/AI漫画/rv-base-lab-camp-lp/dist/lithium/assets/camp-lights-off.png",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        "/Users/kasaikyohei/.codex/generated_images/01a15c89-78b3-72f3-8b0d-77f3c3b3a074/exec-ac8d47fa-fe95-43b0-9d1d-3e779935262c.png"
+      ]
+    }
+  ],
+  "review": "Both lighting states visually inspected. Matching 3-person family, camper, campsite, framing; warm electric lamps versus unlit moonlight state. No brands or text generated."
+}

@@ -27,6 +27,22 @@
     });
   }
 
+  if (opening) {
+    let heroInView = true;
+    const updateHeroMotion = () => {
+      opening.classList.toggle('hero-motion-active', heroInView && !document.hidden && !reduced.matches);
+    };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        heroInView = entries[0].isIntersecting;
+        updateHeroMotion();
+      }).observe(opening.querySelector('.hero-copy'));
+    }
+    document.addEventListener('visibilitychange', updateHeroMotion);
+    reduced.addEventListener?.('change', updateHeroMotion);
+    updateHeroMotion();
+  }
+
   const carousel = document.querySelector('.scene-carousel');
   if (carousel) {
     const viewport = carousel.querySelector('.scene-viewport');

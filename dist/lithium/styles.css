@@ -35,22 +35,19 @@ p,h1,h2,h3,figure{margin:0}em{font-style:normal}[hidden]{display:none!important}
 .hero-intro{display:flex;flex-direction:column;align-items:flex-start;gap:.7cqw;margin-top:1.5cqw;font-size:3.2cqw;line-height:1.4;font-weight:800;letter-spacing:.035em}
 .hero-intro>span{padding:.5cqw 1.5cqw .65cqw;background:#0c211fe8;box-shadow:2px 2px 0 #0b1c1a22;color:var(--paper)}
 .hero-intro strong{color:#ffca70;font-weight:900}
-.js .hero-copy h1>span:not(.hero-line-focus){animation:opening-copy-in .8s cubic-bezier(.22,.65,.3,1) both}
+.js .hero-copy h1>span{animation:opening-copy-in .8s cubic-bezier(.22,.65,.3,1) both}
 .js .hero-copy h1>span:nth-child(2){animation-delay:.12s}
+.js .hero-copy h1>.hero-line-focus{animation-delay:.24s}
 .js .hero-intro{animation:opening-copy-in .75s .45s both}
 @keyframes opening-copy-in{from{opacity:0;transform:translateY(18px);clip-path:inset(100% 0 0)}to{opacity:1;transform:none;clip-path:inset(0)}}
-/* Separate entry and idle transforms keep the word readable throughout the loop. */
-.hero-word{display:inline-flex;align-items:baseline}
-.hero-letter,.hero-letter>span{display:inline-block;transform-origin:50% 85%}
-.hero-letter{--letter-delay:0s}
-.hero-letter:nth-child(2){--letter-delay:.16s}.hero-letter:nth-child(3){--letter-delay:.32s}
-.js .hero-letter{animation:hero-letter-enter .85s cubic-bezier(.2,.8,.25,1) calc(.65s + var(--letter-delay)) both}
-.js .hero-letter>span{animation:hero-letter-float 5.4s ease-in-out calc(2s + var(--letter-delay)) infinite;animation-play-state:paused}
-.hero-motion-active .hero-letter>span{animation-play-state:running}
-.js .hero-line-focus>.hero-quote,.js .hero-line-focus>.hero-ending{animation:hero-word-frame .7s 1s both}
-@keyframes hero-letter-enter{0%{opacity:0;transform:translateY(.22em) rotate(-7deg) scale(.9)}65%{opacity:1;transform:translateY(-.025em) rotate(1deg) scale(1.015)}100%{opacity:1;transform:none}}
-@keyframes hero-letter-float{0%,46%,100%{transform:translateY(0) rotate(0)}16%{transform:translateY(-.075em) rotate(-2deg)}30%{transform:translateY(.012em) rotate(.7deg)}}
-@keyframes hero-word-frame{from{opacity:0;transform:translateY(.08em)}to{opacity:1;transform:none}}
+/* A warm highlight travels across the whole word; the type itself stays still. */
+.hero-word{display:inline-block}
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+  .js .hero-word{background-image:linear-gradient(105deg,#ffca70 0%,#ffca70 38%,#f5b451 44%,#fff3d2 50%,#ffdc8c 56%,#ffca70 62%,#ffca70 100%);background-size:260% 100%;background-position:100% 50%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none;animation:hero-word-sheen 5s linear infinite;animation-play-state:paused}
+  .hero-motion-active .hero-word{animation-play-state:running}
+}
+@keyframes hero-word-sheen{0%{background-position:100% 50%}80%,100%{background-position:0% 50%}}
+@media(prefers-reduced-motion:reduce),(forced-colors:active){.js .hero-word{background:none;color:inherit;-webkit-text-fill-color:currentColor;animation:none}}
 
 .light-switch{position:absolute;right:15px;bottom:24px;z-index:2;display:flex;align-items:center;gap:8px;min-height:43px;padding:9px 14px;border:2px solid var(--paper);background:var(--forest);color:var(--paper);border-radius:24px;font-size:11px;font-weight:800;transition:background .4s,color .4s}.light-switch .icon{width:17px;height:17px}.is-lit .light-switch{background:var(--amber);color:var(--ink);border-color:var(--ink)}.hero-scene-note{position:absolute;left:16px;bottom:8px;font-size:7px;color:#f7f2e7cc}
 .hero-bottom{text-align:center;padding:27px 22px 25px;color:var(--ink)}

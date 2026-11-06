@@ -5,6 +5,7 @@
   const lightSwitch = document.querySelector('.light-switch');
   let introTimer;
   let userChangedLights = false;
+  let introStarted = false;
   const setLights = on => {
     opening.classList.toggle('is-lit', on);
     document.body.classList.toggle('camp-is-lit', on);
@@ -13,17 +14,43 @@
     lightSwitch.querySelector('span').textContent = on ? '灯りを消す' : '灯りをつける';
   };
   if (opening && lightSwitch) {
+    let framesReady = false;
+    let sceneInView = false;
+    const scene = opening.querySelector('.hero-scene');
+    const beginIntro = () => {
+      introStarted = true;
+      opening.classList.add('intro-started');
+      setLights(true);
+    };
+    const scheduleIntro = () => {
+      clearTimeout(introTimer);
+      if (introStarted || userChangedLights || !framesReady) return;
+      if (reduced.matches) return beginIntro();
+      if (document.hidden || !sceneInView) return;
+      introTimer = setTimeout(beginIntro, 1500);
+    };
     opening.classList.add('lights-ready');
     lightSwitch.hidden = false;
     lightSwitch.addEventListener('click', () => {
       userChangedLights = true;
+      introStarted = true;
       clearTimeout(introTimer);
+      opening.classList.add('intro-started');
       setLights(!opening.classList.contains('is-lit'));
     });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        sceneInView = entries[0].isIntersecting && entries[0].intersectionRatio >= 0.15;
+        scheduleIntro();
+      }, {threshold: 0.15}).observe(scene);
+    } else {
+      sceneInView = true;
+    }
+    document.addEventListener('visibilitychange', scheduleIntro);
     const frames = [...opening.querySelectorAll('.hero-frame')];
     Promise.all(frames.map(img => img.decode ? img.decode().catch(() => {}) : Promise.resolve())).then(() => {
-      if (userChangedLights) return;
-      introTimer = setTimeout(() => setLights(true), reduced.matches ? 0 : 750);
+      framesReady = true;
+      scheduleIntro();
     });
   }
 
@@ -235,7 +262,11 @@
   reduced.addEventListener?.('change', event => {
     if (!event.matches) return;
     clearTimeout(introTimer);
-    if (!userChangedLights && opening && lightSwitch) setLights(true);
+    if (!userChangedLights && opening && lightSwitch) {
+      introStarted = true;
+      opening.classList.add('intro-started');
+      setLights(true);
+    }
     revealObserver?.disconnect();
     document.documentElement.classList.remove('motion-ready');
   });

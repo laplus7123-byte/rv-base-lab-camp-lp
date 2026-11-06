@@ -201,22 +201,15 @@
 
   const powerMap = document.querySelector('.power-map');
   if (powerMap && 'IntersectionObserver' in window) {
-    const chargeToggle = powerMap.querySelector('.charge-toggle');
     let chargeInView = false;
-    let chargePaused = false;
     const updateCharge = () => {
       powerMap.classList.toggle('charge-running', !reduced.matches);
-      powerMap.classList.toggle('charge-paused', chargePaused || !chargeInView || document.hidden);
-      chargeToggle.hidden = reduced.matches;
-      chargeToggle.classList.toggle('is-paused', chargePaused);
-      chargeToggle.setAttribute('aria-label', chargePaused ? '充電アニメーションを再生' : '充電アニメーションを一時停止');
-      chargeToggle.querySelector('span').textContent = chargePaused ? '再生' : '一時停止';
+      powerMap.classList.toggle('charge-paused', !chargeInView || document.hidden);
     };
     new IntersectionObserver(entries => {
       chargeInView = entries[0].isIntersecting && entries[0].intersectionRatio >= .35;
       updateCharge();
     }, {threshold: .35}).observe(powerMap);
-    chargeToggle.addEventListener('click', () => { chargePaused = !chargePaused; updateCharge(); });
     document.addEventListener('visibilitychange', updateCharge);
     reduced.addEventListener?.('change', updateCharge);
     updateCharge();

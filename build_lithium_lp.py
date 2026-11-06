@@ -22,8 +22,9 @@ shared_assets = {
 for source, destination in shared_assets.items():
     shutil.copy2(ROOT / 'dist' / 'assets' / source, DESTINATION / 'assets' / destination)
 
-for name in ('camp-lights-on.png', 'camp-lights-off.png'):
+for name in ('camp-lights-on.png', 'camp-lights-off.png',
+             'charging-driving-v1.png', 'charging-home-v1.png', 'charging-solar-v1.png'):
     if not (DESTINATION / 'assets' / name).is_file():
-        raise FileNotFoundError(f'Missing generated opening image: {name}')
+        raise FileNotFoundError(f'Missing generated LP image: {name}')
 
 print('Built dist/lithium/. Existing dist/index.html and repair assets are unchanged.')

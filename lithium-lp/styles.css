@@ -62,19 +62,6 @@ p,h1,h2,h3,figure{margin:0}em{font-style:normal}[hidden]{display:none!important}
 .line-cta{display:flex;align-items:center;gap:12px;justify-content:center;background:var(--green);color:var(--paper);min-height:72px;padding:13px 17px;margin-top:26px;border:2px solid var(--ink);border-radius:40px;box-shadow:3px 4px 0 var(--ink),inset 0 0 0 3px var(--paper);font-size:clamp(13px,3.3cqw,16px);font-weight:900;line-height:1.5;transition:transform .2s}
 .line-cta img{width:36px;height:36px;flex:0 0 36px}.line-cta>.icon{width:22px;margin-left:auto}.line-cta:hover{transform:translateY(-2px)}.line-cta:active{transform:translateY(2px)}
 .scroll-cue{display:flex;justify-content:center;align-items:center;gap:16px;font-size:11px;font-weight:700;letter-spacing:.03em;margin-top:25px;min-height:35px}.scroll-cue span{font-size:22px;animation:cue-down 2s 2 ease-in-out}@keyframes cue-down{0%,100%{transform:translateY(-3px)}50%{transform:translateY(3px)}}
-/* Two clear lanes keep the moving center line away from the copy and campers. */
-.travel-ribbon{position:relative;overflow:hidden;background:#5b6064;color:var(--paper);border-block:2px solid #45494c}
-.travel-ribbon::before{content:"";position:absolute;inset:7px 0;border-block:1px solid #fffdf566;pointer-events:none}
-.travel-ribbon::after{content:"";position:absolute;left:-66px;top:calc(50% - 1.5px);width:calc(100% + 66px);height:3px;background:repeating-linear-gradient(90deg,#fffdf5cc 0 36px,transparent 36px 66px);pointer-events:none}
-.road-marquee{display:flex;width:max-content}
-.road-lap{display:flex;flex-shrink:0;align-items:center;gap:36px;padding-right:36px;white-space:nowrap;font-size:13px;font-weight:900;letter-spacing:.05em}
-.road-scene{display:grid;grid-template-rows:1fr 1fr;place-items:center;min-width:150px;height:104px}
-.road-camper{display:block;width:46px;height:30px;flex-shrink:0;transform:scaleX(-1)}
-.js .road-marquee{animation:road-travel 26s linear infinite;animation-play-state:paused}
-.js .travel-ribbon::after{animation:road-markings 2.4s linear infinite;animation-play-state:paused}
-.road-motion-active .road-marquee,.js .road-motion-active::after{animation-play-state:running}
-@keyframes road-travel{to{transform:translateX(-50%)}}
-@keyframes road-markings{to{transform:translateX(66px)}}
 /* Clear section rhythm: cream, forest green and warm brown. */
 .paper-section{background:var(--paper)}
 .section-heading{padding:0 25px;text-align:center}
@@ -85,7 +72,7 @@ p,h1,h2,h3,figure{margin:0}em{font-style:normal}[hidden]{display:none!important}
 .section-heading>p:last-child:not(.chapter-label){font-size:clamp(14px,3.8cqw,16px);font-weight:500;line-height:1.95;margin-top:25px}
 .marker{position:relative;display:inline-block;isolation:isolate}.marker::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.12em;height:.34em;z-index:-1;background:#9eab7880;transform-origin:left}.motion-ready .is-visible .marker::after{animation:marker-draw .8s .35s both}@keyframes marker-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .small-note{font-size:11px;line-height:1.9;color:#5a5e50;padding:0 25px}
-.life-section{padding:57px 0 46px}
+.life-section{padding:40px 0 46px}
 /* Centered scene cards: adjacent scenes stay visible, then slide forward together. */
 .scene-carousel{margin:22px 0 20px;position:relative}
 .scene-track{display:grid;gap:24px;padding:0 24px}

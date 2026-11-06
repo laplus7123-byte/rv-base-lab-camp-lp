@@ -43,23 +43,6 @@
     updateHeroMotion();
   }
 
-  const road = document.querySelector('.travel-ribbon');
-  if (road) {
-    let roadInView = !('IntersectionObserver' in window);
-    const updateRoadMotion = () => {
-      road.classList.toggle('road-motion-active', roadInView && !document.hidden && !reduced.matches);
-    };
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(entries => {
-        roadInView = entries[0].isIntersecting;
-        updateRoadMotion();
-      }).observe(road);
-    }
-    document.addEventListener('visibilitychange', updateRoadMotion);
-    reduced.addEventListener?.('change', updateRoadMotion);
-    updateRoadMotion();
-  }
-
   const carousel = document.querySelector('.scene-carousel');
   if (carousel) {
     const viewport = carousel.querySelector('.scene-viewport');
